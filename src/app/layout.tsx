@@ -1,8 +1,34 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import localFont from 'next/font/local';
+import './styles/globals.scss';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const gilroy = localFont({
+  src: [
+    {
+      path: '../../fonts/Gilroy-Light.woff2',
+      weight: '300',
+    },
+    {
+      path: '../../fonts/Gilroy-Regular.woff2',
+      weight: '400',
+    },
+    {
+      path: '../../fonts/Gilroy-Medium.woff2',
+      weight: '500',
+    },
+    {
+      path: '../../fonts/Gilroy-Semibold.woff2',
+      weight: '600',
+    },
+    {
+      path: '../../fonts/Gilroy-Bold.woff2',
+      weight: '700',
+    },
+  ],
+  variable: '--font-gilroy',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,8 +43,10 @@ export default function RootLayout({
   return (
     //suppressHydrationWarning
     <html lang='en'>
-      <body className={[inter.className, 'demo-1', 'loading'].join(' ')}>
+      <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

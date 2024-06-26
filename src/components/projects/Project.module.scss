@@ -1,0 +1,46 @@
+.project {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7rem 6.25rem 6rem;
+  border-top: 1px solid rgba(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(201, 201, 201);
+  }
+
+  &:hover {
+    h2 {
+      transform: translateX(-10px);
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    p {
+      transform: translateX(10px);
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    transition: all 0.4s;
+  }
+
+  p {
+    transition: all 0.4s;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

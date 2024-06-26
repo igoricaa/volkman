@@ -1,0 +1,25 @@
+.menuDesktop {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      padding: 10px 34px;
+      border-radius: 22px;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        background-color: var(--color-main);
+        color: #000;
+      }
+    }
+  }
+}

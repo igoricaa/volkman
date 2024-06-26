@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ConnectedGrid() {
   useEffect(() => {
-    const grid = document.querySelector('.grid');
+    // const grid = document.querySelector('.grid');
     const gridItems = document.querySelectorAll('.grid__item');
 
     const initSmoothScrolling = () => {

@@ -1,0 +1,335 @@
+.mobileMenu {
+  .burgerWrapper {
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    padding: 0.75em 0;
+    transform: translateY(0%) scale(1) rotate(0.001deg);
+    transition: transform var(--animation-smooth) 0s;
+    z-index: 10;
+
+    .burger {
+      display: flex;
+      height: 67px;
+      width: 67px;
+      background-color: #fff;
+      position: relative;
+      right: 0;
+      border-radius: 50%;
+      transition: var(--animation-smooth), background-color 0.2s ease-in-out;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translate(0%, 0%) rotate(0.001deg);
+      cursor: pointer;
+      top: 0;
+
+      .bar {
+        position: absolute;
+        width: 2rem;
+        height: 1.5px;
+        background-color: #232323;
+        transition: var(--animation-smooth), background-color 0.2s ease-in-out;
+
+        &:nth-child(1) {
+          transform: translateY(-3px) rotate(0.001deg);
+        }
+
+        &:nth-child(2) {
+          transform: translateY(3px) rotate(0.001deg);
+        }
+      }
+
+      &:hover {
+        .bar {
+          &:nth-child(1) {
+            transform: translateY(3px) rotate(0.001deg);
+          }
+
+          &:nth-child(2) {
+            transform: translateY(-3px) rotate(0.001deg);
+          }
+        }
+      }
+    }
+  }
+
+  .modalNavBackground {
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    transition: var(--animation-smooth);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: all;
+  }
+
+  .modalNavMobile {
+    top: 141px;
+    bottom: 140px;
+    left: 38px;
+    right: 38px;
+    z-index: 5;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    pointer-events: none;
+    height: 100vh;
+
+    .modalBlock {
+      border-radius: 1.5em;
+      padding: 40px 30px 30px;
+      pointer-events: none;
+      position: relative;
+
+      .modalBlockBackground {
+        background-color: #fff;
+        border-radius: 33.5px;
+        transition: all var(--animation-smooth),
+          background-color 0.2s ease-in-out,
+          transform var(--animation-smooth) 0s;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 67px;
+        height: 67px;
+        transform: scale(1) rotate(0.001deg);
+      }
+
+      .mobileMenuWrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(0) scale(0.1) rotate(0.001deg);
+        transition: all var(--animation-smooth);
+        transform-origin: top right;
+        opacity: 0;
+
+        .modalSmallTitle {
+          color: #a3a3a3;
+          transform: translateY(0em);
+          text-transform: uppercase;
+          font-size: 1.13em;
+          margin-bottom: 2rem;
+        }
+
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 14px;
+            }
+
+            a {
+              font-size: calc(var(--menu__font-size) * 0.25);
+              color: #232323;
+              transition: all var(--animation-smooth), color 0.2s ease-in-out;
+              position: relative;
+              padding-right: 1em;
+              display: block;
+              text-transform: uppercase;
+
+              &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(calc(50%), -50%) scale(0) rotate(0.001deg);
+                width: 0.3em;
+                height: 0.3em;
+                border-radius: 50%;
+                background-color: #232323;
+                transition: all var(--animation-smooth),
+                  transform var(--animation-primary),
+                  background-color 0.2s ease-in-out;
+              }
+            }
+
+            &.active {
+              a {
+                opacity: 0.4;
+                text-transform: none;
+
+                &::before {
+                  transform: translate(calc(50%), -50%) scale(1)
+                    rotate(0.001deg);
+                  opacity: 0.5;
+                }
+              }
+            }
+
+            &:hover {
+              a {
+                &::before {
+                  transform: translate(calc(50%), -50%) scale(1)
+                    rotate(0.001deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    .burger {
+      transform: translate(-3px, 18px);
+
+      .bar {
+        &:nth-child(1) {
+          transform: translateY(0em) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: translateY(0em) rotate(-45deg);
+        }
+      }
+    }
+
+    .modalNavBackground {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modalNavMobile {
+      .modalBlock {
+        pointer-events: all;
+
+        .modalBlockBackground {
+          width: 100%;
+          height: 100%;
+          transform: scale(1) rotate(0.001deg);
+          top: 0;
+          right: 0;
+        }
+
+        .mobileMenuWrapper {
+          transform: translateY(0) scale(1) rotate(0.001deg);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mobileMenu {
+    .burgerWrapper {
+      .burger {
+        width: 55px;
+        height: 55px;
+
+        .bar {
+          width: 1.5rem;
+        }
+      }
+    }
+
+    .modalNavMobile {
+      top: 105px;
+      bottom: 140px;
+      right: 1.5rem;
+      left: 1.5rem;
+
+      .modalBlock {
+        .modalBlockBackground {
+          width: 55px;
+          height: 55px;
+        }
+      }
+    }
+
+    &.active {
+      .burger {
+        transform: translate(-0.5rem, 1.5rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .mobileMenu {
+    .burgerWrapper {
+      .burger {
+        width: 3rem;
+        height: 3rem;
+
+        .bar {
+          width: 17.5px;
+
+          &:nth-child(1) {
+            transform: translateY(-2px) rotate(0.001deg);
+          }
+
+          &:nth-child(2) {
+            transform: translateY(2px) rotate(0.001deg);
+          }
+        }
+
+        &:hover {
+          .bar {
+            &:nth-child(1) {
+              transform: translateY(2px) rotate(0.001deg);
+            }
+
+            &:nth-child(2) {
+              transform: translateY(-2px) rotate(0.001deg);
+            }
+          }
+        }
+      }
+    }
+
+    .modalNavMobile {
+      top: 29px;
+      bottom: 33px;
+      left: unset;
+      right: 17px;
+
+      .modalBlock {
+        padding: 20px;
+
+        .modalBlockBackground {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        .mobileMenuWrapper {
+          .modalSmallTitle {
+            font-size: 10px;
+          }
+
+          ul {
+            li {
+              a {
+                > span {
+                  font-size: 22p;
+
+                  &::before {
+                    width: 6px;
+                    height: 6px;
+                  }
+                }
+              }
+
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      .burger {
+        transform: translate(-3px, 3px);
+      }
+    }
+  }
+}
