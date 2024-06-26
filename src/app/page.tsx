@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import Link from 'next/link';
 import Projects from '@/components/projects/Projects';
 import ScrollAnimation from '@/components/scrollAnimation/ScrollAnimation';
+import Button from '@/components/common/Button/Button';
 
 export default function Home() {
   return (
@@ -56,7 +56,11 @@ export default function Home() {
               tenetur autem nobis, quo fuga voluptatum sit, cum dignissimos
               saepe consequuntur nesciunt.
             </p>
-            <Link href='about-me'>About me</Link>
+            <div>
+              <Button>
+                <p>About me</p>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
