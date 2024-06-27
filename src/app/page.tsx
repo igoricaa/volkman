@@ -69,10 +69,10 @@ export default function Home() {
         <h4 className={styles.sectiontitle}>Recent Work</h4>
         <Projects />
       </section>
-      {/* 
+
       <section>
         <ScrollAnimation />
-      </section> */}
+      </section>
 
       <AwardsSection />
 
