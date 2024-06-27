@@ -2,8 +2,7 @@
   .burgerWrapper {
     position: absolute;
     right: 17px;
-    top: 17px;
-    padding: 0.75em 0;
+    top: 22px;
     transform: translateY(0%) scale(1) rotate(0.001deg);
     transition: transform var(--animation-smooth) 0s;
     z-index: 10;
@@ -286,7 +285,7 @@
     }
 
     .modalNavMobile {
-      top: 29px;
+      top: 22px;
       bottom: 33px;
       left: unset;
       right: 17px;

@@ -8,12 +8,13 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
-        <Image
-          src='/logos/marija-volkman-logo.svg'
-          alt='Marija Volkman'
-          width={289}
-          height={53}
-        />
+        <div className={styles.logoWrapper}>
+          <Image
+            src='/logos/marija-volkman-logo.svg'
+            alt='Marija Volkman'
+            fill
+          />
+        </div>
       </div>
       <div className={styles.footerBottom}>
         <div className={styles.footerMenu}>

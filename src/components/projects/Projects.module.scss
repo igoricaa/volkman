@@ -4,3 +4,53 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    article {
+      width: 100%;
+      margin-top: 4rem;
+
+      * {
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      .imageWrapper {
+        position: relative;
+        aspect-ratio: 386 / 260;
+      }
+
+      h3 {
+        font-size: 2rem;
+        line-height: 1;
+        margin: 2rem 0 1.5rem;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .projects {
+    article {
+      margin-top: 3rem;
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}

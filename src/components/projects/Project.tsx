@@ -9,7 +9,7 @@ type Project = {
 
 const Project = ({ index, title, category, setModal }: Project) => {
   return (
-    <div
+    <article
       onMouseEnter={() => {
         setModal({ active: true, index });
       }}
@@ -20,7 +20,7 @@ const Project = ({ index, title, category, setModal }: Project) => {
     >
       <h2>{title}</h2>
       <p>{category}</p>
-    </div>
+    </article>
   );
 };
 

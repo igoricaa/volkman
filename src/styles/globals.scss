@@ -3,8 +3,6 @@
   --animation-primary: 0.4s cubic-bezier(0.5, 0.75, 0, 1);
   --animation-smooth: 0.7s cubic-bezier(0.5, 0.5, 0, 1);
 
-  --padding-left: 6rem;
-  --padding-right: 6rem;
   --padding-side: 8.85vw;
   --color-main: #eebf9e;
 }
@@ -71,6 +69,16 @@ h5 {
 }
 h6 {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 680px) {
+  :root {
+    --padding-side: 1.25rem;
+  }
 }
 
 /* connected grid */

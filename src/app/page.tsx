@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { getImageProps } from 'next/image';
 import styles from './page.module.scss';
 import Projects from '@/components/projects/Projects';
 import ScrollAnimation from '@/components/scrollAnimation/ScrollAnimation';
@@ -7,19 +7,38 @@ import AwardsSection from '@/components/awards/AwardsSection';
 import CopyButton from '@/components/common/CopyButton/CopyButton';
 
 export default function Home() {
+  const common = {
+    alt: 'Marija Volkman',
+    sizes: '100vw',
+    fill: true,
+    quality: 100,
+    priority: true,
+  };
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({
+    ...common,
+    src: '/home/marija-volkman-hero.png',
+  });
+  const {
+    props: { srcSet: mobile, ...rest },
+  } = getImageProps({
+    ...common,
+    src: '/home/marija-volkman-hero-mobile.png',
+  });
+
   return (
     <main className={styles.main}>
       <section className={styles.heroSection}>
         <div className={styles.heroBgWrapper}>
-          <Image
-            src='/home/marija-volkman-hero.png'
-            alt='Marija Volkman'
-            fill
-            sizes='100vw'
-            quality={100}
-            style={{ objectFit: 'cover' }}
-            priority
-          />
+          <picture>
+            <source media='(min-width: 680px)' srcSet={desktop} />
+            <source media='(max-width: 680px)' srcSet={mobile} />
+            <img
+              {...rest}
+              style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+            />
+          </picture>
         </div>
 
         <div className={styles.textWrapper}>
@@ -70,9 +89,9 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section>
+      {/* <section>
         <ScrollAnimation />
-      </section>
+      </section> */}
 
       <AwardsSection />
 
@@ -84,8 +103,7 @@ export default function Home() {
               <Image
                 src='/home/marija-volkman-rounded.png'
                 alt='Marija Volkman'
-                width={123}
-                height={123}
+                fill
               />
             </span>
             Let's work
@@ -97,9 +115,7 @@ export default function Home() {
         </div>
         <div className={styles.contactInfoWrapper}>
           <CopyButton text='volkmanm@archicraft.co' />
-          <p>
-            <a href='tel:0018184581762'>+1 818 458 1762</a>
-          </p>
+          <a href='tel:0018184581762'>+1 818 458 1762</a>
         </div>
       </section>
     </main>

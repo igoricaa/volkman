@@ -41,3 +41,23 @@
   top: 100%;
   background-color: red;
 }
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 680px) {
+  .roundedButton {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    left: calc(100% - 10rem - 22px);
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .contactButton {
+    margin-top: 1rem;
+  }
+}

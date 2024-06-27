@@ -47,7 +47,7 @@
 
   &.aboutSection {
     position: relative;
-    
+
     .innerWrapper {
       display: flex;
       gap: 8rem;
@@ -58,8 +58,8 @@
           font-size: 1.5rem;
           font-weight: 300;
 
-          &:first-of-type {
-            margin-bottom: 2rem;
+          &:nth-of-type(2) {
+            margin-top: 2rem;
           }
         }
       }
@@ -84,6 +84,9 @@
 
           span {
             display: inline-flex;
+            position: relative;
+            width: 123px;
+            height: 123px;
           }
         }
       }
@@ -106,6 +109,85 @@
         background-color: transparent;
         font-family: var(--font-gilroy);
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 680px) {
+  .heroSection {
+    padding-bottom: 4rem;
+    align-items: flex-end;
+
+    .textWrapper {
+      gap: 1.25rem;
+
+      h1 {
+        font-size: 4.75rem;
+        line-height: 6rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        max-width: 100%;
+        min-width: auto;
+      }
+    }
+  }
+
+  .section {
+    padding: 1.5rem var(--padding-side) 0;
+    .sectiontitle {
+      font-size: 12px;
+      padding-bottom: 1rem;
+    }
+
+    &.aboutSection {
+      .innerWrapper {
+        padding: 2.5rem 0 0;
+        flex-direction: column;
+        gap: 2rem;
+        .columnWrapper {
+          > p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &.contactSection {
+      .innerWrapper {
+        border-bottom: none;
+        padding-bottom: 0;
+
+        h2 {
+          font-size: 3rem;
+          line-height: 3.5rem;
+
+          &:first-of-type {
+            gap: 0.5rem;
+            span {
+              width: 55px;
+              height: 55px;
+            }
+          }
+        }
+      }
+      .contactInfoWrapper {
+        padding: 1.75rem 0 3rem;
+        flex-direction: column;
+        gap: 1.75rem;
+        border-bottom: 1px solid #fff;
+
+        > * {
+          font-size: 1rem;
+          padding: 1.25rem 0;
+          text-align: center;
+        }
       }
     }
   }
