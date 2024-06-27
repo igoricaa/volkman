@@ -4,12 +4,15 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import styles from './RoundedButton.module.scss';
 import Magnetic from '../Magnetic/Magnetic';
+import Link from 'next/link';
 
 const RoundedButton = ({
   children,
+  href,
   className,
 }: {
   children: any;
+  href: string;
   className?: any;
 }) => {
   const circle = useRef<HTMLDivElement>(null);
@@ -45,7 +48,8 @@ const RoundedButton = ({
 
   return (
     <Magnetic>
-      <div
+      <Link
+        href={href}
         className={[styles.roundedButton, styles[className]].join(' ')}
         style={{ overflow: 'hidden' }}
         onMouseEnter={() => manageMouseEnter()}
@@ -53,7 +57,7 @@ const RoundedButton = ({
       >
         {children}
         <div ref={circle} className={styles.circle}></div>
-      </div>
+      </Link>
     </Magnetic>
   );
 };

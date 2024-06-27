@@ -36,7 +36,7 @@ export default function Home() {
             <source media='(max-width: 680px)' srcSet={mobile} />
             <img
               {...rest}
-              style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </picture>
         </div>
@@ -79,7 +79,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <RoundedButton>
+        <RoundedButton href='/about-me'>
           <p>About me</p>
         </RoundedButton>
       </section>
@@ -109,7 +109,7 @@ export default function Home() {
             Let's work
           </h2>
           <h2>together</h2>
-          <RoundedButton className='contactButton'>
+          <RoundedButton href='/contact' className='contactButton'>
             <p>Get in touch</p>
           </RoundedButton>
         </div>

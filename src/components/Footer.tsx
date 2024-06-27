@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
-        <div className={styles.logoWrapper}>
+        <Link href='/' className={styles.logoWrapper}>
           <Image
             src='/logos/marija-volkman-logo.svg'
             alt='Marija Volkman'
             fill
           />
-        </div>
+        </Link>
       </div>
       <div className={styles.footerBottom}>
         <div className={styles.footerMenu}>
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className={styles.contactInfo}>
           <h4>Contact</h4>
           <div className={styles.innerWrapper}>
-            <a href='https://maps.app.goo.gl/fgnxdamRC3pRDR9h7'>
+            <a href='https://maps.app.goo.gl/fgnxdamRC3pRDR9h7' target='_blank'>
               700 N San Vicente Blvd,
               <br />
               Los Angeles
@@ -46,7 +46,9 @@ const Footer = () => {
           <ul>
             {socials.map((social, index) => (
               <li key={`socialLink_${index}`}>
-                <a href={social.href}>{social.title}</a>
+                <a href={social.href} target='_blank'>
+                  {social.title}
+                </a>
               </li>
             ))}
           </ul>

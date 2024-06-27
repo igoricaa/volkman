@@ -71,13 +71,27 @@ h6 {
   font-size: 1.5rem;
 }
 
+.main {
+  padding: 19rem var(--padding-side) 13rem;
+}
+
 @media screen and (max-width: 1024px) {
-  
+  :root {
+    --padding-side: 4rem;
+  }
+
+  .main {
+    padding: 13.5rem var(--padding-side) 9rem;
+  }
 }
 
 @media screen and (max-width: 680px) {
   :root {
     --padding-side: 1.25rem;
+  }
+
+  .main {
+    padding: 7.5rem var(--padding-side) 3rem;
   }
 }
 

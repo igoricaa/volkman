@@ -1,13 +1,17 @@
 'use client';
-import { useEffect, useState } from 'react';
+
+import { useEffect, useRef, useState } from 'react';
 import styles from './Projects.module.scss';
 import Project from './Project';
 import ProjectModal from './modal/ProjectModal';
 import { projects } from '@/data/data';
-import Image from 'next/image';
+import { useInView } from 'framer-motion';
+import MobileProjects from './MobileProjects';
 
 const Projects = () => {
   const [isDesktop, setIsDesktop] = useState(false);
+  const projectsRef = useRef(null);
+  const isInView = useInView(projectsRef, { once: true });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -15,7 +19,11 @@ const Projects = () => {
     }
   }, [isDesktop]);
 
-  return isDesktop ? <DesktopProjects /> : <MobileProjects />;
+  return (
+    <div ref={projectsRef}>
+      {isInView ? isDesktop ? <DesktopProjects /> : <MobileProjects /> : null}
+    </div>
+  );
 };
 
 export default Projects;
@@ -40,28 +48,5 @@ const DesktopProjects = () => {
       </div>
       <ProjectModal modal={modal} projects={projects} />
     </>
-  );
-};
-
-const MobileProjects = () => {
-  return (
-    <div className={styles.projects}>
-      {projects.map((project, index) => {
-        return (
-          <article key={`project_${index}`}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src={`/projects/${project.src}`}
-                alt={project.title}
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <h3>{project.title}</h3>
-            <p>{project.category}</p>
-          </article>
-        );
-      })}
-    </div>
   );
 };

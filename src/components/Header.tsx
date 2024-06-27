@@ -1,21 +1,20 @@
 import Image from 'next/image';
 import Navigation from './nav/Navigation';
 import styles from './Header.module.scss';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logoWrapper}>
+      <Link href='/' className={styles.logoWrapper}>
         <Image
           src='/logos/marija-volkman-logo.svg'
           alt='Marija Volkman'
-          // width={243}
-          // height={44}
           style={{ objectFit: 'cover' }}
           fill
           priority
         />
-      </div>
+      </Link>
 
       <Navigation />
     </header>

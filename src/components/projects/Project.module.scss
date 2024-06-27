@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 7rem 6.25rem 6rem;
-  border-top: 1px solid rgba(201, 201, 201);
+  border-top: 1px solid #fff;
   cursor: pointer;
   transition: all 0.2s;
 
@@ -13,18 +13,18 @@
   }
 
   &:last-of-type {
-    border-bottom: 1px solid rgba(201, 201, 201);
+    border-bottom: 1px solid #fff;
   }
 
   &:hover {
     h2 {
       transform: translateX(-10px);
-      color: rgba(255, 255, 255, 0.3);
+      color: #fff;
     }
 
     p {
       transform: translateX(10px);
-      color: rgba(255, 255, 255, 0.3);
+      color: #fff;
     }
   }
 
