@@ -1,0 +1,52 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minMax(0, 1fr));
+  row-gap: 3rem;
+  column-gap: 2.5rem;
+
+  .project {
+    .imageWrapper {
+      position: relative;
+      aspect-ratio: 767 / 513;
+    }
+
+    .infoWrapper {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      h2 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.cursor,
+.cursorLabel {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #0f0f0f;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.cursorLabel {
+  background-color: transparent;
+}

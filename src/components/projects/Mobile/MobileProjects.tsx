@@ -1,6 +1,6 @@
 import { projects } from '@/data/data';
 import Image from 'next/image';
-import styles from './Projects.module.scss';
+import styles from './MobileProjects.module.scss';
 
 const MobileProjects = () => {
   return (

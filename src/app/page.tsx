@@ -89,9 +89,9 @@ export default function Home() {
         <Projects />
       </section>
 
-      {/* <section>
+      <section>
         <ScrollAnimation />
-      </section> */}
+      </section>
 
       <AwardsSection />
 

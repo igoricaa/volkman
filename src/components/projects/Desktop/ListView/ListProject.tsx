@@ -1,4 +1,4 @@
-import styles from './Project.module.scss';
+import styles from '../../SingleProject.module.scss';
 
 type Project = {
   index: number;
@@ -7,7 +7,7 @@ type Project = {
   setModal: Function;
 };
 
-const Project = ({ index, title, category, setModal }: Project) => {
+const ListProject = ({ index, title, category, setModal }: Project) => {
   return (
     <article
       onMouseEnter={() => {
@@ -24,4 +24,4 @@ const Project = ({ index, title, category, setModal }: Project) => {
   );
 };
 
-export default Project;
+export default ListProject;

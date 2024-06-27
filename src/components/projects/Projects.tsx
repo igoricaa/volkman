@@ -1,14 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import styles from './Projects.module.scss';
-import Project from './Project';
-import ProjectModal from './modal/ProjectModal';
-import { projects } from '@/data/data';
 import { useInView } from 'framer-motion';
-import MobileProjects from './MobileProjects';
+import MobileProjects from './Mobile/MobileProjects';
+import DesktopProjects from './Desktop/DesktopProjects';
+import { ProjectsView } from '@/data/data';
 
-const Projects = () => {
+const Projects = ({ view }: { view?: ProjectsView }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const projectsRef = useRef(null);
   const isInView = useInView(projectsRef, { once: true });
@@ -20,33 +18,23 @@ const Projects = () => {
   }, [isDesktop]);
 
   return (
-    <div ref={projectsRef}>
-      {isInView ? isDesktop ? <DesktopProjects /> : <MobileProjects /> : null}
+    <div
+      ref={projectsRef}
+      style={
+        view === 'list'
+          ? { borderTop: '1px solid #fff' }
+          : { borderBottom: 'none' }
+      }
+    >
+      {isInView ? (
+        isDesktop ? (
+          <DesktopProjects view={view!} />
+        ) : (
+          <MobileProjects />
+        )
+      ) : null}
     </div>
   );
 };
 
 export default Projects;
-
-const DesktopProjects = () => {
-  const [modal, setModal] = useState({ active: false, index: 0 });
-
-  return (
-    <>
-      <div className={styles.projects}>
-        {projects.map((project, index) => {
-          return (
-            <Project
-              key={`project_${index}`}
-              index={index}
-              title={project.title}
-              category={project.category}
-              setModal={setModal}
-            />
-          );
-        })}
-      </div>
-      <ProjectModal modal={modal} projects={projects} />
-    </>
-  );
-};
