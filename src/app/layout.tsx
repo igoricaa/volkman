@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import '../styles/globals.scss';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BackToTopButton from '@/components/BackToTopButton';
 
 const gilroy = localFont({
   src: [
@@ -45,6 +46,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
         <Header />
+        <BackToTopButton />
         {children}
         <Footer />
       </body>
