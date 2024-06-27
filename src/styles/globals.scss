@@ -5,7 +5,7 @@
 
   --padding-left: 6rem;
   --padding-right: 6rem;
-  --padding-side: 6rem;
+  --padding-side: 8.85vw;
   --color-main: #eebf9e;
 }
 
@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 *,
 *::after,
 *::before {
@@ -46,7 +50,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  line-height: 1;
+  // line-height: 1;
 }
 
 h1 {

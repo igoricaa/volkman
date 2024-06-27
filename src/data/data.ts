@@ -91,3 +91,18 @@ export const awards = [
     year: '2010',
   },
 ];
+
+export const socials = [
+  {
+    title: 'Instagram',
+    href: 'https://www.instagram.com/marijavolkman/',
+  },
+  {
+    title: 'Facebook',
+    href: 'https://www.facebook.com/marija.volkman',
+  },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/marija-volkman-0a8b5b1a/',
+  },
+];

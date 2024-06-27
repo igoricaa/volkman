@@ -1,15 +1,11 @@
 'use client';
 
-const CopyButton = () => {
+const CopyButton = ({ text }: { text: string }) => {
   const copyToClipboard = async (text: any) => {
     navigator.clipboard.writeText(text);
   };
 
-  return (
-    <button onClick={() => copyToClipboard('volkmanm@archicraft.co')}>
-      volkmanm@archicraft.co
-    </button>
-  );
+  return <button onClick={() => copyToClipboard(text)}>{text}</button>;
 };
 
 export default CopyButton;

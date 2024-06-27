@@ -96,9 +96,9 @@ export default function Home() {
           </RoundedButton>
         </div>
         <div className={styles.contactInfoWrapper}>
-          <CopyButton />
+          <CopyButton text='volkmanm@archicraft.co' />
           <p>
-            <a href='tel:0018184581762'>+18184581762</a>
+            <a href='tel:0018184581762'>+1 818 458 1762</a>
           </p>
         </div>
       </section>

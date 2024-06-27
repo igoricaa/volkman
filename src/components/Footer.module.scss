@@ -1,0 +1,70 @@
+.footer {
+  padding: 3.5rem var(--padding-side) 15rem;
+
+  * {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .footerTop {
+    padding-bottom: 6rem;
+  }
+
+  .footerBottom {
+    display: flex;
+    justify-content: space-between  ;
+
+    .footerMenu {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h4 {
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+
+      .innerWrapper {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          background-color: transparent;
+          outline: none;
+          border: none;
+          color: #fff;
+          font-family: var(--font-gilroy);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .socialsWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30%;
+
+      * {
+        text-transform: uppercase;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+    }
+  }
+}
