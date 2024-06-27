@@ -49,3 +49,45 @@ export const projects = [
     src: 'andjela-zivic.jpeg',
   },
 ];
+
+export const awards = [
+  {
+    title: 'CZECH INSTITUTE OF DESIGN',
+    context:
+      'Interior of the Year - Public Spaces for Masarycka Restaurant awarded by Institute of Design, Czech Republic',
+    year: '2021',
+  },
+  {
+    title: 'AMERICAN INSTITUTE OF ARCHITECT',
+    context: 'AIA LA RESTAURANT AWARDS HONOR AWARD for Masarycka Restaurant',
+    year: '2022',
+  },
+  {
+    title: 'BIG SEE',
+    context: 'BIG SEE Interior Design Award - Winner for Motorcycle Loft',
+    year: '2021',
+  },
+  {
+    title: 'AMERICAN INSTITUTE OF ARCHITECT',
+    context: 'AIA LA NEXT AWARDS HONOR AWARD for Embassy of the Czech Republic',
+    year: '2010',
+  },
+  {
+    title: 'AMERICAN INSTITUTE OF ARCHITECT',
+    context:
+      'AIA LA NEXT AWARDS BEST IN SHOW for Embassy of the Czech Republic',
+    year: '2010',
+  },
+  {
+    title: 'LOS ANGELES BUSINESS COUNCIL',
+    context:
+      'Renovation Award for Commercial project Indian Paintbrush Productions',
+    year: '2012',
+  },
+  {
+    title: 'CHAMBER OF ARCHITECTS CZECH REPUBLIC',
+    context:
+      'Grand Prix - National Architecture Award for Czech Republic for Residential Multifamily project Central Park Prague',
+    year: '2010',
+  },
+];

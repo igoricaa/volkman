@@ -1,0 +1,82 @@
+.awardsSection {
+  padding: 2.5rem 11rem 0;
+  margin-top: -10rem;
+
+  .gridHeader {
+    display: flex;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding-bottom: 1.5rem;
+
+    .sectiontitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+
+      &:first-child {
+        width: 48%;
+      }
+
+      &:nth-child(2) {
+        width: 44%;
+      }
+      &:last-child {
+        width: 8%;
+        text-align: right;
+      }
+    }
+  }
+
+  .awardsWrapper {
+    display: flex;
+    padding: 2.5rem 0;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+
+    div {
+      display: flex;
+
+      &:first-of-type {
+        width: 48%;
+
+        p {
+          font-size: 3rem;
+          font-weight: 500;
+          max-width: 80%;
+          text-transform: uppercase;
+        }
+      }
+
+      &:nth-of-type(2) {
+        width: 35%;
+
+        p {
+          max-width: 80%;
+        }
+      }
+
+      &:last-of-type {
+        width: 17%;
+        justify-content: end;
+      }
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.3s ease;
+      }
+    }
+
+    &:hover {
+      div {
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

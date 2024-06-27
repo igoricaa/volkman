@@ -2,10 +2,16 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import styles from './Button.module.scss';
+import styles from './RoundedButton.module.scss';
 import Magnetic from '../Magnetic/Magnetic';
 
-const Button = ({ children }: { children: any }) => {
+const RoundedButton = ({
+  children,
+  className,
+}: {
+  children: any;
+  className?: any;
+}) => {
   const circle = useRef<HTMLDivElement>(null);
   let timeline = useRef(gsap.timeline());
   let timeoutId: any = null;
@@ -40,7 +46,7 @@ const Button = ({ children }: { children: any }) => {
   return (
     <Magnetic>
       <div
-        className={styles.roundedButton}
+        className={[styles.roundedButton, styles[className]].join(' ')}
         style={{ overflow: 'hidden' }}
         onMouseEnter={() => manageMouseEnter()}
         onMouseLeave={() => manageMouseLeave()}
@@ -52,4 +58,4 @@ const Button = ({ children }: { children: any }) => {
   );
 };
 
-export default Button;
+export default RoundedButton;

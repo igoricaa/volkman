@@ -9,8 +9,8 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  top: 80%;
-  left: calc(100% - 340px);
+  bottom: 0;
+  left: calc(100% - 570px);
 
   p {
     color: #1f1f1f;
@@ -26,6 +26,11 @@
       color: white;
     }
   }
+}
+
+.contactButton {
+  top: calc(100% - 115px);
+  left: calc(100% - 399px);
 }
 
 .circle {
