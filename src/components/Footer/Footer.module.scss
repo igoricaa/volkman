@@ -21,18 +21,6 @@
     display: flex;
     justify-content: space-between;
 
-    .footerMenu {
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-
-        li {
-          text-transform: uppercase;
-        }
-      }
-    }
-
     .contactInfo {
       display: flex;
       flex-direction: column;

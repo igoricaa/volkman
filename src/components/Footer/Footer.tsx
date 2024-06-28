@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
-import { routes, socials } from '@/data/data';
+import { socials } from '@/data/data';
 import Link from 'next/link';
-import CopyButton from './common/CopyButton/CopyButton';
+import CopyButton from '../common/CopyButton/CopyButton';
+import MenuFooter from './MenuFooter';
 
 const Footer = () => {
   return (
@@ -17,17 +18,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className={styles.footerBottom}>
-        <div className={styles.footerMenu}>
-          <ul>
-            {routes.map((route, index) => {
-              return (
-                <li key={`footerLink_${index}`}>
-                  <Link href={route.href}>{route.title}</Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <MenuFooter />
         <div className={styles.contactInfo}>
           <h4>Contact</h4>
           <div className={styles.innerWrapper}>

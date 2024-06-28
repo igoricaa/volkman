@@ -12,7 +12,10 @@ const DesktopMenu = () => {
         {routes.map((route, index) => (
           <li
             key={index}
-            className={pathname == route.href ? styles.active : ''}
+            className={[
+              pathname === route.href ? styles.active : '',
+              route.href === '/contact' ? styles.contact : '',
+            ].join(' ')}
           >
             <Link href={route.href}>{route.title}</Link>
           </li>
