@@ -37,7 +37,7 @@ const Footer = () => {
               Los Angeles
             </a>
             <a href='tel:0018184581762'>+1 818 458 1762</a>
-            <CopyButton text='volkmanm@archicraft.co' />
+            <CopyButton text='volkmanm@archicraft.co' clean />
           </div>
         </div>
 

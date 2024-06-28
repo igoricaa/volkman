@@ -2,9 +2,10 @@ import Image, { getImageProps } from 'next/image';
 import styles from './page.module.scss';
 import Projects from '@/components/projects/Projects';
 import ScrollAnimation from '@/components/scrollAnimation/ScrollAnimation';
-import RoundedButton from '@/components/common/RoundedButton/RoundedButton';
+
 import AwardsSection from '@/components/awards/AwardsSection';
 import CopyButton from '@/components/common/CopyButton/CopyButton';
+import Button from '@/components/common/Button/Button';
 
 export default function Home() {
   const common = {
@@ -79,9 +80,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <RoundedButton href='/about-me'>
+        <Button href='/about-me' classes={['roundedButton']}>
           <p>About me</p>
-        </RoundedButton>
+        </Button>
       </section>
 
       <section className={[styles.section, styles.workSection].join(' ')}>
@@ -89,9 +90,9 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section>
+      {/* <section>
         <ScrollAnimation />
-      </section>
+      </section> */}
 
       <AwardsSection />
 
@@ -109,13 +110,18 @@ export default function Home() {
             Let's work
           </h2>
           <h2>together</h2>
-          <RoundedButton href='/contact' className='contactButton'>
+          <Button href='/contact' classes={['contactButton', 'roundedButton']}>
             <p>Get in touch</p>
-          </RoundedButton>
+          </Button>
         </div>
         <div className={styles.contactInfoWrapper}>
-          <CopyButton text='volkmanm@archicraft.co' />
-          <a href='tel:0018184581762'>+1 818 458 1762</a>
+          <CopyButton
+            text='volkmanm@archicraft.co'
+            classes={['contactInfoButton']}
+          />
+          <Button href='tel:0018184581762' classes={['contactInfoButton']}>
+            <p>+1 818 458 1762</p>
+          </Button>
         </div>
       </section>
     </main>
