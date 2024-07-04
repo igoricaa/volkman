@@ -1,11 +1,11 @@
-import Image, { getImageProps } from 'next/image';
+import { getImageProps } from 'next/image';
 import styles from './page.module.scss';
 import Projects from '@/components/projects/Projects';
 import ScrollAnimation from '@/components/scrollAnimation/ScrollAnimation';
 
 import AwardsSection from '@/components/awards/AwardsSection';
-import CopyButton from '@/components/common/CopyButton/CopyButton';
 import Button from '@/components/common/Button/Button';
+import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
   const common = {
@@ -96,33 +96,8 @@ export default function Home() {
 
       <AwardsSection />
 
-      <section className={[styles.section, styles.contactSection].join(' ')}>
-        <h4 className={styles.sectiontitle}>Contact</h4>
-        <div className={styles.innerWrapper}>
-          <h2>
-            <span>
-              <Image
-                src='/home/marija-volkman-rounded.png'
-                alt='Marija Volkman'
-                fill
-              />
-            </span>
-            Let's work
-          </h2>
-          <h2>together</h2>
-          <Button href='/contact' classes={['contactButton', 'roundedButton']}>
-            <p>Get in touch</p>
-          </Button>
-        </div>
-        <div className={styles.contactInfoWrapper}>
-          <CopyButton
-            text='volkmanm@archicraft.co'
-            classes={['contactInfoButton']}
-          />
-          <Button href='tel:0018184581762' classes={['contactInfoButton']}>
-            <p>+1 818 458 1762</p>
-          </Button>
-        </div>
+      <section className={styles.section}>
+        <ContactSection hasTitle />
       </section>
     </main>
   );

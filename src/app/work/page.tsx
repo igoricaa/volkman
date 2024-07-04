@@ -4,6 +4,7 @@ import Projects from '@/components/projects/Projects';
 import styles from './page.module.scss';
 import { useEffect, useState } from 'react';
 import { ProjectsView } from '@/data/data';
+import ContactSection from '@/components/ContactSection';
 
 const Work = () => {
   const [view, setView] = useState<ProjectsView>('list');
@@ -51,6 +52,8 @@ const Work = () => {
         )}
       </div>
       <Projects view={view} />
+
+      <ContactSection />
     </main>
   );
 };
