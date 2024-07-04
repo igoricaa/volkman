@@ -4,6 +4,7 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
+  font-family: var(--font-gilroy);
 
   p {
     transition: color 0.4s linear;
@@ -29,7 +30,7 @@
   }
 }
 
-.contactButton {
+.centered {
   top: calc(100% - 115px);
   left: calc(100% - 399px);
 }
@@ -42,7 +43,6 @@
   border-radius: 3rem;
   color: #fff;
   background-color: transparent;
-  font-family: var(--font-gilroy);
   cursor: pointer;
 
   &:hover {
@@ -76,7 +76,7 @@
     }
   }
 
-  .contactButton {
+  .centered {
     margin-top: 1rem;
   }
 }

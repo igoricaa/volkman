@@ -1,0 +1,35 @@
+.pageHeader {
+  padding-bottom: 9.5rem;
+  padding-left: 2.65vw;
+
+  h1 {
+    font-size: 4.5rem;
+    max-width: 35rem;
+    margin-bottom: 10rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pageHeader {
+    padding-bottom: 4rem;
+    padding-left: 0;
+
+    h1 {
+      font-size: 3.5rem;
+      max-width: 28rem;
+      margin-bottom: 7.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .pageHeader {
+    padding-bottom: 2.5rem;
+
+    h1 {
+      font-size: 2.75rem;
+      max-width: 22rem;
+      margin-bottom: 5rem;
+    }
+  }
+}

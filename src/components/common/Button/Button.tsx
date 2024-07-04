@@ -11,11 +11,13 @@ const Button = ({
   href,
   classes,
   onClick,
+  type,
 }: {
   children: any;
   href?: string;
   classes?: string[];
   onClick?: () => void;
+  type?: string;
 }) => {
   const circle = useRef<HTMLDivElement>(null);
   let timeline = useRef(gsap.timeline());
@@ -64,6 +66,20 @@ const Button = ({
           {children}
           <div ref={circle} className={styles.circle}></div>
         </Link>
+      ) : type === 'submit' ? (
+        <button
+          type='submit'
+          className={[
+            styles.button,
+            classes?.map((c: string) => styles[c]).join(' '),
+          ].join(' ')}
+          style={{ overflow: 'hidden' }}
+          onMouseEnter={() => manageMouseEnter()}
+          onMouseLeave={() => manageMouseLeave()}
+        >
+          {children}
+          <div ref={circle} className={styles.circle}></div>
+        </button>
       ) : (
         <button
           onClick={onClick}
