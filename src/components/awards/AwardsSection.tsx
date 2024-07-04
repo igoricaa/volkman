@@ -12,7 +12,7 @@ const AwardsSection = () => {
 
       {awards.map((award, index) => {
         return (
-          <article key={`awards_${index}`} className={styles.awardsWrapper}>
+          <article key={`awards_${index}`} className={styles.awardWrapper}>
             <div>
               <p>{award.title}</p>
             </div>
