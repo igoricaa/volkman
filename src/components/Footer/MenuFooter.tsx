@@ -3,7 +3,7 @@
 import { routes } from '@/data/data';
 import styles from './MenuFooter.module.scss';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import TransitionLink from '../PageTransition/TransitionLink/TransitionLink';
 
 const MenuFooter = () => {
   const pathname = usePathname();
@@ -17,7 +17,7 @@ const MenuFooter = () => {
               key={`footerLink_${index}`}
               className={pathname === route.href ? styles.active : ''}
             >
-              <Link href={route.href}>{route.title}</Link>
+              <TransitionLink href={route.href}>{route.title}</TransitionLink>
             </li>
           );
         })}

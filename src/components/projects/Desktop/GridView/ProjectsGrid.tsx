@@ -1,10 +1,10 @@
 import { projects } from '@/data/data';
 import styles from './ProjectsGrid.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
 
 const ProjectsGrid = () => {
   const cursor = useRef(null);
@@ -70,7 +70,7 @@ const ProjectsGrid = () => {
               onMouseEnter={() => setActive(true)}
               onMouseLeave={() => setActive(false)}
             >
-              <Link href={`/projects/${project.href}`}>
+              <TransitionLink href={`/projects/${project.href}`}>
                 <div className={styles.imageWrapper}>
                   <Image
                     src={`/projects/${project.src}`}
@@ -83,7 +83,7 @@ const ProjectsGrid = () => {
                   <h2>{project.title}</h2>
                   <p>{project.category}</p>
                 </div>
-              </Link>
+              </TransitionLink>
             </article>
           );
         })}

@@ -2,7 +2,6 @@ import { getImageProps } from 'next/image';
 import styles from './page.module.scss';
 import Projects from '@/components/projects/Projects';
 import ScrollAnimation from '@/components/scrollAnimation/ScrollAnimation';
-
 import AwardsSection from '@/components/awards/AwardsSection';
 import Button from '@/components/common/Button/Button';
 import ContactSection from '@/components/ContactSection';
@@ -80,7 +79,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Button href='/about-me' classes={['roundedButton']}>
+        <Button href='/about-me' classes={['roundedButton']} isLink>
           <p>About me</p>
         </Button>
       </section>

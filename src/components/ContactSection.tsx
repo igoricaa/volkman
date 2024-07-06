@@ -30,7 +30,7 @@ const ContactSection = ({
           Let's work
         </h2>
         <h2>together</h2>
-        <Button href='/contact' classes={['roundedButton', 'centered']}>
+        <Button href='/contact' classes={['roundedButton', 'centered']} isLink>
           <p>Get in touch</p>
         </Button>
       </div>

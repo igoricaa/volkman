@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { ButtonHTMLAttributes, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import styles from './Button.module.scss';
 import Magnetic from '../Magnetic/Magnetic';
+import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
 import Link from 'next/link';
 
 const Button = ({
@@ -12,12 +13,14 @@ const Button = ({
   classes,
   onClick,
   type,
+  isLink,
 }: {
   children: any;
   href?: string;
   classes?: string[];
   onClick?: () => void;
-  type?: string;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+  isLink?: boolean;
 }) => {
   const circle = useRef<HTMLDivElement>(null);
   let timeline = useRef(gsap.timeline());
@@ -53,35 +56,39 @@ const Button = ({
   return (
     <Magnetic>
       {href ? (
-        <Link
-          href={href}
-          className={[
-            styles.button,
-            classes?.map((c: string) => styles[c]).join(' '),
-          ].join(' ')}
-          style={{ overflow: 'hidden' }}
-          onMouseEnter={() => manageMouseEnter()}
-          onMouseLeave={() => manageMouseLeave()}
-        >
-          {children}
-          <div ref={circle} className={styles.circle}></div>
-        </Link>
-      ) : type === 'submit' ? (
-        <button
-          type='submit'
-          className={[
-            styles.button,
-            classes?.map((c: string) => styles[c]).join(' '),
-          ].join(' ')}
-          style={{ overflow: 'hidden' }}
-          onMouseEnter={() => manageMouseEnter()}
-          onMouseLeave={() => manageMouseLeave()}
-        >
-          {children}
-          <div ref={circle} className={styles.circle}></div>
-        </button>
+        isLink ? (
+          <div
+            className={[
+              styles.button,
+              classes?.map((c: string) => styles[c]).join(' '),
+            ].join(' ')}
+            style={{ overflow: 'hidden' }}
+            onMouseEnter={() => manageMouseEnter()}
+            onMouseLeave={() => manageMouseLeave()}
+          >
+            <TransitionLink href={href} classes='fill'>
+              {children}
+            </TransitionLink>
+            <div ref={circle} className={styles.circle}></div>
+          </div>
+        ) : (
+          <Link
+            href={href}
+            className={[
+              styles.button,
+              classes?.map((c: string) => styles[c]).join(' '),
+            ].join(' ')}
+            style={{ overflow: 'hidden' }}
+            onMouseEnter={() => manageMouseEnter()}
+            onMouseLeave={() => manageMouseLeave()}
+          >
+            {children}
+            <div ref={circle} className={styles.circle}></div>
+          </Link>
+        )
       ) : (
         <button
+          type={type || 'button'}
           onClick={onClick}
           className={[
             styles.button,

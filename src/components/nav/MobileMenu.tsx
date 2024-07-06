@@ -3,8 +3,8 @@ import { routes } from '@/data/data';
 
 import styles from './MobileMenu.module.scss';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import TransitionLink from '../PageTransition/TransitionLink/TransitionLink';
 
 const MobileMenu = () => {
   const pathname = usePathname();
@@ -67,12 +67,12 @@ const MobileMenu = () => {
                   key={index}
                   className={pathname == route.href ? styles.active : ''}
                 >
-                  <Link
+                  <TransitionLink
                     href={route.href}
                     onClick={() => setMenuOpen(!menuOpen)}
                   >
                     {route.title}
-                  </Link>
+                  </TransitionLink>
                 </li>
               ))}
             </ul>

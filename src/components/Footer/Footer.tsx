@@ -1,21 +1,23 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import { socials } from '@/data/data';
-import Link from 'next/link';
 import CopyButton from '../common/CopyButton/CopyButton';
 import MenuFooter from './MenuFooter';
+import TransitionLink from '../PageTransition/TransitionLink/TransitionLink';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
-        <Link href='/' className={styles.logoWrapper}>
-          <Image
-            src='/logos/marija-volkman-logo.svg'
-            alt='Marija Volkman'
-            fill
-          />
-        </Link>
+        <TransitionLink href='/'>
+          <div className={styles.logoWrapper}>
+            <Image
+              src='/logos/marija-volkman-logo.svg'
+              alt='Marija Volkman'
+              fill
+            />
+          </div>
+        </TransitionLink>
       </div>
       <div className={styles.footerBottom}>
         <MenuFooter />

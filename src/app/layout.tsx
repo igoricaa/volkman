@@ -4,6 +4,7 @@ import '../styles/globals.scss';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer/Footer';
 import BackToTopButton from '@/components/BackToTopButton';
+import SplashScreen from '@/components/PageTransition/SplashScreen/SplashScreen';
 
 const gilroy = localFont({
   src: [
@@ -41,11 +42,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     //suppressHydrationWarning
     <html lang='en'>
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
+        <SplashScreen />
         <Header />
         <BackToTopButton />
         {children}

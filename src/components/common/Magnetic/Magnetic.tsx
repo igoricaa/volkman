@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 
 const Magnetic = ({ children }: { children: any }) => {
-  const magnetic = useRef<HTMLDivElement>(null);
+  const magnetic = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const xTo = gsap.quickTo(magnetic.current, 'x', {
@@ -25,7 +25,7 @@ const Magnetic = ({ children }: { children: any }) => {
       yTo(y * 0.35);
     });
 
-    magnetic.current!.addEventListener('mouseleave', (e) => {
+    magnetic.current?.addEventListener('mouseleave', (e) => {
       xTo(0);
       yTo(0);
     });

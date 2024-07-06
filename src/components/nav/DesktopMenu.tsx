@@ -1,7 +1,7 @@
 import { routes } from '@/data/data';
 import styles from './DesktopMenu.module.scss';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import TransitionLink from '../PageTransition/TransitionLink/TransitionLink';
 
 const DesktopMenu = () => {
   const pathname = usePathname();
@@ -17,7 +17,7 @@ const DesktopMenu = () => {
               route.href === '/contact' ? styles.contact : '',
             ].join(' ')}
           >
-            <Link href={route.href}>{route.title}</Link>
+            <TransitionLink href={route.href}>{route.title}</TransitionLink>
           </li>
         ))}
       </ul>
