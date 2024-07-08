@@ -1,16 +1,16 @@
 'use client';
 
 export * from 'lenis/react';
-import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import styles from './ConnectedGrid.module.scss';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ConnectedGrid() {
-  useEffect(() => {
+  useGSAP(() => {
     const gridItems = document.querySelectorAll(`.${styles.gridItem}`);
 
     const initSmoothScrolling = () => {
@@ -30,9 +30,6 @@ export default function ConnectedGrid() {
     };
 
     const scroll = () => {
-      const viewportHeight = window.innerHeight;
-      const endValue = viewportHeight / 2;
-
       gridItems.forEach((item, index) => {
         const previousElementSibling = item.previousElementSibling;
         const isLeftSide =
@@ -92,12 +89,9 @@ export default function ConnectedGrid() {
       });
     };
 
-    // preloadImages('.grid__item-img-inner').then(() => {
     initSmoothScrolling();
     scroll();
-    // document.body.classList.remove('loading');
-    // });
-  }, []);
+  });
 
   return (
     <div className={styles.grid}>

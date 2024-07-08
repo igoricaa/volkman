@@ -2,9 +2,10 @@ import { projects } from '@/data/data';
 import styles from './ProjectsGrid.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
+import { useGSAP } from '@gsap/react';
 
 const ProjectsGrid = () => {
   const cursor = useRef(null);
@@ -27,7 +28,7 @@ const ProjectsGrid = () => {
     },
   };
 
-  useEffect(() => {
+  useGSAP(() => {
     let xMoveCursor = gsap.quickTo(cursor.current, 'left', {
       duration: 0.5,
       ease: 'power3',
@@ -70,7 +71,7 @@ const ProjectsGrid = () => {
               onMouseEnter={() => setActive(true)}
               onMouseLeave={() => setActive(false)}
             >
-              <TransitionLink href={`/projects/${project.href}`}>
+              <TransitionLink href={`/projects/${project.slug}`}>
                 <div className={styles.imageWrapper}>
                   <Image
                     src={`/projects/${project.src}`}

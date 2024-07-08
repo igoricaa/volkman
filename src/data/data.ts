@@ -20,37 +20,37 @@ export const routes = [
 export const projects = [
   {
     title: 'C2 Montreal',
-    href: '/projects/c2-montreal',
+    slug: 'c2-montreal',
     category: 'Design & Development',
     src: 'igor-stanisavljevic.jpg',
   },
   {
     title: 'Office Studio',
-    href: '/projects/c2-montreal',
+    slug: 'c2-montreal',
     category: 'Design & Development',
     src: 'jelena-ristic.jpg',
   },
   {
     title: 'Locomotive',
-    href: '/projects/c2-montreal',
+    slug: 'c2-montreal',
     category: 'Design & Development',
     src: 'djordje-cetkovic.jpg',
   },
   {
     title: 'Silencio',
-    href: '/projects/c2-montreal',
+    slug: 'c2-montreal',
     category: 'Design & Development',
     src: 'dea-krzelj.jpeg',
   },
   {
     title: 'Locomotive',
-    href: '/projects/c2-montreal',
+    slug: 'c2-montreal',
     category: 'Design & Development',
     src: 'darja-babovic.jpg',
   },
   {
     title: 'Silencio',
-    href: '/projects/c2-montreal',
+    slug: 'c2-montreal',
     category: 'Design & Development',
     src: 'andjela-zivic.jpeg',
   },

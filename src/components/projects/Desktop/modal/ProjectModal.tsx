@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import styles from './ProjectModal.module.scss';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
+import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
+import { useGSAP } from '@gsap/react';
 
 type ProjectModal = {
   modal: {
@@ -11,6 +13,7 @@ type ProjectModal = {
   };
   projects: {
     title: string;
+    slug: string;
     src: string;
   }[];
 };
@@ -36,7 +39,7 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     let xMoveContainer = gsap.quickTo(modalContainer.current, 'left', {
       duration: 0.8,
       ease: 'power3',
@@ -79,7 +82,7 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
       xMoveCursorLabel(pageX);
       yMoveCursorLabel(pageY);
     });
-  });
+  }, []);
 
   const { active, index } = modal;
 
@@ -109,6 +112,7 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
           })}
         </div>
       </motion.div>
+
       <motion.div
         ref={cursor}
         className={styles.cursor}
@@ -123,7 +127,9 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
         initial='initial'
         animate={active ? 'enter' : 'closed'}
       >
-        View
+        <TransitionLink href={`/projects/${projects[index].slug}`}>
+          View
+        </TransitionLink>
       </motion.div>
     </>
   );

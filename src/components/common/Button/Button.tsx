@@ -1,7 +1,8 @@
 'use client';
 
-import { ButtonHTMLAttributes, useEffect, useRef } from 'react';
+import { ButtonHTMLAttributes, useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import styles from './Button.module.scss';
 import Magnetic from '../Magnetic/Magnetic';
 import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
@@ -26,7 +27,7 @@ const Button = ({
   let timeline = useRef(gsap.timeline());
   let timeoutId: any = null;
 
-  useEffect(() => {
+  useGSAP(() => {
     timeline.current = gsap.timeline({ paused: true });
     timeline.current
       .to(
@@ -39,7 +40,7 @@ const Button = ({
         { top: '-150%', width: '125%', duration: 0.25 },
         'exit'
       );
-  }, []);
+  });
 
   const manageMouseEnter = () => {
     if (timeoutId) {
