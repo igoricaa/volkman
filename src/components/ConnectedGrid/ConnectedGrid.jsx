@@ -30,7 +30,7 @@ export default function ConnectedGrid() {
     };
 
     const scroll = () => {
-      gridItems.forEach((item, index) => {
+      gridItems.forEach((item) => {
         const previousElementSibling = item.previousElementSibling;
         const isLeftSide =
           previousElementSibling &&

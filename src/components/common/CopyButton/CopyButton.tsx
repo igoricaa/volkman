@@ -2,6 +2,7 @@
 
 import Button from '../Button/Button';
 import styles from './CopyButton.module.scss';
+import Tooltip from '@/components/Tooltip/Tooltip';
 
 const CopyButton = ({
   text,
@@ -17,11 +18,17 @@ const CopyButton = ({
   };
 
   return clean ? (
-    <button onClick={() => copyToClipboard(text)} className={styles.clean}>{text}</button>
+    <button onClick={() => copyToClipboard(text)} className={styles.clean}>
+      {text}
+    </button>
   ) : (
-    <Button onClick={() => copyToClipboard(text)} classes={classes}>
-      <p>{text}</p>
-    </Button>
+    <>
+      <Tooltip>
+        <Button onClick={() => copyToClipboard(text)} classes={classes}>
+          <p>{text}</p>
+        </Button>
+      </Tooltip>
+    </>
   );
 };
 
