@@ -1,0 +1,49 @@
+.backgroundImageContainer {
+  position: absolute;
+  inset: 50vh 0 0 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+
+  .backgroundImage {
+    width: 132vw;
+    aspect-ratio: 2537 / 1351;
+    position: relative;
+
+    &:first-of-type {
+      opacity: 0.62;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 17.1vw;
+    }
+
+    &:nth-of-type(2) {
+      transform: translateX(-50%);
+    }
+
+    &:nth-of-type(4) {
+      transform: translateX(50%);
+    }
+
+    &:nth-of-type(6) {
+      transform: translateX(-50%);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 680px) {
+  .backgroundImageContainer {
+    .backgroundImage {
+      width: 217vw;
+      aspect-ratio: 931 / 495;
+    }
+  }
+}

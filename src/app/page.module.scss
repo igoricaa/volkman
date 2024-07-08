@@ -5,12 +5,12 @@
   padding: 0 var(--padding-side);
   background: linear-gradient(180deg, rgb(10 10 10 / 0.5) 8%, #fff0 24.5%);
 
-    .heroBgWrapper {
+  .heroBgWrapper {
     position: absolute;
     inset: 0;
     width: 100vw;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
 
     img {
       max-height: 100vh;

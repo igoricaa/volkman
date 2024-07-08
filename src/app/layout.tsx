@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer/Footer';
 import BackToTopButton from '@/components/BackToTopButton';
 import SplashScreen from '@/components/PageTransition/SplashScreen/SplashScreen';
+import BackgroundImage from '@/components/backgroundImage/BackgroundImage';
 
 const gilroy = localFont({
   src: [
@@ -47,6 +48,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
         <SplashScreen />
+        <BackgroundImage />
         <Header />
         <BackToTopButton />
         {children}
