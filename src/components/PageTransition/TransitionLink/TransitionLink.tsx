@@ -13,6 +13,7 @@ interface TransitionLinkProps extends LinkProps {
   classes?: string[] | string | undefined;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  onClick?: () => void;
 }
 
 const TransitionLink = ({
@@ -22,6 +23,7 @@ const TransitionLink = ({
   style,
   onMouseEnter,
   onMouseLeave,
+  onClick,
   ...rest
 }: TransitionLinkProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -106,7 +108,10 @@ const TransitionLink = ({
   return (
     <Link
       href={href}
-      onClick={handleTranstition}
+      onClick={(e) => {
+        onClick && onClick();
+        handleTranstition(e);
+      }}
       className={
         classes instanceof Array
           ? classes?.map((c: string) => styles[c]).join(' ')
