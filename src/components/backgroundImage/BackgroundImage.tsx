@@ -14,10 +14,14 @@ const BackgroundImage = () => {
     const bodyWidth = body!.clientWidth;
     const bodyHeight = body!.clientHeight;
 
-    const imageHeight = (bodyWidth * 1.32) / (2537 / 1351);
+    const isMobile: boolean = window.matchMedia('(max-width: 680px)').matches;
+    const coeff: number = isMobile ? 2.17 : 1.32;
 
-    let numberOfImages = Math.floor(bodyHeight / imageHeight);
+    const imageHeight: number = (bodyWidth * coeff) / (2537 / 1351);
+
+    let numberOfImages: number = Math.floor(bodyHeight / imageHeight);
     if (pathname === '/') numberOfImages++;
+
     setNumberOfImages(numberOfImages);
   }, [pathname]);
 
@@ -28,7 +32,7 @@ const BackgroundImage = () => {
           <Image
             src='/backgroundImg.svg'
             fill
-            objectFit='cover'
+            style={{ objectFit: 'cover' }}
             alt='Marija Volkman'
             priority
           />
