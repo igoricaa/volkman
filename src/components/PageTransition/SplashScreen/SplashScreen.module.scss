@@ -4,28 +4,50 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #1f1f1f;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 
   &.visible {
     opacity: 1;
     visibility: visible;
+
+    .markWrapper,
+    .textLogoWrapper {
+      opacity: 1;
+    }
   }
 
   img {
     display: block;
   }
 
+  .markWrapper,
+  .textLogoWrapper {
+    z-index: 11;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .overlay {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    opacity: 1 !important;
+
+    .overlayPath {
+      fill: #1f1f1f;
+    }
+  }
+
   .markWrapper {
     position: relative;
     width: 153px;
     height: 82px;
+    opacity: 0;
 
     .vWrapper {
       position: relative;
@@ -62,6 +84,7 @@
     justify-content: space-between;
     clip-path: inset(0 100% 0 0);
     animation: animateText 0.5s ease-in-out forwards 3s;
+    opacity: 0;
 
     .firstName {
       position: relative;
