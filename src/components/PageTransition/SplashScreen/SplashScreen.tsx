@@ -10,7 +10,7 @@ const SplashScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setSplashScreenVisibility(false);
-    }, 3000);
+    }, 3500);
   }, []);
 
   return (

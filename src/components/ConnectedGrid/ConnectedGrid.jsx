@@ -7,9 +7,8 @@ import Lenis from 'lenis';
 import styles from './ConnectedGrid.module.scss';
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function ConnectedGrid() {
+  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const gridItems = document.querySelectorAll(`.${styles.gridItem}`);
 

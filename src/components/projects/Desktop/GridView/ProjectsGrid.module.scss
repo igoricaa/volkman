@@ -5,6 +5,8 @@
   column-gap: 2.5rem;
 
   .project {
+    transition: opacity 0.3s ease;
+    
     .imageWrapper {
       position: relative;
       aspect-ratio: 767 / 513;
@@ -26,6 +28,18 @@
         font-size: 1.25rem;
         font-weight: 300;
       }
+    }
+
+    &:hover {
+      opacity: 1;
+
+      & ~ * {
+        opacity: 0.3;
+      }
+    }
+
+    &:has(~ *:hover) {
+      opacity: 0.3;
     }
   }
 }

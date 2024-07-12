@@ -1,5 +1,5 @@
 .footer {
-  padding: 3.5rem var(--padding-side) 15rem;
+  padding: 3.5rem var(--padding-side) 10rem;
 
   * {
     font-size: 1.25rem;
@@ -34,6 +34,7 @@
       .innerWrapper {
         display: flex;
         flex-direction: column;
+        gap: 0.25rem;
       }
     }
 

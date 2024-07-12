@@ -5,6 +5,7 @@
   cursor: pointer;
   position: relative;
   font-family: var(--font-gilroy);
+  border: none;
 
   p {
     transition: color 0.4s linear;
@@ -78,5 +79,11 @@
 
   .centered {
     margin-top: 1rem;
+  }
+
+  .contactInfoButton {
+    font-size: 1rem;
+    padding: 1.25rem 0;
+    width: 100%;
   }
 }

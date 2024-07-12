@@ -32,19 +32,6 @@ const smaugConfig: Map = {
         duration: 100,
       },
     },
-    // trigger: {
-    //   translateX: [
-    //     { value: '-30%', duration: 130, easing: 'easeInQuad' },
-    //     { value: ['30%', '0%'], duration: 900, easing: 'easeOutElastic' },
-    //   ],
-    //   opacity: [
-    //     { value: 0, duration: 130, easing: 'easeInQuad' },
-    //     { value: 1, duration: 130, easing: 'easeOutQuad' },
-    //   ],
-    //   color: [
-    //     { value: '#6fbb95', duration: 1, delay: 130, easing: 'easeOutQuad' },
-    //   ],
-    // },
   },
   out: {
     base: {
@@ -61,19 +48,6 @@ const smaugConfig: Map = {
       rotate: -10,
       opacity: 0,
     },
-    // trigger: {
-    //   translateX: [
-    //     { value: '-30%', duration: 200, easing: 'easeInQuad' },
-    //     { value: ['30%', '0%'], duration: 200, easing: 'easeOutQuad' },
-    //   ],
-    //   opacity: [
-    //     { value: 0, duration: 200, easing: 'easeInQuad' },
-    //     { value: 1, duration: 200, easing: 'easeOutQuad' },
-    //   ],
-    //   color: [
-    //     { value: '#666', duration: 1, delay: 200, easing: 'easeOutQuad' },
-    //   ],
-    // },
   },
 };
 
@@ -167,14 +141,8 @@ const Tooltip = ({ children }: { children: React.ReactNode }) => {
         </span>
       </div>
       <div ref={tooltipBase} className={styles.tooltipBase}>
-        <svg
-          className={styles.tooltipShape}
-          width='100%'
-          height='100%'
-          viewBox='0 0 400 300'
-        >
-          <path d='M 314,100 C 313,100 312,100 311,100 L 89.5,100 C 55.9,100 29.1,121 29.1,150 29.1,178 53.1,201 89.5,201 L 184,201 200,223 217,201 311,201 C 344,201 371,178 371,150 371,122 346,99 314,100 Z' />
-        </svg>
+        <div className={styles.tooltipShape}></div>
+
         <div ref={tooltipContent} className={styles.tooltipContent}>
           {tooltipText}
         </div>

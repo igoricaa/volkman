@@ -26,11 +26,12 @@ const Footer = () => {
           <div className={styles.innerWrapper}>
             <a href='https://maps.app.goo.gl/fgnxdamRC3pRDR9h7' target='_blank'>
               700 N San Vicente Blvd,
-              <br />
+            </a>
+            <a href='https://maps.app.goo.gl/fgnxdamRC3pRDR9h7' target='_blank'>
               Los Angeles
             </a>
             <a href='tel:0018184581762'>+1 818 458 1762</a>
-            <CopyButton text='volkmanm@archicraft.co' clean />
+            <a href='mailto:volkmanm@archicraft.co'>volkmanm@archicraft.co</a>
           </div>
         </div>
 
