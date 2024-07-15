@@ -49,6 +49,10 @@
   appearance: none;
   transition: all 0.3s ease;
 
+  &.mobileBackToTopButton {
+    display: none;
+  }
+
   &:hover {
     p {
       color: #1f1f1f;
@@ -105,5 +109,21 @@
     font-size: 1rem;
     padding: 1.25rem 0;
     width: 100%;
+  }
+
+  .backToTopButton {
+    &.desktopBackToTopButton {
+      display: none;
+    }
+
+    &.mobileBackToTopButton {
+      display: flex;
+      width: 100%;
+      background-color: #fff;
+      
+      p {
+        color: #1f1f1f;
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 import Button from './common/Button/Button';
 
-export default function BackToTopButton() {
+export default function BackToTopButton({ classes }: { classes?: string[] }) {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -11,7 +11,10 @@ export default function BackToTopButton() {
   };
 
   return (
-    <Button classes={['backToTopButton']} onClick={scrollToTop}>
+    <Button
+      classes={['backToTopButton', ...(classes ?? [])]}
+      onClick={scrollToTop}
+    >
       <p>Back to top</p>
     </Button>
   );

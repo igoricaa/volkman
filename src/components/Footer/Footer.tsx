@@ -9,6 +9,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
+        <BackToTopButton classes={['mobileBackToTopButton']} />
         <TransitionLink href='/'>
           <div className={styles.logoWrapper}>
             <Image
@@ -38,7 +39,7 @@ const Footer = () => {
         <div className={styles.socialsWrapper}>
           <div className={styles.innerWrapper}>
             <h4>Social</h4>
-            <BackToTopButton />
+            <BackToTopButton classes={['desktopBackToTopButton']} />
           </div>
           <ul>
             {socials.map((social, index) => (
