@@ -1,11 +1,21 @@
+'use client';
+
 import Image from 'next/image';
 import Navigation from './nav/Navigation';
 import styles from './Header.module.scss';
 import TransitionLink from './PageTransition/TransitionLink/TransitionLink';
+import useScrollDirection from '@/utils/useScrollDirection';
 
 const Header = () => {
+  const scrollDirection = useScrollDirection();
+
   return (
-    <header className={styles.header}>
+    <header
+      className={[
+        styles.header,
+        scrollDirection && styles[scrollDirection],
+      ].join(' ')}
+    >
       <TransitionLink href='/'>
         <div className={styles.logoWrapper}>
           <Image

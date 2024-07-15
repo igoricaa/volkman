@@ -2,11 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6.5rem 5.75rem 2rem;
+  padding: 6.5rem 5.75rem;
   background-color: transparent;
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100vw;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.5) 12%, rgba(255, 255, 255, 0) 100%);
+
+  &.down {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.up {
+    opacity: 1;
+    visibility: visible;
+  }
 
   .logoWrapper {
     position: relative;
