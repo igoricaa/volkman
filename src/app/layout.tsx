@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer/Footer';
 import BackToTopButton from '@/components/BackToTopButton';
 import PageTransition from '@/components/PageTransition/PageTransition';
-import BackgroundImage from '@/components/backgroundImage/BackgroundImage';
+import BackgroundImage from '@/components/BackgroundImage/BackgroundImage';
 import SplashScreen from '@/components/PageTransition/SplashScreen/SplashScreen';
 
 const gilroy = localFont({

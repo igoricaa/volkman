@@ -19,7 +19,8 @@ const BackgroundImage = () => {
 
     const imageHeight: number = (bodyWidth * coeff) / (2537 / 1351);
 
-    let numberOfImages: number = Math.floor(bodyHeight / imageHeight);
+    let numberOfImages: number = Math.ceil(bodyHeight / imageHeight);
+
     if (pathname === '/') numberOfImages++;
 
     setNumberOfImages(numberOfImages);

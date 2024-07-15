@@ -19,16 +19,12 @@
       margin-top: 17.1vw;
     }
 
-    &:nth-of-type(2) {
-      transform: translateX(-50%);
+    &:nth-of-type(2n) {
+      transform: translateX(-46%);
     }
 
-    &:nth-of-type(4) {
+    &:nth-of-type(4n) {
       transform: translateX(50%);
-    }
-
-    &:nth-of-type(6) {
-      transform: translateX(-50%);
     }
 
     svg {
@@ -45,6 +41,16 @@
     .backgroundImage {
       width: 217vw;
       aspect-ratio: 931 / 495;
+
+      &:not(:first-of-type) {
+        margin-top: 17.1vw;
+      }
+      &:nth-of-type(2n) {
+        transform: translateX(-64%);
+      }
+      &:nth-of-type(2n + 1) {
+        transform: translateX(0);
+      }
     }
   }
 }
