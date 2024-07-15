@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import { socials } from '@/data/data';
-import CopyButton from '../common/CopyButton/CopyButton';
 import MenuFooter from './MenuFooter';
 import TransitionLink from '../PageTransition/TransitionLink/TransitionLink';
+import BackToTopButton from '../BackToTopButton';
 
 const Footer = () => {
   return (
@@ -36,7 +36,10 @@ const Footer = () => {
         </div>
 
         <div className={styles.socialsWrapper}>
-          <h4>Social</h4>
+          <div className={styles.innerWrapper}>
+            <h4>Social</h4>
+            <BackToTopButton />
+          </div>
           <ul>
             {socials.map((social, index) => (
               <li key={`socialLink_${index}`}>

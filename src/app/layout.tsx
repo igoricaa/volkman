@@ -3,7 +3,6 @@ import localFont from 'next/font/local';
 import '../styles/globals.scss';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer/Footer';
-import BackToTopButton from '@/components/BackToTopButton';
 import PageTransition from '@/components/PageTransition/PageTransition';
 import BackgroundImage from '@/components/BackgroundImage/BackgroundImage';
 import SplashScreen from '@/components/PageTransition/SplashScreen/SplashScreen';
@@ -61,14 +60,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    //suppressHydrationWarning
     <html lang='en'>
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
         <PageTransition />
         <SplashScreen />
         <BackgroundImage />
         <Header />
-        <BackToTopButton />
         {children}
         <Footer />
       </body>
