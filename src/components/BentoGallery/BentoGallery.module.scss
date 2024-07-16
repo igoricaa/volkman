@@ -23,10 +23,9 @@
       align-content: center;
 
       .galleryItem {
-        background-position: 50% 50%;
-        background-size: cover;
         flex: none;
         border-radius: 6px;
+        overflow: hidden;
         position: relative;
         filter: brightness(1);
 

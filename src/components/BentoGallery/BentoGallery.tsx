@@ -6,6 +6,42 @@ import { Flip } from 'gsap/Flip';
 import Lenis from 'lenis';
 import styles from './BentoGallery.module.scss';
 import { useGSAP } from '@gsap/react';
+import Image from 'next/image';
+
+const galleryPhotos = [
+  {
+    src: '/about-me/gallery/masarycka-restaurant.png',
+    alt: 'Masarycka Restaurant',
+  },
+  {
+    src: '/about-me/gallery/arden-back-yard.png',
+    alt: 'Arden Back Yard',
+  },
+  {
+    src: '/about-me/gallery/marija-volkman-logo.png',
+    alt: 'Marija Volkman Logo',
+  },
+  {
+    src: '/about-me/gallery/exterior.png',
+    alt: 'Exterior',
+  },
+  {
+    src: '/about-me/gallery/wilshire-cafe-view.png',
+    alt: 'Wilshire Cafe View',
+  },
+  {
+    src: '/about-me/gallery/marija-volkman-interior-design-2.png',
+    alt: 'Marija Volkman Interior Design 2',
+  },
+  {
+    src: '/about-me/gallery/arden-family-room.png',
+    alt: 'Arden Family Room',
+  },
+  {
+    src: '/about-me/gallery/marija-volkman-interior-design.png',
+    alt: 'Marija Volkman Interior Design',
+  },
+];
 
 const BentoGallery = () => {
   gsap.registerPlugin(Flip, ScrollTrigger);
@@ -86,38 +122,16 @@ const BentoGallery = () => {
         className={[styles.gallery, styles.galleryBento].join(' ')}
         id='gallery-8'
       >
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/masarycka-restaurant.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/arden-back-yard.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/marija-volkman-logo.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/exterior.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/wilshire-cafe-view.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/marija-volkman-interior-design-2.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/arden-family-room.png)' }}
-        ></div>
-        <div
-          className={styles.galleryItem}
-          style={{ backgroundImage: 'url(about-me/gallery/marija-volkman-interior-design.png)' }}
-        ></div>
+        {galleryPhotos.map((photo, index) => (
+          <div className={styles.galleryItem} key={index}>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+        ))}
         <div className={styles.caption}>Perfect Imperfections</div>
       </div>
     </div>
