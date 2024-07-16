@@ -1,3 +1,5 @@
+'use client';
+
 import { projects } from '@/data/data';
 import styles from './ProjectsGrid.module.scss';
 import Image from 'next/image';
@@ -62,7 +64,7 @@ const ProjectsGrid = () => {
 
   return (
     <>
-      <div className={styles.projects}>
+      <div className={styles.desktopProjects}>
         {projects.map((project, index) => {
           return (
             <article

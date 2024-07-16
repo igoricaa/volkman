@@ -21,9 +21,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      width: 582px;
-      height: 431px;
     }
   }
 }
@@ -47,4 +44,14 @@
 
 .cursorLabel {
   background-color: transparent;
+}
+
+@media screen and (max-width: 680px) {
+  .modalContainer {
+    display: none;
+  }
+  .cursor,
+  .cursorLabel {
+    display: none;
+  }
 }

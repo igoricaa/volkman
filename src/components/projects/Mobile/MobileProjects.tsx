@@ -4,7 +4,7 @@ import styles from './MobileProjects.module.scss';
 
 const MobileProjects = () => {
   return (
-    <div className={styles.projects}>
+    <div className={styles.mobileProjects}>
       {projects.map((project, index) => {
         return (
           <article key={`project_${index}`}>

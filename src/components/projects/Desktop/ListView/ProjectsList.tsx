@@ -1,3 +1,5 @@
+'use client';
+
 import { projects } from '@/data/data';
 import { useState } from 'react';
 import ListProject from './ListProject';
@@ -9,7 +11,7 @@ const ProjectsList = () => {
 
   return (
     <>
-      <div className={[styles.projects].join(' ')}>
+      <div className={[styles.desktopProjects].join(' ')}>
         {projects.map((project, index) => {
           return (
             <ListProject

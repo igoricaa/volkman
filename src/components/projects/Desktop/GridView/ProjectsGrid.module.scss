@@ -1,4 +1,4 @@
-.projects {
+.desktopProjects {
   display: grid;
   grid-template-columns: repeat(2, minMax(0, 1fr));
   row-gap: 3rem;
@@ -6,7 +6,7 @@
 
   .project {
     transition: opacity 0.3s ease;
-    
+
     .imageWrapper {
       position: relative;
       aspect-ratio: 767 / 513;
@@ -63,4 +63,15 @@
 
 .cursorLabel {
   background-color: transparent;
+}
+
+@media screen and (max-width: 680px) {
+  .desktopProjects {
+    display: none;
+  }
+
+  .cursor,
+  .cursorLabel {
+    display: none;
+  }
 }

@@ -103,7 +103,8 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
               <div key={`modal_${index}`} className={styles.modal}>
                 <Image
                   src={`/projects/${src}`}
-                  fill
+                  width={582}
+                  height={431}
                   style={{ objectFit: 'cover' }}
                   alt={title}
                 />
