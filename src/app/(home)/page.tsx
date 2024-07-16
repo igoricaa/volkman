@@ -2,7 +2,7 @@ import { getImageProps } from 'next/image';
 import styles from './page.module.scss';
 import Projects from '@/components/projects/Projects';
 import ScrollAnimation from '@/components/scrollAnimation/ScrollAnimation';
-import AwardsSection from '@/components/awards/AwardsSection';
+import Awards from '@/components/awards/Awards';
 import Button from '@/components/common/Button/Button';
 import ContactSection from '@/components/ContactSection';
 
@@ -93,7 +93,9 @@ export default function Home() {
         <ScrollAnimation />
       </section> */}
 
-      <AwardsSection />
+      <section className={styles.awardsSection}>
+        <Awards />
+      </section>
 
       <section className={styles.section}>
         <ContactSection hasTitle />

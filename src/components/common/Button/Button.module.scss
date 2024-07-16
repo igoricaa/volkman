@@ -31,6 +31,11 @@
   }
 }
 
+.aboutMeButton {
+  top: -2.5rem;
+  left: 69%;
+}
+
 .centered {
   top: calc(100% - 115px);
   left: calc(100% - 399px);
@@ -101,6 +106,10 @@
     }
   }
 
+  .aboutMeButton {
+    left: 50%;
+  }
+
   .centered {
     margin-top: 1rem;
   }
@@ -120,7 +129,7 @@
       display: flex;
       width: 100%;
       background-color: #fff;
-      
+
       p {
         color: #1f1f1f;
       }

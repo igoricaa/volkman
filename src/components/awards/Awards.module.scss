@@ -1,7 +1,4 @@
-.awardsSection {
-  padding: 2.5rem var(--padding-side) 0;
-  margin-top: -10rem;
-
+.awards {
   .gridHeader {
     display: flex;
     border-bottom: 1px solid #fff;
@@ -101,7 +98,7 @@
 }
 
 @media screen and (max-width: 680px) {
-  .awardsSection {
+  .awards {
     margin-top: 0;
 
     .gridHeader {

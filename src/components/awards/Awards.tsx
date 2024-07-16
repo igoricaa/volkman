@@ -1,9 +1,9 @@
 import { awards } from '@/data/data';
-import styles from './AwardsSection.module.scss';
+import styles from './Awards.module.scss';
 
-const AwardsSection = () => {
+const Awards = () => {
   return (
-    <section className={styles.awardsSection}>
+    <div className={styles.awards}>
       <div className={styles.gridHeader}>
         <h2 className={styles.sectiontitle}>Awards and Recognition</h2>
         <p className={styles.sectiontitle}>Context</p>
@@ -25,8 +25,8 @@ const AwardsSection = () => {
           </article>
         );
       })}
-    </section>
+    </div>
   );
 };
 
-export default AwardsSection;
+export default Awards;

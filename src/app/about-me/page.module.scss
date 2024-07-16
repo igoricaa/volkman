@@ -1,0 +1,145 @@
+.pageHeader {
+  padding-bottom: 4.125rem;
+
+  h1 {
+    font-size: 4.5rem;
+    max-width: 35rem;
+  }
+}
+
+.introSection {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 5rem;
+  p {
+    font-weight: 300;
+    font-size: 1.5rem;
+
+    &:last-of-type {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.middleSection {
+  padding: 5.25rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  align-items: center;
+  position: relative;
+
+  .imageWrapper {
+    position: relative;
+    aspect-ratio: 740 / 829;
+    object-fit: cover;
+  }
+
+  .textWrapper {
+    > p {
+      font-weight: 300;
+      font-size: 1.5rem;
+
+      &:last-of-type {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.animatedSection {
+  margin-top: calc(-40vh - 1rem);
+}
+
+.endingSection {
+  padding: 6.5rem 0 4.625rem;
+  margin-top: calc(-40vh - 1rem);
+
+  > p {
+    font-weight: 300;
+    font-size: 1.5rem;
+
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.awardsSection {
+  padding: 2.5rem 3rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .pageHeader {
+    padding-bottom: 4rem;
+    padding-left: 0;
+
+    h1 {
+      font-size: 3.5rem;
+      max-width: 28rem;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .pageHeader {
+    padding-bottom: 3.5rem;
+
+    h1 {
+      font-size: 2.75rem;
+      max-width: 22rem;
+    }
+  }
+
+  .introSection {
+    border-bottom: none;
+    padding-bottom: 0;
+    > p {
+      font-size: 1rem;
+
+      &:last-of-type {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .middleSection {
+    padding: 3.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5rem;
+    align-items: center;
+
+    .imageWrapper {
+      position: relative;
+      aspect-ratio: 386 / 467;
+      object-fit: cover;
+    }
+
+    .textWrapper {
+      > p {
+        font-size: 1rem;
+
+        &:last-of-type {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .endingSection {
+    padding: 2.25rem 0;
+    margin-top: calc(-40vh + 1rem);
+
+    > p {
+      font-size: 1rem;
+
+      &:not(:first-of-type) {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .awardsSection {
+    padding: 0 0 0.5rem;
+  }
+}

@@ -61,6 +61,7 @@
       place-items: center;
       font-size: clamp(2rem, 8vw, 4rem);
       opacity: 0;
+      z-index: 101;
     }
   }
 }
