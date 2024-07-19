@@ -11,12 +11,7 @@ const ContactSection = ({
   hasTitle?: boolean;
 }) => {
   return (
-    <div
-      className={[
-        styles.contactSection,
-        className ? styles[className] : '',
-      ].join(' ')}
-    >
+    <div className={className ? styles[className] : ''}>
       {hasTitle && <h4 className={styles.sectiontitle}>Contact</h4>}
       <div className={styles.innerWrapper}>
         <h2>

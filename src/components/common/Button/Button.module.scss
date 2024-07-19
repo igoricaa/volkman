@@ -103,6 +103,14 @@
   background-color: #fff;
 }
 
+@media screen and (max-width: 1500px) {
+  .aboutMeButton {
+    top: -4.5rem;
+    width: 13vw;
+    height: 13vw;
+  }
+}
+
 @media screen and (max-width: 1024px) {
 }
 

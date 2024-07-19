@@ -100,7 +100,7 @@ export default function Home() {
         <Awards />
       </section>
 
-      <section className={styles.section}>
+      <section className={[styles.section, styles.contactSection].join(' ')}>
         <ContactSection hasTitle />
       </section>
     </main>

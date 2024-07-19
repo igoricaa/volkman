@@ -7,7 +7,7 @@ import BentoGallery from '@/components/BentoGallery/BentoGallery';
 
 const AboutMe = () => {
   return (
-    <main className='main'>
+    <main className={styles.main}>
       <div className={styles.pageHeader}>
         <h1>About me</h1>
       </div>
@@ -101,7 +101,10 @@ const AboutMe = () => {
       <section className={styles.awardsSection}>
         <Awards />
       </section>
-      <ContactSection hasTitle />
+
+      <div className={styles.contactSection}>
+        <ContactSection hasTitle />
+      </div>
     </main>
   );
 };

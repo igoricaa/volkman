@@ -1,5 +1,9 @@
+.main {
+  padding: 19rem 0 13rem;
+}
+
 .pageHeader {
-  padding-bottom: 4.125rem;
+  padding: 0 var(--padding-side) 4.125rem;
 
   h1 {
     font-size: 4.5rem;
@@ -9,7 +13,8 @@
 
 .introSection {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  padding-bottom: 5rem;
+  padding: 0 var(--padding-side) 5rem;
+
   p {
     font-weight: 300;
     font-size: 1.5rem;
@@ -21,7 +26,7 @@
 }
 
 .middleSection {
-  padding: 5.25rem 0;
+  padding: 5.25rem var(--padding-side);
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5rem;
@@ -51,7 +56,7 @@
 }
 
 .endingSection {
-  padding: 6.5rem 0 4.625rem;
+  padding: 6.5rem var(--padding-side) 4.625rem;
   margin-top: calc(-40vh - 1rem);
 
   > p {
@@ -65,13 +70,22 @@
 }
 
 .awardsSection {
-  padding: 2.5rem 3rem 0;
+  padding: 2.5rem calc(var(--padding-side) + 3rem) 0;
+}
+
+.contactSection {
+  padding: 2.5rem var(--padding-side) 0;
+  margin-top: 5.5rem;
 }
 
 @media screen and (max-width: 1024px) {
+  .main {
+    padding: 13.5rem 0 9rem;
+  }
+
   .pageHeader {
     padding-bottom: 4rem;
-    padding-left: 0;
+    padding: 0 var(--padding-side) 4rem;
 
     h1 {
       font-size: 3.5rem;
@@ -81,8 +95,12 @@
 }
 
 @media screen and (max-width: 680px) {
+  .main {
+    padding: 7.5rem 0 3rem;
+  }
+
   .pageHeader {
-    padding-bottom: 3.5rem;
+    padding: 0 var(--padding-side) 3.5rem;
 
     h1 {
       font-size: 2.75rem;
@@ -92,7 +110,8 @@
 
   .introSection {
     border-bottom: none;
-    padding-bottom: 0;
+    padding: 0 var(--padding-side);
+
     > p {
       font-size: 1rem;
 
@@ -103,7 +122,7 @@
   }
 
   .middleSection {
-    padding: 3.5rem 0;
+    padding: 3.5rem var(--padding-side);
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 5rem;
@@ -127,7 +146,7 @@
   }
 
   .endingSection {
-    padding: 2.25rem 0;
+    padding: 2.25rem var(--padding-side);
     margin-top: calc(-40vh + 1rem);
 
     > p {
@@ -140,6 +159,11 @@
   }
 
   .awardsSection {
-    padding: 0 0 0.5rem;
+    padding: 0 calc(0.5rem + var(--padding-side));
+  }
+
+  .contactSection {
+    padding: 1.5rem var(--padding-side) 0;
+    margin-top: 0;
   }
 }

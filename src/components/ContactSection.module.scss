@@ -1,89 +1,79 @@
-.contactSection {
-  padding-top: 2.5rem;
-  margin-top: 5.5rem;
+.sectiontitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
 
-  .sectiontitle {
-    font-size: 1.25rem;
-    font-weight: 300;
-    border-bottom: 1px solid #fff;
-    width: 100%;
-    text-transform: uppercase;
-    padding-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
+.innerWrapper {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #fff;
+  position: relative;
 
-  .innerWrapper {
-    padding: 2.5rem 0;
-    border-bottom: 1px solid #fff;
-    position: relative;
+  h2 {
+    font-size: 7rem;
+    line-height: 8.5rem;
+    font-weight: 500;
 
-    h2 {
-      font-size: 7rem;
-      line-height: 8.5rem;
-      font-weight: 500;
+    &:first-of-type {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
 
-      &:first-of-type {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-
-        span {
-          display: inline-flex;
-          position: relative;
-          width: 123px;
-          height: 123px;
-        }
+      span {
+        display: inline-flex;
+        position: relative;
+        width: 123px;
+        height: 123px;
       }
     }
   }
-  .contactInfoWrapper {
-    display: flex;
-    gap: 3rem;
-    padding: 4rem 0 8rem;
-  }
+}
+.contactInfoWrapper {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 0 8rem;
 }
 
 @media screen and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 680px) {
-  .contactSection {
-    padding-top: 1.5rem;
-    margin-top: 0;
+  .sectiontitle {
+    font-size: 12px;
+    padding-bottom: 1rem;
+  }
 
-    .sectiontitle {
-      font-size: 12px;
-      padding-bottom: 1rem;
-    }
+  .innerWrapper {
+    border-bottom: none;
+    padding-bottom: 0;
 
-    .innerWrapper {
-      border-bottom: none;
-      padding-bottom: 0;
+    h2 {
+      font-size: 3rem;
+      line-height: 3.5rem;
 
-      h2 {
-        font-size: 3rem;
-        line-height: 3.5rem;
-
-        &:first-of-type {
-          gap: 0.5rem;
-          span {
-            width: 55px;
-            height: 55px;
-          }
+      &:first-of-type {
+        gap: 0.5rem;
+        span {
+          width: 55px;
+          height: 55px;
         }
       }
     }
-    .contactInfoWrapper {
-      padding: 1.75rem 0 3rem;
-      flex-direction: column;
-      gap: 1.75rem;
-      border-bottom: 1px solid #fff;
+  }
+  .contactInfoWrapper {
+    padding: 1.75rem 0 3rem;
+    flex-direction: column;
+    gap: 1.75rem;
+    border-bottom: 1px solid #fff;
 
-      > * {
-        font-size: 1rem;
-        padding: 1.25rem 0;
-        text-align: center;
-      }
+    > * {
+      font-size: 1rem;
+      padding: 1.25rem 0;
+      text-align: center;
     }
   }
 }

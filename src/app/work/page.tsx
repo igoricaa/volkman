@@ -53,7 +53,9 @@ const Work = () => {
       </div>
       <Projects view={view} />
 
-      <ContactSection />
+      <div className={styles.contactSection}>
+        <ContactSection />
+      </div>
     </main>
   );
 };
