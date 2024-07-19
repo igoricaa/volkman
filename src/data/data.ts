@@ -340,7 +340,7 @@ export const projectsFull = [
     category: 'Residential',
     featuredPhoto: 'arden-residence/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
-    client: 'Rismondo Design',
+    client: '',
     year: '2021-2022',
     grid: {
       alt: 'Basics Coffee',
@@ -426,6 +426,7 @@ export const projectsFull = [
     category: 'Office fittout',
     featuredPhoto: 'bird-and-bird/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
+    client: '',
     year: '2022',
     grid: {
       alt: 'Bird & Bird',
