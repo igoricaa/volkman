@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const routes = [
   {
     title: 'Home',
@@ -154,6 +156,18 @@ export const projectsFeatured = [
     slug: 'red-dot-apartment',
     category: 'Residential',
     featuredPhoto: 'red-dot-apartment/featuredPhoto.jpg',
+  },
+  {
+    title: 'Gasnet Offices',
+    slug: 'gasnet-offices',
+    category: 'Office fittout',
+    featuredPhoto: 'gasnet-offices/featuredPhoto.jpg',
+  },
+  {
+    title: 'Bombay Express Restaurant Chain',
+    slug: 'bombay-express-restaurant-chain',
+    category: 'Hospitality',
+    featuredPhoto: 'bombay-express-restaurant-chain/featuredPhoto.jpg',
   }
 ];
 
@@ -1155,7 +1169,7 @@ export const projectsFull = [
     client: 'Hladinka',
     year: '2020',
     grid: {
-      alt: 'Shou Sugi Ban Apartment',
+      alt: 'Hladinka Restaurant',
       images: [
         {
           src: '/projects/hladinka-restaurant/1.jpg',
@@ -1266,6 +1280,166 @@ export const projectsFull = [
         {
           src: '/projects/red-dot-apartment/11.jpg',
           style: { '--r': 11, '--c': 4, '--s': 2 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Gasnet Offices',
+    slug: 'gasnet-offices',
+    category: 'Office fittout',
+    featuredPhoto: 'gasnet-offices/featuredPhoto.jpg',
+    location: 'Brno, Czech Republic',
+    client: 'Gasnet',
+    year: '2023',
+    grid: {
+      alt: 'Gasnet Offices',
+      images: [
+        {
+          src: '/projects/gasnet-offices/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/gasnet-offices/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/gasnet-offices/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/gasnet-offices/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/gasnet-offices/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/gasnet-offices/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/gasnet-offices/7.jpg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/gasnet-offices/8.jpg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/gasnet-offices/9.jpg',
+          style: { '--r': 9, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/gasnet-offices/10.jpg',
+          style: { '--r': 10, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/gasnet-offices/11.jpg',
+          style: { '--r': 11, '--c': 4, '--s': 2 },
+        },
+        {
+          src: '/projects/gasnet-offices/12.jpg',
+          style: { '--r': 12, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/gasnet-offices/13.jpg',
+          style: { '--r': 13, '--c': 4, '--s': 5 },
+        },
+        {
+          src: '/projects/gasnet-offices/14.jpg',
+          style: { '--r': 14, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/gasnet-offices/15.jpg',
+          style: { '--r': 15, '--c': 4, '--s': 5 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Bombay Express Restaurant Chain',
+    slug: 'bombay-express-restaurant-chain',
+    category: 'Hospitality',
+    featuredPhoto: 'bombay-express-restaurant-chain/featuredPhoto.jpg',
+    location: 'Czech Republic',
+    client: 'Bombay Express',
+    year: '2013 - ongoing',
+    grid: {
+      alt: 'Bombay Express Restaurant Chain',
+      images: [
+        {
+          src: '/projects/bombay-express-restaurant-chain/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/7.jpg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/8.jpg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/9.jpg',
+          style: { '--r': 9, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/10.jpg',
+          style: { '--r': 10, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/11.jpg',
+          style: { '--r': 11, '--c': 4, '--s': 2 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/12.jpg',
+          style: { '--r': 12, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/13.jpg',
+          style: { '--r': 13, '--c': 4, '--s': 5 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/14.jpg',
+          style: { '--r': 14, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/15.jpg',
+          style: { '--r': 15, '--c': 4, '--s': 5 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/16.jpg',
+          style: { '--r': 16, '--c': 3, '--s': 1 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/17.jpg',
+          style: { '--r': 17, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/bombay-express-restaurant-chain/18.jpg',
+          style: { '--r': 18, '--c': 3, '--s': 5 },
         },
       ],
     },
