@@ -108,11 +108,53 @@ export const projectsFeatured = [
     featuredPhoto: 'cottage/featuredPhoto.jpg',
   },
   {
-    title: 'Silencio',
-    slug: 'c2-montreal',
-    category: 'Design & Development',
-    featuredPhoto: 'andjela-zivic.jpeg',
+    title: 'Motorcycle Loft',
+    slug: 'motorcycle-loft',
+    category: 'Residential',
+    featuredPhoto: 'motorcycle-loft/featuredPhoto.jpg',
   },
+  {
+    title: 'Modern Chalet',
+    slug: 'modern-chalet',
+    category: 'Hospitality',
+    featuredPhoto: 'modern-chalet/featuredPhoto.jpeg',
+  },
+  {
+    title: 'Dinosaria Museum',
+    slug: 'dinosaria-museum',
+    category: 'Exibition Design',
+    featuredPhoto: 'dinosaria-museum/featuredPhoto.jpg',
+  },
+  {
+    title: 'Kitchen Concept 54',
+    slug: 'kitchen-concept-54',
+    category: 'Commercial',
+    featuredPhoto: 'kitchen-concept-54/featuredPhoto.jpg',
+  },
+  {
+    title: 'Shou Sugi Ban Apartment',
+    slug: 'shou-sugi-ban-apartment',
+    category: 'Residential',
+    featuredPhoto: 'shou-sugi-ban-apartment/featuredPhoto.jpg',
+  },
+  {
+    title: 'Czech Embassy in Washington',
+    slug: 'czech-embassy-washington',
+    category: 'Institutional',
+    featuredPhoto: 'czech-embassy-washington/featuredPhoto.jpg',
+  },
+  {
+    title: 'Hladinka Restaurant',
+    slug: 'hladinka-restaurant',
+    category: 'Hospitality',
+    featuredPhoto: 'hladinka-restaurant/featuredPhoto.jpg',
+  },
+  {
+    title: 'Red Dot Apartment',
+    slug: 'red-dot-apartment',
+    category: 'Residential',
+    featuredPhoto: 'red-dot-apartment/featuredPhoto.jpg',
+  }
 ];
 
 export type Project = {
@@ -756,6 +798,474 @@ export const projectsFull = [
         {
           src: '/projects/cottage/35.jpg',
           style: { '--r': 35, '--c': 1, '--s': 5 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Motorcycle Loft',
+    slug: 'motorcycle-loft',
+    category: 'Residential',
+    featuredPhoto: 'motorcycle-loft/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Private Client',
+    year: '2019',
+    grid: {
+      alt: 'Motorcycle Loft',
+      images: [
+        {
+          src: '/projects/motorcycle-loft/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/motorcycle-loft/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/7.jpg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/8.jpg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/9.jpg',
+          style: { '--r': 9, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/10.jpg',
+          style: { '--r': 10, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/11.jpg',
+          style: { '--r': 11, '--c': 4, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/12.jpg',
+          style: { '--r': 12, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/13.jpg',
+          style: { '--r': 13, '--c': 4, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/14.jpg',
+          style: { '--r': 14, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/15.jpg',
+          style: { '--r': 15, '--c': 4, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/16.jpg',
+          style: { '--r': 16, '--c': 3, '--s': 1 },
+        },
+        {
+          src: '/projects/motorcycle-loft/17.jpg',
+          style: { '--r': 17, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/18.jpg',
+          style: { '--r': 18, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/19.jpg',
+          style: { '--r': 19, '--c': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/20.jpg',
+          style: { '--r': 20, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/21.jpg',
+          style: { '--r': 21, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/22.jpg',
+          style: { '--r': 22, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/23.jpg',
+          style: { '--r': 23, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/24.jpg',
+          style: { '--r': 24, '--c': 4, '--s': 2 },
+        },
+        {
+          src: '/projects/motorcycle-loft/25.jpg',
+          style: { '--r': 25, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/motorcycle-loft/26.jpg',
+          style: { '--r': 26, '--c': 4, '--s': 5 },
+        },
+        {
+          src: '/projects/motorcycle-loft/27.jpg',
+          style: { '--r': 27, '--c': 1, '--s': 3 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Modern Chalet',
+    slug: 'modern-chalet',
+    category: 'Hospitality',
+    featuredPhoto: 'modern-chalet/featuredPhoto.jpg',
+    location: 'Costa Rica',
+    client: 'Private Client',
+    year: '2022',
+    grid: {
+      alt: 'Modern Chalet',
+      images: [
+        {
+          src: '/projects/modern-chalet/1.jpeg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/modern-chalet/2.jpeg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/modern-chalet/3.jpeg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/modern-chalet/4.jpeg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/modern-chalet/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/modern-chalet/6.jpeg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/modern-chalet/7.jpeg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/modern-chalet/8.jpeg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Dinosaria Museum',
+    slug: 'dinosaria-museum',
+    category: 'Exibition Design',
+    featuredPhoto: 'dinosaria-museum/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Kaprain Group',
+    year: '2021',
+    grid: {
+      alt: 'Dinosaria Museum',
+      images: [
+        {
+          src: '/projects/dinosaria-museum/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/dinosaria-museum/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/dinosaria-museum/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/dinosaria-museum/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/dinosaria-museum/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/dinosaria-museum/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Kitchen Concept 54',
+    slug: 'kitchen-concept-54',
+    category: 'Commercial',
+    featuredPhoto: 'kitchen-concept-54/featuredPhoto.jpg',
+    location: 'Anywhere',
+    client: 'Intergast s.r.o.',
+    year: '2022',
+    grid: {
+      alt: 'Kitchen Concept 54',
+      images: [
+        {
+          src: '/projects/kitchen-concept-54/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/kitchen-concept-54/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/kitchen-concept-54/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/kitchen-concept-54/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/kitchen-concept-54/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/kitchen-concept-54/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Shou Sugi Ban Apartment',
+    slug: 'shou-sugi-ban-apartment',
+    category: 'Residential',
+    featuredPhoto: 'shou-sugi-ban-apartment/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Private Client',
+    year: '2017',
+    grid: {
+      alt: 'Shou Sugi Ban Apartment',
+      images: [
+        {
+          src: '/projects/shou-sugi-ban-apartment/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/7.jpg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/8.jpg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/9.jpg',
+          style: { '--r': 9, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/10.jpg',
+          style: { '--r': 10, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/11.jpg',
+          style: { '--r': 11, '--c': 4, '--s': 2 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/12.jpg',
+          style: { '--r': 12, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/shou-sugi-ban-apartment/13.jpg',
+          style: { '--r': 13, '--c': 4, '--s': 5 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Czech Embassy in Washington',
+    slug: 'czech-embassy-washington',
+    category: 'Institutional',
+    featuredPhoto: 'czech-embassy-washington/featuredPhoto.jpg',
+    location: 'Washington, USA',
+    client: 'Competition',
+    year: '2011',
+    grid: {
+      alt: 'Czech Embassy in Washington',
+      images: [
+        {
+          src: '/projects/czech-embassy-washington/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/czech-embassy-washington/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/czech-embassy-washington/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/czech-embassy-washington/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/czech-embassy-washington/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Hladinka Restaurant',
+    slug: 'hladinka-restaurant',
+    category: 'Hospitality',
+    featuredPhoto: 'hladinka-restaurant/featuredPhoto.jpg',
+    location: 'Kladno, Czech Republic',
+    client: 'Hladinka',
+    year: '2020',
+    grid: {
+      alt: 'Shou Sugi Ban Apartment',
+      images: [
+        {
+          src: '/projects/hladinka-restaurant/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/7.jpg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/8.jpg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/9.jpg',
+          style: { '--r': 9, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/10.jpg',
+          style: { '--r': 10, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/11.jpg',
+          style: { '--r': 11, '--c': 4, '--s': 2 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/12.jpg',
+          style: { '--r': 12, '--c': 1, '--s': 3 },
+        },
+        {
+          src: '/projects/hladinka-restaurant/13.jpg',
+          style: { '--r': 13, '--c': 4, '--s': 5 },
+        },
+      ],
+    },
+  },
+  {
+    title: 'Red Dot Apartment',
+    slug: 'red-dot-apartment',
+    category: 'Residential',
+    featuredPhoto: 'red-dot-apartment/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Private Client',
+    year: '2019',
+    grid: {
+      alt: 'Red Dot Apartment',
+      images: [
+        {
+          src: '/projects/red-dot-apartment/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/red-dot-apartment/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/red-dot-apartment/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/red-dot-apartment/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+        {
+          src: '/projects/red-dot-apartment/5.jpg',
+          style: { '--r': 5, '--c': 3, '--s': 5 },
+        },
+        {
+          src: '/projects/red-dot-apartment/6.jpg',
+          style: { '--r': 6, '--c': 2 },
+        },
+        {
+          src: '/projects/red-dot-apartment/7.jpg',
+          style: { '--r': 7, '--c': 3, '--s': 3 },
+        },
+        {
+          src: '/projects/red-dot-apartment/8.jpg',
+          style: { '--r': 8, '--c': 6, '--s': 2 },
+        },
+        {
+          src: '/projects/red-dot-apartment/9.jpg',
+          style: { '--r': 9, '--c': 1, '--s': 5 },
+        },
+        {
+          src: '/projects/red-dot-apartment/10.jpg',
+          style: { '--r': 10, '--c': 6, '--s': 3 },
+        },
+        {
+          src: '/projects/red-dot-apartment/11.jpg',
+          style: { '--r': 11, '--c': 4, '--s': 2 },
         },
       ],
     },
