@@ -14,7 +14,7 @@ type ProjectModal = {
   projects: {
     title: string;
     slug: string;
-    src: string;
+    featuredPhoto: string;
   }[];
 };
 
@@ -97,12 +97,12 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
       >
         <div style={{ top: index * -100 + '%' }} className={styles.modalSlider}>
           {projects.map((project, index) => {
-            const { title, src } = project;
+            const { title, featuredPhoto } = project;
 
             return (
               <div key={`modal_${index}`} className={styles.modal}>
                 <Image
-                  src={`/projects/${src}`}
+                  src={`/projects/${featuredPhoto}`}
                   width={582}
                   height={431}
                   style={{ objectFit: 'cover' }}

@@ -6,8 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import styles from './ConnectedGrid.module.scss';
 import { useGSAP } from '@gsap/react';
+import Image from 'next/image';
 
-export default function ConnectedGrid() {
+export default function ConnectedGrid({ gridContent }) {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const gridItems = document.querySelectorAll(`.${styles.gridItem}`);
@@ -71,20 +72,20 @@ export default function ConnectedGrid() {
               scale: 1,
             },
             0
-          )
-          .fromTo(
-            item.querySelector(`.${styles.gridItemCaption}`),
-            {
-              xPercent: () => (isLeftSide ? 100 : -100),
-              opacity: 0,
-            },
-            {
-              ease: 'power1',
-              xPercent: 0,
-              opacity: 1,
-            },
-            0
           );
+        // .fromTo(
+        //   item.querySelector(`.${styles.gridItemCaption}`),
+        //   {
+        //     xPercent: () => (isLeftSide ? 100 : -100),
+        //     opacity: 0,
+        //   },
+        //   {
+        //     ease: 'power1',
+        //     xPercent: 0,
+        //     opacity: 1,
+        //   },
+        //   0
+        // );
       });
     };
 
@@ -94,15 +95,36 @@ export default function ConnectedGrid() {
 
   return (
     <div className={styles.grid}>
-      <figure
+      {Object.keys(gridContent.images).map((key, index) => (
+        <figure
+          key={`projectImage${index}`}
+          className={styles.gridItem}
+          style={gridContent.images[key].style}
+        >
+          <div className={styles.gridItemImg}>
+            <div className={styles.gridItemImgInner}></div>
+            <Image
+              src={gridContent.images[key].src}
+              alt={gridContent.alt}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes='(max-width: 1024px) 100vw, 50vw'
+              priority
+            />
+          </div>
+        </figure>
+      ))}
+
+      {/* <figure
         className={styles.gridItem}
         style={{ '--r': 1, '--c': 1, '--s': 4 }}
       >
         <div className={styles.gridItemImg}>
           <div
             className={styles.gridItemImgInner}
-            style={{ backgroundImage: 'url(/1.jpg)' }}
+            // style={{ backgroundImage: 'url(/1.jpg)' }}
           ></div>
+          <Image src='/projects/masarycka-restaurant/1.jpg' alt='test' fill />
         </div>
         <figcaption
           className={styles.gridItemCaptionCustom}
@@ -159,7 +181,7 @@ export default function ConnectedGrid() {
           className={styles.gridItemCaptionCustom}
           style={{ left: 'calc(100vw / ( 8 / 2))' }}
         >
-          {/* <h3>Dune Mirage Retreat</h3> <span>2021</span> */}
+          <h3>Dune Mirage Retreat</h3> <span>2021</span>
           <p>
             Masarycka stands proudly as a recipient of prestigious awards, a
             testament to its exceptional design and culinary excellence. This
@@ -289,7 +311,7 @@ export default function ConnectedGrid() {
         <figcaption className={styles.gridItemCaption}>
           <h3>Desert Elegance Escapes</h3> <span>2023</span>
         </figcaption>
-      </figure>
+      </figure> */}
     </div>
   );
 }

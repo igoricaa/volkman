@@ -1,6 +1,6 @@
 'use client';
 
-import { projects } from '@/data/data';
+import { projectsFeatured } from '@/data/data';
 import styles from './ProjectsGrid.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -65,7 +65,7 @@ const ProjectsGrid = () => {
   return (
     <>
       <div className={styles.desktopProjects}>
-        {projects.map((project, index) => {
+        {projectsFeatured.map((project, index) => {
           return (
             <article
               key={index}
@@ -76,7 +76,7 @@ const ProjectsGrid = () => {
               <TransitionLink href={`/projects/${project.slug}`}>
                 <div className={styles.imageWrapper}>
                   <Image
-                    src={`/projects/${project.src}`}
+                    src={`/projects/${project.featuredPhoto}`}
                     alt={project.title}
                     fill
                     style={{ objectFit: 'cover', borderRadius: '1rem' }}

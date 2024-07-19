@@ -1,6 +1,6 @@
 'use client';
 
-import { projects } from '@/data/data';
+import { projectsFeatured } from '@/data/data';
 import { useState } from 'react';
 import ListProject from './ListProject';
 import ProjectModal from '../modal/ProjectModal';
@@ -12,7 +12,7 @@ const ProjectsList = () => {
   return (
     <>
       <div className={[styles.desktopProjects].join(' ')}>
-        {projects.map((project, index) => {
+        {projectsFeatured.map((project, index) => {
           return (
             <ListProject
               key={`project_${index}`}
@@ -24,7 +24,7 @@ const ProjectsList = () => {
           );
         })}
       </div>
-      <ProjectModal modal={modal} projects={projects} />
+      <ProjectModal modal={modal} projects={projectsFeatured} />
     </>
   );
 };
