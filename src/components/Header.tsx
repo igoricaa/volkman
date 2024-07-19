@@ -1,10 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Navigation from './nav/Navigation';
 import styles from './Header.module.scss';
 import TransitionLink from './PageTransition/TransitionLink/TransitionLink';
 import useScrollDirection from '@/utils/useScrollDirection';
+import DesktopMenu from './nav/DesktopMenu';
+import MobileMenu from './nav/MobileMenu';
 
 const Header = () => {
   const scrollDirection = useScrollDirection();
@@ -28,7 +29,8 @@ const Header = () => {
         </div>
       </TransitionLink>
 
-      <Navigation />
+      <DesktopMenu />
+      <MobileMenu />
     </header>
   );
 };

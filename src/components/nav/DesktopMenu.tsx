@@ -1,3 +1,5 @@
+'use client';
+
 import { routes } from '@/data/data';
 import styles from './DesktopMenu.module.scss';
 import { usePathname } from 'next/navigation';
