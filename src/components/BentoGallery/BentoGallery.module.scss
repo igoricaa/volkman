@@ -72,23 +72,7 @@
         .galleryItem {
           filter: contrast(1) saturate(1) brightness(1) opacity(1);
         }
-
-        .caption {
-          margin-top: -50vh;
-        }
       }
-    }
-
-    .caption {
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      top: 50%;
-      left: 50%;
-      margin: 100vh 0 0 -50vw;
-      font-size: clamp(2rem, 10vw, 5rem);
-      display: grid;
-      place-items: center;
     }
   }
 }

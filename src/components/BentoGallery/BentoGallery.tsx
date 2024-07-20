@@ -80,11 +80,10 @@ const BentoGallery = () => {
 
       settings = Object.assign({}, settings, options);
 
-      const galleryCaption = galleryEl.querySelector(`.${styles.caption}`);
       const galleryItems = galleryEl.querySelectorAll(`.${styles.galleryItem}`);
 
       galleryEl.classList.add(`${styles.gallerySwitch}`);
-      const flipstate = Flip.getState([galleryItems, galleryCaption], {
+      const flipstate = Flip.getState([galleryItems], {
         props: 'filter, opacity',
       });
 
@@ -132,7 +131,6 @@ const BentoGallery = () => {
             />
           </div>
         ))}
-        <div className={styles.caption}>Perfect Imperfections</div>
       </div>
     </div>
   );

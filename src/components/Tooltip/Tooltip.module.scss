@@ -40,13 +40,13 @@
         display: block;
         width: 228px;
         height: 65px;
-        background-color: #141514;
+        background-color: var(--color-main);
         border-radius: 3rem;
       }
     }
 
     .tooltipContent {
-      color: #fff;
+      color: #000;
       display: flex;
       position: relative;
       align-items: center;
