@@ -2,7 +2,7 @@ import MobileProjects from './Mobile/MobileProjects';
 import DesktopProjects from './Desktop/DesktopProjects';
 import { ProjectsView } from '@/data/data';
 
-const Projects = ({ view }: { view?: ProjectsView }) => {
+const Projects = ({ view, isHome }: { view?: ProjectsView; isHome: boolean }) => {
   return (
     <div
       style={
@@ -12,8 +12,8 @@ const Projects = ({ view }: { view?: ProjectsView }) => {
       }
     >
       <>
-        <DesktopProjects view={view!} />
-        <MobileProjects />
+        <DesktopProjects view={view!} isHome={isHome} />
+        <MobileProjects isHome={isHome} />
       </>
     </div>
   );

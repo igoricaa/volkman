@@ -51,7 +51,7 @@ const Work = () => {
           </div>
         )}
       </div>
-      <Projects view={view} />
+      <Projects view={view} isHome={false} />
 
       <div className={styles.contactSection}>
         <ContactSection />

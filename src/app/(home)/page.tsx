@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className={[styles.section, styles.workSection].join(' ')}>
         <h4 className={styles.sectiontitle}>Recent Work</h4>
-        <Projects />
+        <Projects isHome />
         <Button href='/work' classes={['viewAllButton']} isLink>
           <p>View All</p>
         </Button>

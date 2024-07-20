@@ -6,13 +6,15 @@ import ListProject from './ListProject';
 import ProjectModal from '../modal/ProjectModal';
 import styles from './ProjectsList.module.scss';
 
-const ProjectsList = () => {
+const ProjectsList = ({ isHome }: { isHome: boolean }) => {
   const [modal, setModal] = useState({ active: false, index: 0 });
+
+  const projects = isHome ? projectsFeatured.slice(0, 5) : projectsFeatured;
 
   return (
     <>
       <div className={[styles.desktopProjects].join(' ')}>
-        {projectsFeatured.map((project, index) => {
+        {projects.map((project, index) => {
           return (
             <ListProject
               key={`project_${index}`}

@@ -2,10 +2,12 @@ import { projectsFeatured } from '@/data/data';
 import Image from 'next/image';
 import styles from './MobileProjects.module.scss';
 
-const MobileProjects = () => {
+const MobileProjects = ({ isHome }: { isHome: boolean }) => {
+  const projects = isHome ? projectsFeatured.slice(0, 5) : projectsFeatured;
+
   return (
     <div className={styles.mobileProjects}>
-      {projectsFeatured.map((project, index) => {
+      {projects.map((project, index) => {
         return (
           <article key={`project_${index}`}>
             <div className={styles.imageWrapper}>
