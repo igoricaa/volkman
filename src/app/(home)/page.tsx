@@ -5,6 +5,8 @@ import GridGallery from '@/components/GridGallery/GridGallery';
 import Awards from '@/components/awards/Awards';
 import Button from '@/components/common/Button/Button';
 import ContactSection from '@/components/ContactSection';
+import heroDesktop from '@/../public/home/marija-volkman-hero.png';
+import heroMobile from '@/../public/home/marija-volkman-hero-mobile.png';
 
 export default function Home() {
   const common = {
@@ -18,13 +20,13 @@ export default function Home() {
     props: { srcSet: desktop },
   } = getImageProps({
     ...common,
-    src: '/home/marija-volkman-hero.png',
+    src: heroDesktop,
   });
   const {
     props: { srcSet: mobile, ...rest },
   } = getImageProps({
     ...common,
-    src: '/home/marija-volkman-hero-mobile.png',
+    src: heroMobile,
   });
 
   return (

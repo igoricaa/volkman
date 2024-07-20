@@ -6,42 +6,7 @@ import { Flip } from 'gsap/Flip';
 import Lenis from 'lenis';
 import styles from './BentoGallery.module.scss';
 import { useGSAP } from '@gsap/react';
-import Image from 'next/image';
-
-const galleryPhotos = [
-  {
-    src: '/about-me/gallery/masarycka-restaurant.png',
-    alt: 'Masarycka Restaurant',
-  },
-  {
-    src: '/about-me/gallery/arden-back-yard.png',
-    alt: 'Arden Back Yard',
-  },
-  {
-    src: '/about-me/gallery/marija-volkman-logo.png',
-    alt: 'Marija Volkman Logo',
-  },
-  {
-    src: '/about-me/gallery/exterior.png',
-    alt: 'Exterior',
-  },
-  {
-    src: '/about-me/gallery/wilshire-cafe-view.png',
-    alt: 'Wilshire Cafe View',
-  },
-  {
-    src: '/about-me/gallery/marija-volkman-interior-design-2.png',
-    alt: 'Marija Volkman Interior Design 2',
-  },
-  {
-    src: '/about-me/gallery/arden-family-room.png',
-    alt: 'Arden Family Room',
-  },
-  {
-    src: '/about-me/gallery/marija-volkman-interior-design.png',
-    alt: 'Marija Volkman Interior Design',
-  },
-];
+import { desktopImages, mobileImages, restProps } from './imageProps';
 
 const BentoGallery = () => {
   gsap.registerPlugin(Flip, ScrollTrigger);
@@ -116,19 +81,35 @@ const BentoGallery = () => {
   }, []);
 
   return (
-    <div className={styles.galleryWrap}>
+    <div className={[styles.galleryWrap, styles.desktop].join(' ')}>
       <div
         className={[styles.gallery, styles.galleryBento].join(' ')}
         id='gallery-8'
       >
-        {galleryPhotos.map((photo, index) => (
-          <div className={styles.galleryItem} key={index}>
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              style={{ objectFit: 'cover' }}
-            />
+        {Array.from({ length: 8 }, (_, i) => i).map((index) => (
+          <div
+            className={[
+              styles.galleryItem,
+              index === 2 && styles.centralImageWrapper,
+            ].join(' ')}
+            key={index}
+          >
+            {index !== 2 && (
+              <picture>
+                <source
+                  media='(min-width: 680px)'
+                  srcSet={desktopImages[index]}
+                />
+                <source
+                  media='(max-width: 680px)'
+                  srcSet={mobileImages[index]}
+                />
+                <img
+                  {...restProps[index]}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </picture>
+            )}
           </div>
         ))}
       </div>
