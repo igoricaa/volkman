@@ -10,7 +10,7 @@ const MobileProjects = () => {
           <article key={`project_${index}`}>
             <div className={styles.imageWrapper}>
               <Image
-                src={`/work/${project.featuredPhoto}`}
+                src={`/projects/${project.featuredPhoto}`}
                 alt={project.title}
                 fill
                 sizes='(max-width: 1024px) 100vw, 0vw'
