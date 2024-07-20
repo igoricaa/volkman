@@ -128,7 +128,7 @@ const ProjectModal = ({ modal, projects }: ProjectModal) => {
         initial='initial'
         animate={active ? 'enter' : 'closed'}
       >
-        <TransitionLink href={`/projects/${projects[index].slug}`}>
+        <TransitionLink href={`/work/${projects[index].slug}`}>
           View
         </TransitionLink>
       </motion.div>

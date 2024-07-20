@@ -20,6 +20,7 @@ const ContactSection = ({
               src='/home/marija-volkman-rounded.png'
               alt='Marija Volkman'
               fill
+              sizes='(max-width: 1024px) 55px, 123px'
             />
           </span>
           Let's work

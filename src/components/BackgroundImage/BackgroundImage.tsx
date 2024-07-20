@@ -33,6 +33,7 @@ const BackgroundImage = () => {
           <Image
             src='/backgroundImg.svg'
             fill
+            sizes='100vw'
             style={{ objectFit: 'cover' }}
             alt='Marija Volkman'
             priority

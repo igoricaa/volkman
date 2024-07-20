@@ -73,12 +73,13 @@ const ProjectsGrid = () => {
               onMouseEnter={() => setActive(true)}
               onMouseLeave={() => setActive(false)}
             >
-              <TransitionLink href={`/projects/${project.slug}`}>
+              <TransitionLink href={`/work/${project.slug}`}>
                 <div className={styles.imageWrapper}>
                   <Image
                     src={`/projects/${project.featuredPhoto}`}
                     alt={project.title}
                     fill
+                    sizes='(max-width: 1024px) 95vw, 39vw'
                     style={{ objectFit: 'cover', borderRadius: '1rem' }}
                   />
                 </div>

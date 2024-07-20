@@ -144,6 +144,7 @@ const GridGallery = () => {
             <Image
               src={photo.src}
               alt={photo.alt}
+              sizes='(max-width: 1024px) 25vw, 29vw'
               fill
               style={{ objectFit: 'cover' }}
             />

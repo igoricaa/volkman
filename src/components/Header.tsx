@@ -24,6 +24,7 @@ const Header = () => {
             alt='Marija Volkman'
             style={{ objectFit: 'cover' }}
             fill
+            sizes='(max-width: 1024px) 148px, 243px'
             priority
           />
         </div>

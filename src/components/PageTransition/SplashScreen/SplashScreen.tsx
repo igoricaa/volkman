@@ -89,10 +89,10 @@ const SplashScreen = () => {
 
       <div className={styles.markWrapper}>
         <div className={styles.vWrapper}>
-          <Image src='/logos/m-v.svg' alt='Marija Volkman' fill priority />
+          <Image src='/logos/m-v.svg' alt='Marija Volkman' fill sizes='(max-width: 1024px) 87px, 153px' priority />
         </div>
         <div className={styles.legsWrapper}>
-          <Image src='/logos/m-legs.svg' alt='Marija Volkman' fill priority />
+          <Image src='/logos/m-legs.svg' alt='Marija Volkman' fill sizes='(max-width: 1024px) 87px, 153px' priority />
         </div>
       </div>
       <div className={styles.textLogoWrapper}>
@@ -101,6 +101,7 @@ const SplashScreen = () => {
             src='/logos/firstname-logo.svg'
             alt='Marija Volkman'
             fill
+            sizes='(max-width: 1024px) 105px, 183px'
             priority
           />
         </div>
@@ -109,6 +110,7 @@ const SplashScreen = () => {
             src='/logos/lastname-logo.svg'
             alt='Marija Volkman'
             fill
+            sizes='(max-width: 1024px) 137px, 259px'
             priority
           />
         </div>

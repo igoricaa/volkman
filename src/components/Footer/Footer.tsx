@@ -15,6 +15,7 @@ const Footer = () => {
             <Image
               src='/logos/marija-volkman-logo.svg'
               alt='Marija Volkman'
+              sizes='(max-width: 1024px) 148px, 289px'
               fill
             />
           </div>

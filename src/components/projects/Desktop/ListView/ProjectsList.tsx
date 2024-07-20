@@ -18,6 +18,7 @@ const ProjectsList = () => {
               key={`project_${index}`}
               index={index}
               title={project.title}
+              slug={project.slug}
               category={project.category}
               setModal={setModal}
             />
