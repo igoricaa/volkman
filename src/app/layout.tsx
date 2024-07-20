@@ -64,7 +64,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
         <PageTransition />
-        {/* <SplashScreen /> */}
+        <SplashScreen />
         <BackgroundImage />
         <Header />
         {children}
