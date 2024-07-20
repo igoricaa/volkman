@@ -5,11 +5,34 @@ import TransitionLink from '@/components/PageTransition/TransitionLink/Transitio
 
 // TODO: add error page
 const Project = ({ params }: { params: { slug: string } }) => {
-  const project: ProjectModel = projectsFull.find(
-    (project) => project.slug === params.slug
-  )!;
+  const getCurrentProjectAndIndex = (
+    projects: ProjectModel[],
+    slug: string
+  ): { project: ProjectModel | null; index: number } => {
+    const index = projects.findIndex((project) => project.slug === slug);
 
-  if (project === undefined || project.title === undefined) {
+    if (index === -1) {
+      return { project: null, index: -1 };
+    }
+
+    return { project: projects[index], index };
+  };
+
+  const { project, index } = getCurrentProjectAndIndex(
+    projectsFull,
+    params.slug
+  );
+
+  const prevProject =
+    index === 0
+      ? projectsFull[projectsFull.length - 1]
+      : projectsFull[index - 1];
+  const nextProject =
+    index === projectsFull.length - 1
+      ? projectsFull[0]
+      : projectsFull[index + 1];
+
+  if (project === undefined || project?.title === undefined) {
     return <div>Not found</div>;
   }
 
@@ -89,49 +112,13 @@ const Project = ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
         </div>
-
-        {/* <div className={styles.clientInfoWrapper}>
-          <div className={styles.innerWrapper}>
-            <p>Client:</p>
-            <p>Location</p>
-          </div>
-          <div className={[styles.innerWrapper, styles.mainInfo].join(' ')}>
-            <p>{project.client}</p>
-            <p>{project.location}</p>
-          </div>
-        </div>
-
-        <div
-          className={[styles.clientInfoWrapper, styles.clientMainInfo].join(
-            ' '
-          )}
-        >
-          <div className={styles.innerWrapper}>
-            <p>Realization:</p>
-            <p>Share:</p>
-          </div>
-          <div className={[styles.innerWrapper, styles.mainInfo].join(' ')}>
-            <p>{project.year}</p>
-            <div className={styles.socialsShareWrapper}>
-              <a href='https://instagram.com/' target='_blank'>
-                IN
-              </a>
-              <a href='https://facebook.com/' target='_blank'>
-                FB
-              </a>
-              <a href='https://linkedin.com/' target='_blank'>
-                LN
-              </a>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <ConnectedGrid gridContent={project.grid} />
 
       <section className={styles.adjacentProjects}>
-        {project && <AdjacentProject type='prev' project={project} />}
-        {project && <AdjacentProject type='next' project={project} />}
+        {project && <AdjacentProject type='prev' project={prevProject} />}
+        {project && <AdjacentProject type='next' project={nextProject} />}
       </section>
     </main>
   );
@@ -140,12 +127,10 @@ const Project = ({ params }: { params: { slug: string } }) => {
 export default Project;
 
 const AdjacentProject = ({ type, project }: { type: string; project: any }) => {
-  const projectUrl = `/projects/${project.slug}`;
+  const projectUrl = `/work/${project.slug}`;
 
   return (
-    <article
-      className={[styles.adjacentProject, styles[type]].join(' ')}
-    >
+    <article className={[styles.adjacentProject, styles[type]].join(' ')}>
       <TransitionLink href={projectUrl}>
         <span>{type} project</span>
 
