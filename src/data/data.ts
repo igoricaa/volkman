@@ -277,7 +277,10 @@ export type Project = {
     alt: string;
     images: {
       src: string;
-      caption?: string;
+      caption?: {
+        text: string;
+        style: { left: string; textAlign?: string };
+      };
     }[];
   };
 };
@@ -347,14 +350,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/masarycka-restaurant/1.jpg',
-          caption:
-            'Masarycka stands proudly as a recipient of prestigious awards, atestament to its exceptional design and culinary excellence. Thisrevered establishment seamlesly blends the grandeur of the historicImperial Restaurant with the contemporary allure of a modern stationeatery, creating a truly unique dining defstination.',
+          caption: {
+            text: 'Masarycka stands proudly as a recipient of prestigious awards, atestament to its exceptional design and culinary excellence. Thisrevered establishment seamlesly blends the grandeur of the historicImperial Restaurant with the contemporary allure of a modern stationeatery, creating a truly unique dining defstination.',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/masarycka-restaurant/2.jpg',
         },
         {
           src: '/projects/masarycka-restaurant/3.jpg',
+          caption: {
+            text: "From the outset, our commitment was to preserve the venue's distinctive character while infusing it with a fresh, innovative spirit.",
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/masarycka-restaurant/4.jpg',
@@ -367,6 +376,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/masarycka-restaurant/7.jpg',
+          caption: {
+            text: 'Through meticulous attention to detail and a deep appreciation for the art of hospitality, Masarycka has garnered accolades for its timeless design, exceptional service, and culinary mastery.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/masarycka-restaurant/8.jpg',
@@ -376,6 +389,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/masarycka-restaurant/10.jpg',
+          caption: {
+            text: "Our dedication to excellence extends beyond the dining experience itself. We meticulously crafted every aspect of the restaurant's identity, from its name and logo to its brand identity, ensuring a cohesive and captivating brand experience.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/masarycka-restaurant/11.jpg',
@@ -385,6 +402,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/masarycka-restaurant/13.jpg',
+          caption: {
+            text: 'As a recipient of esteemed design awards, Masarycka continues to captivate diners and critics alike, setting the standard for culinary innovation and design excellence. It is a true testament to our passion for creating unforgettable spaces that celebrate both tradition and innovation.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/masarycka-restaurant/14.jpg',
@@ -432,16 +453,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/arden-residence/1.jpg',
-          caption:
-            "This project features a remarkable residential development nestled in California's urban landscape: a 5100 square-foot main house accompanied by an 800 square-foot guest house. This design epitomizes contemporary luxury, showcasing European materials and emphasizing seamless integration with a private garden sanctuary, offering a tranquil retreat from city life.",
+          caption: {
+            text: "This project features a remarkable residential development nestled in California's urban landscape: a 5100 square-foot main house accompanied by an 800 square-foot guest house. This design epitomizes contemporary luxury, showcasing European materials and emphasizing seamless integration with a private garden sanctuary, offering a tranquil retreat from city life.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/arden-residence/2.jpg',
         },
         {
           src: '/projects/arden-residence/3.jpg',
-          caption:
-            'The main house is designed with an expansive open floor plan that maximizes natural light and airflow. Expansive sliding doors effortlessly blend indoor and outdoor spaces, leading to a serene garden and pool area — a secluded oasis amidst the urban hustle.',
+          caption: {
+            text: 'The main house is designed with an expansive open floor plan that maximizes natural light and airflow. Expansive sliding doors effortlessly blend indoor and outdoor spaces, leading to a serene garden and pool area — a secluded oasis amidst the urban hustle.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/arden-residence/4.jpg',
@@ -508,8 +533,10 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/cafe-cube/1.jpg',
-          caption:
-            "The Cement Building, a landmark in Downtown LA, hosts a thriving community of creators. We're crafting a gastro hub on the ground floor to serve the neighborhood's diverse tastes and foster community connections. Join us for delicious meals and vibrant gatherings, where every bite celebrates art, culture, and community.",
+          caption: {
+            text: "The Cement Building, a landmark in Downtown LA, hosts a thriving community of creators. We're crafting a gastro hub on the ground floor to serve the neighborhood's diverse tastes and foster community connections. Join us for delicious meals and vibrant gatherings, where every bite celebrates art, culture, and community.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/cafe-cube/2.jpg',
