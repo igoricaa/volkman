@@ -959,12 +959,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/motorcycle-loft/1.jpg',
+          caption: {
+            text: "Every now and then, we're presented with the opportunity to embark on truly extraordinary endeavors — projects that resonate deeply with our passions and ignite a creative spark within us. Such was the case with this endeavor — a project so captivating that we found ourselves reluctant to see it come to an end.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/motorcycle-loft/2.jpg',
         },
         {
           src: '/projects/motorcycle-loft/3.jpg',
+          caption: {
+            text: 'Fueled by a profound appreciation for exotic natural materials, a penchant for elegant simplicity, and a daring embrace of unconventional technical elements, this project transcended the ordinary to become something truly exceptional. From the outset, our aim was clear: to craft a space that not only met the practical needs of our clients but also ignited their imagination and stirred their souls.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/motorcycle-loft/4.jpg',
@@ -977,6 +985,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/motorcycle-loft/7.jpg',
+          caption: {
+            text: 'One of the most remarkable features of this project? A living room where a motorbike finds its rightful place alongside the furniture — a bold and unconventional choice that speaks volumes about the adventurous spirit of its inhabitants.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/motorcycle-loft/8.jpg',
@@ -986,6 +998,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/motorcycle-loft/10.jpg',
+          caption: {
+            text: 'And why stop at a motorbike? For those with an even grander sense of adventure , imagine the possibility of driving a car directly into your apartment — an audacious concept that pushes the boundaries of traditional living spaces.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/motorcycle-loft/11.jpg',
@@ -995,6 +1011,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/motorcycle-loft/13.jpg',
+          caption: {
+            text: "As we reflect on the journey of bringing this vision to life, the enduring image of contentment and joy on our clients' faces serves as a constant reminder of why we do what we do. Their satisfaction fuels our passion, driving us to continually push the boundaries of creativity and innovation in pursuit of extraordinary design solutions.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/motorcycle-loft/14.jpg',
@@ -1056,15 +1076,27 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/modern-chalet/1.jpeg',
+          caption: {
+            text: "Being approached to design a new Chalet in place of an existing mountain house presented us with a unique challenge and opportunity. While the capacity of the old house didn't align with the new requirements, we were enamored with its architecture and sought to honor its legacy in our design.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/modern-chalet/2.jpeg',
         },
         {
           src: '/projects/modern-chalet/3.jpeg',
+          caption: {
+            text: 'Drawing inspiration from the traditional charm of mountain architecture and the majestic surroundings, we opted for a solution rooted in the original house shape. Embracing the archetypal form of the saddle gable, we seamlessly integrated the new Chalet into its natural environment while paying homage to the timeless appeal of mountain retreats.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/modern-chalet/4.jpeg',
+          caption: {
+            text: 'Our design approach was guided by a deep respect for the genius loci — the unique spirit and character of the site. We meticulously accentuated the breathtaking views afforded by the location, ensuring that each aspect of the Chalet was oriented to maximize its connection with the landscape.',
+            style: { left: '25vw' },
+          },
         },
         {
           src: '/projects/modern-chalet/5.jpg',
@@ -1074,9 +1106,17 @@ export const projectsFull = [
         },
         {
           src: '/projects/modern-chalet/7.jpeg',
+          caption: {
+            text: 'Moreover, we endeavored to seamlessly blend the Chalet into its surroundings, both aesthetically and functionally. By harmonizing the architectural elements with the natural contours of the land, we created a sense of belonging and tranquility, allowing the Chalet to become an organic extension of the mountain terrain.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/modern-chalet/8.jpeg',
+          caption: {
+            text: 'In essence, our design for the new Chalet is a testament to our commitment to preserving the essence of the original house while embracing the beauty and serenity of its mountain setting. It stands as a tribute to the past, a celebration of the present, and a harmonious integration into the timeless landscape.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
       ],
     },
