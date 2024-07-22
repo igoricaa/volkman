@@ -95,18 +95,16 @@
 }
 
 @media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 680px) {
   .awards {
     margin-top: 0;
 
     .gridHeader {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
+
       .sectiontitle {
         &:first-child {
           width: 100%;
-          font-size: 12px;
+          font-size: 1rem;
         }
 
         &:nth-child(2) {
@@ -119,13 +117,13 @@
     }
 
     .awardWrapper {
-      padding: 1.5rem 0 2rem;
+      padding: 2rem 0 2.5rem;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2rem;
       position: relative;
 
       &:last-of-type {
-        padding-bottom: 1.5rem;
+        padding-bottom: 2rem;
       }
 
       div {
@@ -134,9 +132,10 @@
         &:last-of-type {
           width: 100%;
         }
+
         &:first-of-type {
           p {
-            font-size: 1.5rem;
+            font-size: 2rem;
             width: 60%;
             color: #fff;
           }
@@ -144,22 +143,59 @@
 
         &:nth-of-type(2) {
           p {
-            font-size: 1rem;
+            font-size: 1.25rem;
             max-width: 100%;
           }
         }
 
         &:last-of-type {
           position: absolute;
+
           p {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
           }
         }
       }
+    }
+  }
+}
 
-      &:hover {
-        div {
+@media screen and (max-width: 680px) {
+  .awards {
+
+    .gridHeader {
+      padding-bottom: 1rem;
+      .sectiontitle {
+        &:first-child {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .awardWrapper {
+      padding: 1.5rem 0 2rem;
+      gap: 1.5rem;
+
+      &:last-of-type {
+        padding-bottom: 1.5rem;
+      }
+
+      div {
+        &:first-of-type {
           p {
+            font-size: 1.5rem;
+          }
+        }
+
+        &:nth-of-type(2) {
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        &:last-of-type {
+          p {
+            font-size: 1.25rem;
           }
         }
       }

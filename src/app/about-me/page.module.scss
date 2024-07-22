@@ -92,6 +92,22 @@
       max-width: 28rem;
     }
   }
+
+  .middleSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+
+    .imageWrapper {
+      position: relative;
+      aspect-ratio: 386 / 467;
+      object-fit: cover;
+    }
+  }
+
+  .awardsSection {
+    padding: 2.5rem calc(var(--padding-side)) 0;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -123,16 +139,7 @@
 
   .middleSection {
     padding: 3.5rem var(--padding-side);
-    display: grid;
-    grid-template-columns: 1fr;
     column-gap: 5rem;
-    align-items: center;
-
-    .imageWrapper {
-      position: relative;
-      aspect-ratio: 386 / 467;
-      object-fit: cover;
-    }
 
     .textWrapper {
       > p {
