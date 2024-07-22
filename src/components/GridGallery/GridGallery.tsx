@@ -8,11 +8,24 @@ import Lenis from 'lenis';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import { homeGalleryImages } from '@/data/data';
+import { useState } from 'react';
 
 const GridGallery = () => {
   gsap.registerPlugin(Flip, ScrollTrigger);
+  const [bigImagesIndex, setBigImagesIndex] = useState<number[]>([]);
+
+  const imageSizesBig = `(max-width: 1024px) 25vw, 29vw`;
+  const imageSizesSmall = `(max-width: 1024px) 30px, 300px`;
+  const bigImagesIndexDesktop = [33, 34, 35, 36, 43, 44, 45, 46];
+  const bigImagesIndexMobile = [
+    3, 4, 5, 6, 13, 14, 15, 16, 23, 24, 25, 26, 33, 34, 35, 36, 43, 44, 45, 46,
+    53, 54, 55, 56, 63, 64, 65, 66, 73, 74, 75, 76,
+  ];
 
   useGSAP(() => {
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+    setBigImagesIndex(isDesktop ? bigImagesIndexDesktop : bigImagesIndexMobile);
+
     const initSmoothScrolling = () => {
       let lenis = new Lenis({
         lerp: 0.1,
@@ -81,21 +94,6 @@ const GridGallery = () => {
     initSmoothScrolling();
     scroll();
   }, []);
-
-  const imageSizesBig = `(max-width: 1024px) 25vw, 29vw`;
-  const imageSizesSmall = `(max-width: 1024px) 30px, 300px`;
-  const bigImagesIndexDesktop = [33, 34, 35, 36, 43, 44, 45, 46];
-  const bigImagesIndexMobile = [
-    3, 4, 5, 6, 13, 14, 15, 16, 23, 24, 25, 26, 33, 34, 35, 36, 43, 44, 45, 46,
-    53, 54, 55, 56, 63, 64, 65, 66, 73, 74, 75, 76,
-  ];
-
-  let bigImagesIndex: number[] = [];
-  if (typeof window !== 'undefined') {
-    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-
-    bigImagesIndex = isDesktop ? bigImagesIndexDesktop : bigImagesIndexMobile;
-  }
 
   return (
     <div className={styles.galleryWrap}>
