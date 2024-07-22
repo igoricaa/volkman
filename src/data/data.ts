@@ -1432,18 +1432,38 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/czech-embassy-washington/1.jpg',
+          caption: {
+            text: "Embassies serve as vital representations of a country's identity and values on the global stage. As such, their design must strike a delicate balance between prestige and practicality, embodying the essence of the nation while fulfilling its functional requirements.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/czech-embassy-washington/2.jpg',
+          caption: {
+            text: "The design of our embassy is a testament to this philosophy, aiming to showcase our pride in our homeland while ensuring a dignified and welcoming environment for visitors. Every aspect of the design, from the architectural elements to the interior decor, is carefully curated to reflect our country's heritage, culture, and values.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/czech-embassy-washington/3.jpg',
+          caption: {
+            text: "Prestige is evident in the grandeur of the building's facade, which commands attention and respect on the diplomatic scene. Yet, practicality remains paramount, with efficient layout and modern amenities catering to the embassy's operational needs.",
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/czech-embassy-washington/4.jpg',
+          caption: {
+            text: "Inside, visitors are greeted with a sense of elegance and sophistication, with tasteful decor and furnishings that reflect our country's rich history and traditions. The embassy serves as a cultural ambassador, offering glimpses of our heritage through art, artifacts, and cultural events.",
+            style: { left: '25vw' },
+          },
         },
         {
           src: '/projects/czech-embassy-washington/5.jpg',
+          caption: {
+            text: "Ultimately, our embassy design seeks to leave a lasting impression on all who enter its doors — a symbol of our nation's strength, integrity, and commitment to fostering positive relations with the international community.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
       ],
     },
@@ -1463,12 +1483,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/hladinka-restaurant/1.jpg',
+          caption: {
+            text: 'Hladinka has transformed from a standard pub into a sought-after destination in its popular neighborhood, thanks to a comprehensive reconstruction that revolutionized its atmosphere and clientele. No longer just a place for a quick drink with friends, Hladinka now caters to a diverse array of patrons, from couples seeking a romantic dinner to groups in search of a vibrant social scene. Such is its popularity that reservations are now a necessity!',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/hladinka-restaurant/2.jpg',
         },
         {
           src: '/projects/hladinka-restaurant/3.jpg',
+          caption: {
+            text: "At the heart of Hladinka's transformation lies its unique ambiance, carefully crafted to captivate and inspire. The untraditional design of the floor and custom graphics adorning the walls set the stage for an unforgettable experience. Tables and benches with atypical bases seamlessly blend with the bar and other architectural elements, creating a cohesive and inviting environment.",
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/hladinka-restaurant/4.jpg',
@@ -1481,6 +1509,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/hladinka-restaurant/7.jpg',
+          caption: {
+            text: 'In just four months, Hladinka has emerged as a beacon of culinary excellence and social camaraderie in its neighborhood, thanks to its innovative design, welcoming atmosphere, and exceptional service. It stands as a testament to the transformative power of thoughtful design and dedicated craftsmanship.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/hladinka-restaurant/8.jpg',
