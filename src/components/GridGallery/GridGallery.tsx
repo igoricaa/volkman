@@ -91,7 +91,7 @@ const GridGallery = () => {
   ];
 
   let bigImagesIndex: number[] = [];
-  if (window !== undefined) {
+  if (typeof window !== 'undefined') {
     const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
 
     bigImagesIndex = isDesktop ? bigImagesIndexDesktop : bigImagesIndexMobile;
