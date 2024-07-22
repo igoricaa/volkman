@@ -657,12 +657,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/bird-and-bird/1.jpg',
+          caption: {
+            text: 'This company made the strategic decision to relocate its Prague branch from the historic center to a brand - new office building in Karlín. In this innovative space, the architect was presented with a unique challenge: to transform the raw shell and core of the building into a dynamic and functional workplace, where creativity and flexibility are paramount.',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/bird-and-bird/2.jpg',
         },
         {
           src: '/projects/bird-and-bird/3.jpg',
+          caption: {
+            text: 'With a focus on adaptability, the design allows for the seamless utilization of individual zones to accommodate various needs. The reception area, for instance, serves as a tranquil workspace for clerks while also providing a welcoming environment for clients awaiting appointments.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/bird-and-bird/4.jpg',
@@ -675,6 +683,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/bird-and-bird/7.jpg',
+          caption: {
+            text: 'The relaxation zone offers a retreat for lawyers amidst the demands of their workday, doubling as a space for informal company gatherings. While professionalism is essential for a law firm, the project also embraced the opportunity to infuse elements of playfulness and coziness into the interior.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/bird-and-bird/8.jpg',
@@ -684,6 +696,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/bird-and-bird/10.jpg',
+          caption: {
+            text: 'Throughout the office, subtle yet engaging features enhance the overall atmosphere, fostering a more vibrant and inviting work environment for both employees and clients alike. This thoughtful approach not only ensures the functionality of the space but also contributes to a sense of harmony and well - being.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/bird-and-bird/11.jpg',
@@ -802,12 +818,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/cottage/1.jpg',
+          caption: {
+            text: "The property originally housed a cottage earmarked for demolition, prompting us to design a replacement in the same location. Adhering to regulations, the new structure had to maintain the original building's footprint, featuring one above - ground floor and a residential attic. Additional sheds and verandas, not exceeding 10% of the existing built - up area, could be incorporated, though not facing the forest.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/cottage/2.jpg',
         },
         {
           src: '/projects/cottage/3.jpg',
+          caption: {
+            text: "Crafted as a wooden frame, the exterior was meticulously designed for low - maintenance upkeep. Areas susceptible to shade or moisture were adorned with wooden cladding, while a gutterless roof minimized cleaning demands. Opting for a dark hue helped mitigate the structure's visual impact on the surrounding landscape.",
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/cottage/4.jpg',
@@ -820,6 +844,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/cottage/7.jpg',
+          caption: {
+            text: "Delving into the layout, careful consideration was given to accommodating a painting easel and a small desk. In response to the client's desires, the living room was tailored to feature a kitchen, a sofa, and a fireplace insert. The sofa's positioning ensured a captivating view of both the fireplace and the TV.",
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/cottage/8.jpg',
@@ -829,6 +857,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/cottage/10.jpg',
+          caption: {
+            text: "The design also prioritized natural ventilation for all bathrooms, integrating windows to promote airflow and illuminate the space. Despite these technical considerations, we seamlessly blended all elements to create a snug and inviting interior that met the client's expectations.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/cottage/11.jpg',
