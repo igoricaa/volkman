@@ -1550,12 +1550,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/red-dot-apartment/1.jpg',
+          caption: {
+            text: 'Discover a truly unconventional apartment that promises to elevate your vacation experience in the heart of Prague. Eccentric yet undeniably unique, this short-term rental offers a refreshing departure from the ordinary.',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/red-dot-apartment/2.jpg',
         },
         {
           src: '/projects/red-dot-apartment/3.jpg',
+          caption: {
+            text: 'Step inside and prepare to be enchanted by the charm of this one-of-a-kind space. The apartment boasts a smaller kitchen, perfectly suited for quick meals or snacks — after all, who wants to cook on holiday? The bright bedroom, with its whimsical view of the bathroom, adds a playful touch to the ambiance.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/red-dot-apartment/4.jpg',
@@ -1568,6 +1576,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/red-dot-apartment/7.jpg',
+          caption: {
+            text: 'Despite its compact size, every corner of the apartment has been meticulously designed and optimized to maximize space and functionality. The design aesthetic is characterized by brightness and lightness, with all details accentuated in vibrant red hues.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/red-dot-apartment/8.jpg',
@@ -1577,9 +1589,17 @@ export const projectsFull = [
         },
         {
           src: '/projects/red-dot-apartment/10.jpg',
+          caption: {
+            text: 'While the budget may have been modest, the creativity and ingenuity poured into this project were boundless. From the clever use of space to the bold design choices, this apartment is a testament to the power of imagination and resourcefulness.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/red-dot-apartment/11.jpg',
+          caption: {
+            text: "Whether you're exploring the historic streets of Prague or simply unwinding after a day of adventure, this unconventional apartment offers a memorable and enchanting retreat unlike any other. It's the perfect blend of whimsy, comfort, and affordability — a true gem waiting to be discovered.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
       ],
     },
