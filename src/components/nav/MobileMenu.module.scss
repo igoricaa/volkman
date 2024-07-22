@@ -5,19 +5,19 @@
 @media (max-width: 1024px) {
   .mobileMenu {
     display: block;
-    
+
     .burgerWrapper {
       position: absolute;
-      right: 17px;
-      top: 22px;
+      right: 4rem;
+      top: 27px;
       transform: translateY(0%) scale(1) rotate(0.001deg);
       transition: transform var(--animation-smooth) 0s;
       z-index: 10;
 
       .burger {
         display: flex;
-        height: 67px;
-        width: 67px;
+        width: 55px;
+        height: 55px;
         background-color: #fff;
         position: relative;
         right: 0;
@@ -32,7 +32,7 @@
 
         .bar {
           position: absolute;
-          width: 2rem;
+          width: 1.5rem;
           height: 1.5px;
           background-color: #232323;
           transition: var(--animation-smooth), background-color 0.2s ease-in-out;
@@ -75,10 +75,10 @@
     }
 
     .modalNavMobile {
-      top: 141px;
+      top: 27px;
       bottom: 140px;
-      left: 38px;
-      right: 38px;
+      right: 4rem;
+      left: 4rem;
       z-index: 5;
       position: absolute;
       display: flex;
@@ -102,8 +102,8 @@
           position: absolute;
           right: 0px;
           top: 0px;
-          width: 67px;
-          height: 67px;
+          width: 55px;
+          height: 55px;
           transform: scale(1) rotate(0.001deg);
         }
 
@@ -185,7 +185,7 @@
 
     &.active {
       .burger {
-        transform: translate(-3px, 18px);
+        transform: translate(-0.5rem, 1.5rem);
 
         .bar {
           &:nth-child(1) {
@@ -224,44 +224,12 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
-    .mobileMenu {
-      .burgerWrapper {
-        .burger {
-          width: 55px;
-          height: 55px;
-
-          .bar {
-            width: 1.5rem;
-          }
-        }
-      }
-
-      .modalNavMobile {
-        top: 105px;
-        bottom: 140px;
-        right: 1.5rem;
-        left: 1.5rem;
-
-        .modalBlock {
-          .modalBlockBackground {
-            width: 55px;
-            height: 55px;
-          }
-        }
-      }
-
-      &.active {
-        .burger {
-          transform: translate(-0.5rem, 1.5rem);
-        }
-      }
-    }
-  }
-
   @media screen and (max-width: 680px) {
     .mobileMenu {
       .burgerWrapper {
+        right: 17px;
+        top: 22px;
+
         .burger {
           width: 3rem;
           height: 3rem;
