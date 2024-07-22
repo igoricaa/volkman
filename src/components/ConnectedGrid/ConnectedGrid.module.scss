@@ -6,6 +6,12 @@
   position: relative;
   margin: 10vh auto 10vh;
 
+  &.gridMobile {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
   .gridItem {
     position: relative;
     margin: 0;
@@ -14,7 +20,6 @@
 
     .gridItemCaptionCustom {
       position: absolute;
-      padding: 0.5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -43,19 +48,10 @@
       width: 100%;
       height: auto;
       aspect-ratio: var(--img-ratio);
-
-      .gridItemImgInner {
-        width: 100%;
-        height: 100%;
-        background-position: 50%;
-        background-size: cover;
-        position: relative;
-      }
     }
 
     .gridItemCaption {
       position: absolute;
-      padding: 0.5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -79,5 +75,42 @@
   .grid {
     margin: 5vh auto 5vh;
     grid-template-columns: repeat(8, 1fr);
+
+    &.gridDesktop {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+
+    &.gridMobile {
+      opacity: 1;
+      visibility: visible;
+      display: grid;
+    }
+
+    .gridItem {
+      &.gridItemText {
+        margin: 3rem 0;
+      }
+
+      .gridItemCaptionCustom {
+        &.mobileCaption {
+          width: 100vw;
+          position: unset;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .grid {
+    .gridItem {
+      .gridItemCaptionCustom {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }

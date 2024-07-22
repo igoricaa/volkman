@@ -276,7 +276,7 @@ export type Project = {
   grid: {
     alt: string;
     images: {
-      src: string;
+      src?: string;
       caption?: {
         text: string;
         style: { left: string; textAlign?: string };
@@ -335,6 +335,55 @@ export const projectsGalleryImageStyles = [
   { '--r': 46, '--c': 1, '--s': 2 },
 ];
 
+export const projectsGalleryImageStylesMobile = [
+  { '--r': 1, '--c': 1, '--s': 4 },
+  { '--r': 2, '--c': 5, '--s': 4 },
+  { '--r': 3, '--c': 1, '--s': 8 },
+  { '--r': 4, '--c': 5, '--s': 4 },
+  { '--r': 5, '--c': 1, '--s': 4 },
+  { '--r': 6, '--c': 1, '--s': 8 },
+  { '--r': 7, '--c': 1, '--s': 8 },
+  { '--r': 8, '--c': 1, '--s': 8 },
+  { '--r': 9, '--c': 1, '--s': 4 },
+  { '--r': 10, '--c': 5, '--s': 4 },
+  { '--r': 11, '--c': 1, '--s': 4 },
+  { '--r': 12, '--c': 5, '--s': 4 },
+  { '--r': 14, '--c': 1, '--s': 8 },
+  { '--r': 13, '--c': 1, '--s': 4 },
+  { '--r': 15, '--c': 1, '--s': 4 },
+  { '--r': 16, '--c': 5, '--s': 4 },
+  { '--r': 17, '--c': 1, '--s': 4 },
+  { '--r': 18, '--c': 5, '--s': 4 },
+  { '--r': 19, '--c': 1, '--s': 8 },
+  { '--r': 20, '--c': 1, '--s': 4 },
+  { '--r': 21, '--c': 5, '--s': 4 },
+  { '--r': 22, '--c': 1, '--s': 4 },
+  { '--r': 23, '--c': 5, '--s': 4 },
+  { '--r': 24, '--c': 1, '--s': 4 },
+  { '--r': 25, '--c': 5, '--s': 4 },
+  { '--r': 26, '--c': 1, '--s': 4 },
+  { '--r': 27, '--c': 5, '--s': 4 },
+  { '--r': 28, '--c': 1, '--s': 4 },
+  { '--r': 29, '--c': 5, '--s': 4 },
+  { '--r': 30, '--c': 1, '--s': 4 },
+  { '--r': 31, '--c': 5, '--s': 4 },
+  { '--r': 32, '--c': 1, '--s': 4 },
+  { '--r': 33, '--c': 5, '--s': 4 },
+  { '--r': 34, '--c': 1, '--s': 4 },
+  { '--r': 35, '--c': 5, '--s': 4 },
+  { '--r': 36, '--c': 1, '--s': 4 },
+  { '--r': 37, '--c': 5, '--s': 4 },
+  { '--r': 38, '--c': 1, '--s': 4 },
+  { '--r': 39, '--c': 1, '--s': 4 },
+  { '--r': 40, '--c': 5, '--s': 4 },
+  { '--r': 41, '--c': 1, '--s': 4 },
+  { '--r': 42, '--c': 5, '--s': 4 },
+  { '--r': 43, '--c': 1, '--s': 4 },
+  { '--r': 44, '--c': 5, '--s': 4 },
+  { '--r': 45, '--c': 1, '--s': 4 },
+  { '--r': 46, '--c': 5, '--s': 4 },
+];
+
 export const projectsFull = [
   {
     title: 'Masarycka Restaurant',
@@ -360,6 +409,11 @@ export const projectsFull = [
           src: '/projects/masarycka-restaurant/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'Masarycka stands proudly as a recipient of prestigious awards, a testament to its exceptional design and culinary excellence. This revered establishment seamlessly blends the grandeur of the historic Imperial Restaurant with the contemporary allure of a modern station eatery, creating a truly unique dining destination.',
+          },
+        },
+        {
           src: '/projects/masarycka-restaurant/3.jpg',
           caption: {
             text: "From the outset, our commitment was to preserve the venue's distinctive character while infusing it with a fresh, innovative spirit.",
@@ -370,7 +424,17 @@ export const projectsFull = [
           src: '/projects/masarycka-restaurant/4.jpg',
         },
         {
+          mobileCaption: {
+            text: "From the outset, our commitment was to preserve the venue's distinctive character while infusing it with a fresh, innovative spirit.",
+          },
+        },
+        {
           src: '/projects/masarycka-restaurant/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Through meticulous attention to detail and a deep appreciation for the art of hospitality, Masarycka has garnered accolades for its timeless design, exceptional service, and culinary mastery.',
+          },
         },
         {
           src: '/projects/masarycka-restaurant/6.jpg',
@@ -387,6 +451,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/masarycka-restaurant/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "Our dedication to excellence extends beyond the dining experience itself. We meticulously crafted every aspect of the restaurant's identity, from its name and logo to its brand identity, ensuring a cohesive and captivating brand experience.",
+          },
         },
         {
           src: '/projects/masarycka-restaurant/10.jpg',
@@ -410,6 +479,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/masarycka-restaurant/14.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'As a recipient of esteemed design awards, Masarycka continues to captivate diners and critics alike, setting the standard for culinary innovation and design excellence. It is a true testament to our passion for creating unforgettable spaces that celebrate both tradition and innovation.',
+          },
         },
         {
           src: '/projects/masarycka-restaurant/15.jpg',
@@ -1137,18 +1211,34 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/dinosaria-museum/1.jpg',
+          caption: {
+            text: "In collaboration with the esteemed Berlin - based studio Art+COM and the innovative digital agency Lunchmeat, our team had the distinct privilege of designing the captivating interactive museum, Dinosauria Museum Prague. Boasting one of the world's largest private collections of dinosaur skeletons and models, this museum stands as a testament to the awe-inspiring wonders of prehistoric life.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/dinosaria-museum/2.jpg',
+          caption: {
+            text: "Nestled within the vibrant POP Airport area near Prague airport, the Dinosauria Museum sprawls across an impressive 40,000 square feet of space. Here, visitors are treated to a breathtaking display of dinosaur skeletons dating back as far as 66 to 154 million years, renowned for their remarkable completeness and exceptional quality. Among the standout exhibits are the imposing model of a tyrannosaurus rex and the graceful flight of a pterosaur, further enriching the museum's diverse collection.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/dinosaria-museum/3.jpg',
         },
         {
           src: '/projects/dinosaria-museum/4.jpg',
+          caption: {
+            text: "From the initial conceptualization to the meticulous documentation and installation, our team meticulously oversaw every aspect of the museum's architecture. With a keen eye for detail and a dedication to excellence, we ensured that each element seamlessly integrated with the museum's overall design vision.",
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/dinosaria-museum/5.jpg',
+          caption: {
+            text: 'Our involvement extended to the final stages of project management, ensuring a smooth transition leading up to the grand opening of Dinosauria. It was a privilege to be part of this groundbreaking endeavor, bringing the wonders of the ancient world to life for visitors of all ages to enjoy and explore.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/dinosaria-museum/6.jpg',
@@ -1217,18 +1307,34 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/kitchen-concept-54/1.jpg',
+          caption: {
+            text: 'archicraft has joined forces with an expert in cooking and cooling technologies for both professional kitchens and private spaces to introduce the Profi Family kitchen — a revolutionary concept where elegance, functionality, and design converge. Together, these partners have crafted a harmonious blend of interior perfection and cutting-edge appliances, where professional - grade technology seamlessly integrates into the kitchen environment.',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/kitchen-concept-54/2.jpg',
+          caption: {
+            text: 'The collaboration between archicraft studio and the esteemed 54° brand aims to redefine the kitchen experience, offering a space where the sophistication of design meets the precision of professional-grade equipment. The goal of this joint project is to create a truly unique kitchen environment that not only maintains the ergonomic and functional standards found in commercial gastronomic operations but also infuses the interior with a touch of luxury.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/kitchen-concept-54/3.jpg',
         },
         {
           src: '/projects/kitchen-concept-54/4.jpg',
+          caption: {
+            text: 'With the professional kitchen, homeowners can enjoy the convenience and performance of professional-grade appliances without compromising on style or elegance. Each element of the kitchen has been meticulously curated to ensure a seamless integration of form and function, resulting in a space that not only inspires culinary creativity but also elevates the overall aesthetic of the home.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/kitchen-concept-54/5.jpg',
+          caption: {
+            text: "Whether preparing a gourmet meal or simply enjoying a quiet moment in the kitchen, the professional kitchen offers an unparalleled experience where every detail has been carefully considered to meet the highest standards of excellence. It's the perfect fusion of style, innovation, and functionality — a true masterpiece of modern kitchen design.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/kitchen-concept-54/6.jpg',
@@ -1251,12 +1357,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/shou-sugi-ban-apartment/1.jpg',
+          caption: {
+            text: 'In our quest for non-traditional approaches and distinctive solutions, we embarked on a design journey that transformed an apartment within a beautifully reconstructed tenement into a space of unparalleled elegance and innovation. Drawing inspiration from diverse sources, we sought to infuse the interior with a sense of character and uniqueness.',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/shou-sugi-ban-apartment/2.jpg',
         },
         {
           src: '/projects/shou-sugi-ban-apartment/3.jpg',
+          caption: {
+            text: 'At the heart of our design philosophy lies a deep appreciation for the natural beauty of materials, with wood taking center stage as a beloved element. Embracing the traditional Japanese technique of shou sugi ban, we imbued the wood with a rich depth and texture, elevating its aesthetic appeal while also enhancing its durability and longevity.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/shou-sugi-ban-apartment/4.jpg',
@@ -1269,6 +1383,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/shou-sugi-ban-apartment/7.jpg',
+          caption: {
+            text: 'Against the backdrop of an otherwise neutral interior, these meticulously treated wooden elements serve as striking focal points, commanding attention and imbuing the space with a sense of warmth and sophistication. Whether adorning the walls, ceilings, or furnishings, each instance of shou sugi ban wood exudes a timeless allure, inviting admiration and contemplation.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/shou-sugi-ban-apartment/8.jpg',
@@ -1278,6 +1396,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/shou-sugi-ban-apartment/10.jpg',
+          caption: {
+            text: "In our pursuit of unique solutions, we also integrated several dominant elements that further contribute to the apartment's distinct character. From bespoke lighting fixtures to curated artworks, each addition was carefully chosen to complement the overall design vision and enhance the ambiance of the space.",
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/shou-sugi-ban-apartment/11.jpg',
@@ -1287,6 +1409,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/shou-sugi-ban-apartment/13.jpg',
+          caption: {
+            text: 'The result is a harmonious fusion of tradition and innovation, where the artistry of shousugi ban meets modern sensibilities to create an interior that is at once captivating and serene. It is a testament to our commitment to pushing the boundaries of design, exploring new possibilities, and crafting spaces that inspire and delight.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
       ],
     },
