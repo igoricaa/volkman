@@ -95,8 +95,13 @@
 
       .gridItemCaptionCustom {
         &.mobileCaption {
-          width: 100vw;
+          width: calc(100vw - 2 * var(--padding-side));
           position: unset;
+        }
+
+        &.endingText {
+          margin-top: 0;
+          width: calc(100vw - 2 * var(--padding-side));
         }
       }
     }

@@ -264,28 +264,6 @@ export const projectsFeatured = [
   },
 ];
 
-export type Project = {
-  title: string;
-  slug: string;
-  category: string;
-  featuredPhoto: string;
-  location: string;
-  client: string;
-  year: string;
-  archicraftUrl?: string;
-  grid: {
-    alt: string;
-    images: {
-      src?: string;
-      caption?: {
-        text: string;
-        style: { left: string; textAlign?: string };
-      };
-    }[];
-  };
-  endingText?: string;
-};
-
 export const projectsGalleryImageStyles = [
   { '--r': 1, '--c': 1, '--s': 4 },
   { '--r': 2, '--c': 5, '--s': 3 },
@@ -384,7 +362,38 @@ export const projectsGalleryImageStylesMobile = [
   { '--r': 46, '--c': 5, '--s': 4 },
 ];
 
-export const projectsFull = [
+export type Project = {
+  title: string;
+  slug: string;
+  category: string;
+  featuredPhoto: string;
+  location: string;
+  client: string;
+  year: string;
+  archicraftUrl?: string;
+  grid: {
+    alt: string;
+    images: {
+      src?: string;
+      caption?: {
+        text: string;
+        style: { left: string; textAlign?: string };
+      };
+      mobileCaption?: {
+        text: string;
+        style?: {
+          '--r'?: number;
+          '--c'?: number;
+          '--s'?: number;
+          marginBottom?: string;
+        };
+      };
+    }[];
+  };
+  endingText?: string;
+};
+
+export const projectsFull: Project[] = [
   {
     title: 'Masarycka Restaurant',
     slug: 'masarycka-restaurant',
@@ -537,6 +546,11 @@ export const projectsFull = [
           src: '/projects/arden-residence/2.jpg',
         },
         {
+          mobileCaption: {
+            text: "This project features a remarkable residential development nestled in California's urban landscape: a 5100 square-foot main house accompanied by an 800 square-foot guest house. This design epitomizes contemporary luxury, showcasing European materials and emphasizing seamless integration with a private garden sanctuary, offering a tranquil retreat from city life.",
+          },
+        },
+        {
           src: '/projects/arden-residence/3.jpg',
           caption: {
             text: 'The main house is designed with an expansive open floor plan that maximizes natural light and airflow. Expansive sliding doors effortlessly blend indoor and outdoor spaces, leading to a serene garden and pool area — a secluded oasis amidst the urban hustle.',
@@ -547,7 +561,17 @@ export const projectsFull = [
           src: '/projects/arden-residence/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'The main house is designed with an expansive open floor plan that maximizes natural light and airflow. Expansive sliding doors effortlessly blend indoor and outdoor spaces, leading to a serene garden and pool area — a secluded oasis amidst the urban hustle.',
+          },
+        },
+        {
           src: '/projects/arden-residence/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'European materials, including refined stone and hardwood, are carefully selected to enhance both aesthetic appeal and structural integrity.',
+          },
         },
         {
           src: '/projects/arden-residence/6.jpg',
@@ -564,6 +588,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/arden-residence/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Each of the six bedrooms provides direct access to outdoor spaces, whether through private terraces or garden views, ensuring a seamless indoor - outdoor experience that enhances the sense of comfort and homeliness alongside the luxurious and spacious ambiance. Complementing the main residence, the guest house features its own distinctive design and access to outdoor amenities.',
+          },
         },
         {
           src: '/projects/arden-residence/10.jpg',
@@ -589,11 +618,17 @@ export const projectsFull = [
           src: '/projects/arden-residence/14.jpg',
         },
         {
+          mobileCaption: {
+            text: 'This project embodies a blend of sophistication and functionality, offering residents a luxurious sanctuary that harmonizes with nature within an urban setting — a residence that exudes both elegance and inviting comfort.',
+          },
+        },
+        {
           src: '/projects/arden-residence/15.jpg',
         },
         {
           src: '/projects/arden-residence/16.jpg',
         },
+
         {
           src: '/projects/arden-residence/17.jpg',
         },
@@ -655,6 +690,11 @@ export const projectsFull = [
           src: '/projects/basics-coffee/2.jpg',
         },
         {
+          mobileCaption: {
+            text: "The Czech café concept, born from a collaborative effort with graphic designers, presents a space where patrons can enjoy top - notch coffee in a setting designed to enhance their experience. As you step into our café, you'll notice the attention to detail in every aspect of the environment.",
+          },
+        },
+        {
           src: '/projects/basics-coffee/3.jpg',
           caption: {
             text: "We've carefully crafted the ambiance to create a welcoming atmosphere where guests can unwind and savor their coffee. Thoughtful lighting adds warmth to the space, while comfortable seating encourages relaxation. The acoustics have been fine - tuned to provide a pleasant backdrop, allowing visitors to enjoy their coffee in peace.",
@@ -665,7 +705,17 @@ export const projectsFull = [
           src: '/projects/basics-coffee/4.jpg',
         },
         {
+          mobileCaption: {
+            text: "We've carefully crafted the ambiance to create a welcoming atmosphere where guests can unwind and savor their coffee. Thoughtful lighting adds warmth to the space, while comfortable seating encourages relaxation. The acoustics have been fine - tuned to provide a pleasant backdrop, allowing visitors to enjoy their coffee in peace.",
+          },
+        },
+        {
           src: '/projects/basics-coffee/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "In keeping with our commitment to simplicity, we've opted for a design aesthetic that celebrates the beauty of raw materials. By forgoing excessive decoration, we allow the natural characteristics of each element to take center stage, fostering a sense of authenticity and harmony.",
+          },
         },
         {
           src: '/projects/basics-coffee/6.jpg',
@@ -682,6 +732,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/basics-coffee/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Our unique graphic approach serves as a visual representation of our passion for coffee. Through artful expression, we aim to convey what fascinates us about this beloved beverage, inviting guests to explore its complexities with fresh eyes.',
+          },
         },
         {
           src: '/projects/basics-coffee/10.jpg',
@@ -741,6 +796,11 @@ export const projectsFull = [
           src: '/projects/bird-and-bird/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'This company made the strategic decision to relocate its Prague branch from the historic center to a brand - new office building in Karlín. In this innovative space, the architect was presented with a unique challenge: to transform the raw shell and core of the building into a dynamic and functional workplace, where creativity and flexibility are paramount.',
+          },
+        },
+        {
           src: '/projects/bird-and-bird/3.jpg',
           caption: {
             text: 'With a focus on adaptability, the design allows for the seamless utilization of individual zones to accommodate various needs. The reception area, for instance, serves as a tranquil workspace for clerks while also providing a welcoming environment for clients awaiting appointments.',
@@ -751,7 +811,17 @@ export const projectsFull = [
           src: '/projects/bird-and-bird/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'With a focus on adaptability, the design allows for the seamless utilization of individual zones to accommodate various needs. The reception area, for instance, serves as a tranquil workspace for clerks while also providing a welcoming environment for clients awaiting appointments.',
+          },
+        },
+        {
           src: '/projects/bird-and-bird/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'The relaxation zone offers a retreat for lawyers amidst the demands of their workday, doubling as a space for informal company gatherings. While professionalism is essential for a law firm, the project also embraced the opportunity to infuse elements of playfulness and coziness into the interior.',
+          },
         },
         {
           src: '/projects/bird-and-bird/6.jpg',
@@ -768,6 +838,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/bird-and-bird/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Throughout the office, subtle yet engaging features enhance the overall atmosphere, fostering a more vibrant and inviting work environment for both employees and clients alike. This thoughtful approach not only ensures the functionality of the space but also contributes to a sense of harmony and well - being.',
+          },
         },
         {
           src: '/projects/bird-and-bird/10.jpg',
@@ -902,6 +977,11 @@ export const projectsFull = [
           src: '/projects/cottage/2.jpg',
         },
         {
+          mobileCaption: {
+            text: "The property originally housed a cottage earmarked for demolition, prompting us to design a replacement in the same location. Adhering to regulations, the new structure had to maintain the original building's footprint, featuring one above - ground floor and a residential attic. Additional sheds and verandas, not exceeding 10% of the existing built - up area, could be incorporated, though not facing the forest.",
+          },
+        },
+        {
           src: '/projects/cottage/3.jpg',
           caption: {
             text: "Crafted as a wooden frame, the exterior was meticulously designed for low - maintenance upkeep. Areas susceptible to shade or moisture were adorned with wooden cladding, while a gutterless roof minimized cleaning demands. Opting for a dark hue helped mitigate the structure's visual impact on the surrounding landscape.",
@@ -912,7 +992,17 @@ export const projectsFull = [
           src: '/projects/cottage/4.jpg',
         },
         {
+          mobileCaption: {
+            text: "Crafted as a wooden frame, the exterior was meticulously designed for low - maintenance upkeep. Areas susceptible to shade or moisture were adorned with wooden cladding, while a gutterless roof minimized cleaning demands. Opting for a dark hue helped mitigate the structure's visual impact on the surrounding landscape.",
+          },
+        },
+        {
           src: '/projects/cottage/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "Delving into the layout, careful consideration was given to accommodating a painting easel and a small desk. In response to the client's desires, the living room was tailored to feature a kitchen, a sofa, and a fireplace insert. The sofa's positioning ensured a captivating view of both the fireplace and the TV.",
+          },
         },
         {
           src: '/projects/cottage/6.jpg',
@@ -929,6 +1019,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/cottage/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "The design also prioritized natural ventilation for all bathrooms, integrating windows to promote airflow and illuminate the space. Despite these technical considerations, we seamlessly blended all elements to create a snug and inviting interior that met the client's expectations.",
+          },
         },
         {
           src: '/projects/cottage/10.jpg',
@@ -1043,6 +1138,11 @@ export const projectsFull = [
           src: '/projects/motorcycle-loft/2.jpg',
         },
         {
+          mobileCaption: {
+            text: "Every now and then, we're presented with the opportunity to embark on truly extraordinary endeavors — projects that resonate deeply with our passions and ignite a creative spark within us. Such was the case with this endeavor — a project so captivating that we found ourselves reluctant to see it come to an end.",
+          },
+        },
+        {
           src: '/projects/motorcycle-loft/3.jpg',
           caption: {
             text: 'Fueled by a profound appreciation for exotic natural materials, a penchant for elegant simplicity, and a daring embrace of unconventional technical elements, this project transcended the ordinary to become something truly exceptional. From the outset, our aim was clear: to craft a space that not only met the practical needs of our clients but also ignited their imagination and stirred their souls.',
@@ -1053,7 +1153,17 @@ export const projectsFull = [
           src: '/projects/motorcycle-loft/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'Fueled by a profound appreciation for exotic natural materials, a penchant for elegant simplicity, and a daring embrace of unconventional technical elements, this project transcended the ordinary to become something truly exceptional. From the outset, our aim was clear: to craft a space that not only met the practical needs of our clients but also ignited their imagination and stirred their souls.',
+          },
+        },
+        {
           src: '/projects/motorcycle-loft/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'One of the most remarkable features of this project? A living room where a motorbike finds its rightful place alongside the furniture — a bold and unconventional choice that speaks volumes about the adventurous spirit of its inhabitants.',
+          },
         },
         {
           src: '/projects/motorcycle-loft/6.jpg',
@@ -1070,6 +1180,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/motorcycle-loft/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'And why stop at a motorbike? For those with an even grander sense of adventure , imagine the possibility of driving a car directly into your apartment — an audacious concept that pushes the boundaries of traditional living spaces.',
+          },
         },
         {
           src: '/projects/motorcycle-loft/10.jpg',
@@ -1093,6 +1208,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/motorcycle-loft/14.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "As we reflect on the journey of bringing this vision to life, the enduring image of contentment and joy on our clients' faces serves as a constant reminder of why we do what we do. Their satisfaction fuels our passion, driving us to continually push the boundaries of creativity and innovation in pursuit of extraordinary design solutions.",
+          },
         },
         {
           src: '/projects/motorcycle-loft/15.jpg',
@@ -1160,6 +1280,11 @@ export const projectsFull = [
           src: '/projects/modern-chalet/2.jpeg',
         },
         {
+          mobileCaption: {
+            text: "Being approached to design a new Chalet in place of an existing mountain house presented us with a unique challenge and opportunity. While the capacity of the old house didn't align with the new requirements, we were enamored with its architecture and sought to honor its legacy in our design.",
+          },
+        },
+        {
           src: '/projects/modern-chalet/3.jpeg',
           caption: {
             text: 'Drawing inspiration from the traditional charm of mountain architecture and the majestic surroundings, we opted for a solution rooted in the original house shape. Embracing the archetypal form of the saddle gable, we seamlessly integrated the new Chalet into its natural environment while paying homage to the timeless appeal of mountain retreats.',
@@ -1174,7 +1299,17 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: 'Drawing inspiration from the traditional charm of mountain architecture and the majestic surroundings, we opted for a solution rooted in the original house shape. Embracing the archetypal form of the saddle gable, we seamlessly integrated the new Chalet into its natural environment while paying homage to the timeless appeal of mountain retreats.',
+          },
+        },
+        {
           src: '/projects/modern-chalet/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Our design approach was guided by a deep respect for the genius loci — the unique spirit and character of the site. We meticulously accentuated the breathtaking views afforded by the location, ensuring that each aspect of the Chalet was oriented to maximize its connection with the landscape.',
+          },
         },
         {
           src: '/projects/modern-chalet/6.jpeg',
@@ -1191,6 +1326,17 @@ export const projectsFull = [
           caption: {
             text: 'In essence, our design for the new Chalet is a testament to our commitment to preserving the essence of the original house while embracing the beauty and serenity of its mountain setting. It stands as a tribute to the past, a celebration of the present, and a harmonious integration into the timeless landscape.',
             style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'Moreover, we endeavored to seamlessly blend the Chalet into its surroundings, both aesthetically and functionally. By harmonizing the architectural elements with the natural contours of the land, we created a sense of belonging and tranquility, allowing the Chalet to become an organic extension of the mountain terrain.',
+            style: { '--r': 12, '--c': 1, '--s': 8, marginBottom: '0' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'In essence, our design for the new Chalet is a testament to our commitment to preserving the essence of the original house while embracing the beauty and serenity of its mountain setting. It stands as a tribute to the past, a celebration of the present, and a harmonious integration into the timeless landscape.',
           },
         },
       ],
@@ -1224,6 +1370,11 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: "In collaboration with the esteemed Berlin - based studio Art+COM and the innovative digital agency Lunchmeat, our team had the distinct privilege of designing the captivating interactive museum, Dinosauria Museum Prague. Boasting one of the world's largest private collections of dinosaur skeletons and models, this museum stands as a testament to the awe-inspiring wonders of prehistoric life.",
+          },
+        },
+        {
           src: '/projects/dinosaria-museum/3.jpg',
         },
         {
@@ -1234,6 +1385,11 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: "Nestled within the vibrant POP Airport area near Prague airport, the Dinosauria Museum sprawls across an impressive 40,000 square feet of space. Here, visitors are treated to a breathtaking display of dinosaur skeletons dating back as far as 66 to 154 million years, renowned for their remarkable completeness and exceptional quality. Among the standout exhibits are the imposing model of a tyrannosaurus rex and the graceful flight of a pterosaur, further enriching the museum's diverse collection.",
+          },
+        },
+        {
           src: '/projects/dinosaria-museum/5.jpg',
           caption: {
             text: 'Our involvement extended to the final stages of project management, ensuring a smooth transition leading up to the grand opening of Dinosauria. It was a privilege to be part of this groundbreaking endeavor, bringing the wonders of the ancient world to life for visitors of all ages to enjoy and explore.',
@@ -1241,7 +1397,19 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: "From the initial conceptualization to the meticulous documentation and installation, our team meticulously oversaw every aspect of the museum's architecture. With a keen eye for detail and a dedication to excellence, we ensured that each element seamlessly integrated with the museum's overall design vision.",
+            // style: { '--r': 9, '--c': 1, '--s': 8, marginBottom: '0' },
+          },
+        },
+        {
           src: '/projects/dinosaria-museum/6.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Our involvement extended to the final stages of project management, ensuring a smooth transition leading up to the grand opening of Dinosauria. It was a privilege to be part of this groundbreaking endeavor, bringing the wonders of the ancient world to life for visitors of all ages to enjoy and explore.',
+            style: { '--r': 10, '--c': 1, '--s': 8 },
+          },
         },
       ],
     },
@@ -1274,6 +1442,11 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: "Winning first place in a private competition for the design of a residential complex in Bahia Ballena, Costa Rica — a location nestled just a stone's throw away from the majestic sea — was an achievement that filled us with pride and excitement. Drawing inspiration from the serene beauty of the surroundings, we embarked on a design journey that aimed to seamlessly blend with the natural landscape while offering a harmonious living experience.",
+          },
+        },
+        {
           src: '/projects/costa-rica-river-lodge/3.jpg',
           caption: {
             text: 'Incorporating the unique topography of the land, we envisioned amorphous huts nestled into the hillside of the forest, their distinctive shape drawing inspiration from the graceful form of an armadillo. These structures not only provided a charming and organic addition to the landscape but also offered a sense of privacy and tranquility for residents.',
@@ -1281,10 +1454,27 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: 'Our vision for the main buildings centered around a visually subtle aesthetic, characterized by horizontal masses delicately supported by understated columns. This design choice not only complemented the coastal environment but also emphasized a sense of openness and connection with the surrounding nature.',
+          },
+        },
+        {
           src: '/projects/costa-rica-river-lodge/4.jpg',
           caption: {
             text: 'Conscious of the environmental challenges posed by the terrain, we carefully considered the layout of the complex. The sole access road to the future resort opened onto a central platform, from which residents could navigate the area on foot via winding pathways. Given the sloping terrain and the risk of mudslides during heavy rains, we opted against building houses with traditional foundations in certain areas of the forest.',
             style: { left: '25vw' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'Incorporating the unique topography of the land, we envisioned amorphous huts nestled into the hillside of the forest, their distinctive shape drawing inspiration from the graceful form of an armadillo. These structures not only provided a charming and organic addition to the landscape but also offered a sense of privacy and tranquility for residents.',
+            style: { '--c': 1, '--s': 8, marginBottom: '0' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'Conscious of the environmental challenges posed by the terrain, we carefully considered the layout of the complex. The sole access road to the future resort opened onto a central platform, from which residents could navigate the area on foot via winding pathways. Given the sloping terrain and the risk of mudslides during heavy rains, we opted against building houses with traditional foundations in certain areas of the forest.',
+            style: { '--c': 1, '--s': 8 },
           },
         },
       ],
@@ -1320,6 +1510,11 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: 'archicraft has joined forces with an expert in cooking and cooling technologies for both professional kitchens and private spaces to introduce the Profi Family kitchen — a revolutionary concept where elegance, functionality, and design converge. Together, these partners have crafted a harmonious blend of interior perfection and cutting-edge appliances, where professional - grade technology seamlessly integrates into the kitchen environment.',
+          },
+        },
+        {
           src: '/projects/kitchen-concept-54/3.jpg',
         },
         {
@@ -1330,6 +1525,11 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: 'The collaboration between archicraft studio and the esteemed 54° brand aims to redefine the kitchen experience, offering a space where the sophistication of design meets the precision of professional-grade equipment. The goal of this joint project is to create a truly unique kitchen environment that not only maintains the ergonomic and functional standards found in commercial gastronomic operations but also infuses the interior with a touch of luxury.',
+          },
+        },
+        {
           src: '/projects/kitchen-concept-54/5.jpg',
           caption: {
             text: "Whether preparing a gourmet meal or simply enjoying a quiet moment in the kitchen, the professional kitchen offers an unparalleled experience where every detail has been carefully considered to meet the highest standards of excellence. It's the perfect fusion of style, innovation, and functionality — a true masterpiece of modern kitchen design.",
@@ -1337,7 +1537,18 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: 'With the professional kitchen, homeowners can enjoy the convenience and performance of professional-grade appliances without compromising on style or elegance. Each element of the kitchen has been meticulously curated to ensure a seamless integration of form and function, resulting in a space that not only inspires culinary creativity but also elevates the overall aesthetic of the home.',
+          },
+        },
+        {
           src: '/projects/kitchen-concept-54/6.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "Whether preparing a gourmet meal or simply enjoying a quiet moment in the kitchen, the professional kitchen offers an unparalleled experience where every detail has been carefully considered to meet the highest standards of excellence. It's the perfect fusion of style, innovation, and functionality — a true masterpiece of modern kitchen design.",
+            style: { '--c': 1, '--s': 8 },
+          },
         },
       ],
     },
@@ -1366,6 +1577,11 @@ export const projectsFull = [
           src: '/projects/shou-sugi-ban-apartment/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'In our quest for non-traditional approaches and distinctive solutions, we embarked on a design journey that transformed an apartment within a beautifully reconstructed tenement into a space of unparalleled elegance and innovation. Drawing inspiration from diverse sources, we sought to infuse the interior with a sense of character and uniqueness.',
+          },
+        },
+        {
           src: '/projects/shou-sugi-ban-apartment/3.jpg',
           caption: {
             text: 'At the heart of our design philosophy lies a deep appreciation for the natural beauty of materials, with wood taking center stage as a beloved element. Embracing the traditional Japanese technique of shou sugi ban, we imbued the wood with a rich depth and texture, elevating its aesthetic appeal while also enhancing its durability and longevity.',
@@ -1376,7 +1592,17 @@ export const projectsFull = [
           src: '/projects/shou-sugi-ban-apartment/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'At the heart of our design philosophy lies a deep appreciation for the natural beauty of materials, with wood taking center stage as a beloved element. Embracing the traditional Japanese technique of shou sugi ban, we imbued the wood with a rich depth and texture, elevating its aesthetic appeal while also enhancing its durability and longevity.',
+          },
+        },
+        {
           src: '/projects/shou-sugi-ban-apartment/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Against the backdrop of an otherwise neutral interior, these meticulously treated wooden elements serve as striking focal points, commanding attention and imbuing the space with a sense of warmth and sophistication. Whether adorning the walls, ceilings, or furnishings, each instance of shou sugi ban wood exudes a timeless allure, inviting admiration and contemplation.',
+          },
         },
         {
           src: '/projects/shou-sugi-ban-apartment/6.jpg',
@@ -1393,6 +1619,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/shou-sugi-ban-apartment/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "In our pursuit of unique solutions, we also integrated several dominant elements that further contribute to the apartment's distinct character. From bespoke lighting fixtures to curated artworks, each addition was carefully chosen to complement the overall design vision and enhance the ambiance of the space.",
+          },
         },
         {
           src: '/projects/shou-sugi-ban-apartment/10.jpg',
@@ -1412,6 +1643,11 @@ export const projectsFull = [
           caption: {
             text: 'The result is a harmonious fusion of tradition and innovation, where the artistry of shousugi ban meets modern sensibilities to create an interior that is at once captivating and serene. It is a testament to our commitment to pushing the boundaries of design, exploring new possibilities, and crafting spaces that inspire and delight.',
             style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'The result is a harmonious fusion of tradition and innovation, where the artistry of shousugi ban meets modern sensibilities to create an interior that is at once captivating and serene. It is a testament to our commitment to pushing the boundaries of design, exploring new possibilities, and crafting spaces that inspire and delight.',
           },
         },
       ],
@@ -1445,6 +1681,11 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: "Embassies serve as vital representations of a country's identity and values on the global stage. As such, their design must strike a delicate balance between prestige and practicality, embodying the essence of the nation while fulfilling its functional requirements.",
+          },
+        },
+        {
           src: '/projects/czech-embassy-washington/3.jpg',
           caption: {
             text: "Prestige is evident in the grandeur of the building's facade, which commands attention and respect on the diplomatic scene. Yet, practicality remains paramount, with efficient layout and modern amenities catering to the embassy's operational needs.",
@@ -1459,10 +1700,33 @@ export const projectsFull = [
           },
         },
         {
+          mobileCaption: {
+            text: "The design of our embassy is a testament to this philosophy, aiming to showcase our pride in our homeland while ensuring a dignified and welcoming environment for visitors. Every aspect of the design, from the architectural elements to the interior decor, is carefully curated to reflect our country's heritage, culture, and values.",
+          },
+        },
+        {
           src: '/projects/czech-embassy-washington/5.jpg',
           caption: {
             text: "Ultimately, our embassy design seeks to leave a lasting impression on all who enter its doors — a symbol of our nation's strength, integrity, and commitment to fostering positive relations with the international community.",
             style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: "Prestige is evident in the grandeur of the building's facade, which commands attention and respect on the diplomatic scene. Yet, practicality remains paramount, with efficient layout and modern amenities catering to the embassy's operational needs.",
+            style: { '--c': 1, '--s': 8, marginBottom: '0' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: "Inside, visitors are greeted with a sense of elegance and sophistication, with tasteful decor and furnishings that reflect our country's rich history and traditions. The embassy serves as a cultural ambassador, offering glimpses of our heritage through art, artifacts, and cultural events.",
+            style: { '--c': 1, '--s': 8, marginBottom: '0' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: "Ultimately, our embassy design seeks to leave a lasting impression on all who enter its doors — a symbol of our nation's strength, integrity, and commitment to fostering positive relations with the international community.",
+            style: { '--c': 1, '--s': 8 },
           },
         },
       ],
@@ -1492,6 +1756,11 @@ export const projectsFull = [
           src: '/projects/hladinka-restaurant/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'Hladinka has transformed from a standard pub into a sought-after destination in its popular neighborhood, thanks to a comprehensive reconstruction that revolutionized its atmosphere and clientele. No longer just a place for a quick drink with friends, Hladinka now caters to a diverse array of patrons, from couples seeking a romantic dinner to groups in search of a vibrant social scene. Such is its popularity that reservations are now a necessity!',
+          },
+        },
+        {
           src: '/projects/hladinka-restaurant/3.jpg',
           caption: {
             text: "At the heart of Hladinka's transformation lies its unique ambiance, carefully crafted to captivate and inspire. The untraditional design of the floor and custom graphics adorning the walls set the stage for an unforgettable experience. Tables and benches with atypical bases seamlessly blend with the bar and other architectural elements, creating a cohesive and inviting environment.",
@@ -1502,7 +1771,17 @@ export const projectsFull = [
           src: '/projects/hladinka-restaurant/4.jpg',
         },
         {
+          mobileCaption: {
+            text: "At the heart of Hladinka's transformation lies its unique ambiance, carefully crafted to captivate and inspire. The untraditional design of the floor and custom graphics adorning the walls set the stage for an unforgettable experience. Tables and benches with atypical bases seamlessly blend with the bar and other architectural elements, creating a cohesive and inviting environment.",
+          },
+        },
+        {
           src: '/projects/hladinka-restaurant/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'In just four months, Hladinka has emerged as a beacon of culinary excellence and social camaraderie in its neighborhood, thanks to its innovative design, welcoming atmosphere, and exceptional service. It stands as a testament to the transformative power of thoughtful design and dedicated craftsmanship.',
+          },
         },
         {
           src: '/projects/hladinka-restaurant/6.jpg',
@@ -1559,6 +1838,11 @@ export const projectsFull = [
           src: '/projects/red-dot-apartment/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'Discover a truly unconventional apartment that promises to elevate your vacation experience in the heart of Prague. Eccentric yet undeniably unique, this short-term rental offers a refreshing departure from the ordinary.',
+          },
+        },
+        {
           src: '/projects/red-dot-apartment/3.jpg',
           caption: {
             text: 'Step inside and prepare to be enchanted by the charm of this one-of-a-kind space. The apartment boasts a smaller kitchen, perfectly suited for quick meals or snacks — after all, who wants to cook on holiday? The bright bedroom, with its whimsical view of the bathroom, adds a playful touch to the ambiance.',
@@ -1569,7 +1853,17 @@ export const projectsFull = [
           src: '/projects/red-dot-apartment/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'Step inside and prepare to be enchanted by the charm of this one-of-a-kind space. The apartment boasts a smaller kitchen, perfectly suited for quick meals or snacks — after all, who wants to cook on holiday? The bright bedroom, with its whimsical view of the bathroom, adds a playful touch to the ambiance.',
+          },
+        },
+        {
           src: '/projects/red-dot-apartment/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Despite its compact size, every corner of the apartment has been meticulously designed and optimized to maximize space and functionality. The design aesthetic is characterized by brightness and lightness, with all details accentuated in vibrant red hues.',
+          },
         },
         {
           src: '/projects/red-dot-apartment/6.jpg',
@@ -1588,6 +1882,11 @@ export const projectsFull = [
           src: '/projects/red-dot-apartment/9.jpg',
         },
         {
+          mobileCaption: {
+            text: 'While the budget may have been modest, the creativity and ingenuity poured into this project were boundless. From the clever use of space to the bold design choices, this apartment is a testament to the power of imagination and resourcefulness.',
+          },
+        },
+        {
           src: '/projects/red-dot-apartment/10.jpg',
           caption: {
             text: 'While the budget may have been modest, the creativity and ingenuity poured into this project were boundless. From the clever use of space to the bold design choices, this apartment is a testament to the power of imagination and resourcefulness.',
@@ -1599,6 +1898,12 @@ export const projectsFull = [
           caption: {
             text: "Whether you're exploring the historic streets of Prague or simply unwinding after a day of adventure, this unconventional apartment offers a memorable and enchanting retreat unlike any other. It's the perfect blend of whimsy, comfort, and affordability — a true gem waiting to be discovered.",
             style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: "Whether you're exploring the historic streets of Prague or simply unwinding after a day of adventure, this unconventional apartment offers a memorable and enchanting retreat unlike any other. It's the perfect blend of whimsy, comfort, and affordability — a true gem waiting to be discovered.",
+            style: { '--c': 1, '--s': 8 },
           },
         },
       ],
@@ -1628,13 +1933,28 @@ export const projectsFull = [
           src: '/projects/gasnet-offices/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'The interior design of 3500m² is meticulously crafted to optimize functionality and aesthetic appeal. With a deliberate emphasis on a rational layout and a moderate color palette, the space exudes a sense of order and efficiency. While maintaining a disciplined approach, the design integrates carefully chosen artistically expressive elements such as select pieces of furniture, strategic greenery, and tasteful tiling, albeit in measured quantities.',
+          },
+        },
+        {
           src: '/projects/gasnet-offices/3.jpg',
         },
         {
           src: '/projects/gasnet-offices/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'To infuse vitality and creativity into the workspace, the design incorporates finely graded colors in textiles and furniture. These elements are complemented by a versatile array of accessories strategically placed between workstation dividers, encouraging a playful interaction with the environment. Employees are empowered to personalize their workspace by selecting from a comprehensive range of accessories, including upholstery colors, screens, and office chairs, thereby fostering a sense of ownership and comfort.',
+          },
+        },
+        {
           src: '/projects/gasnet-offices/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Central to the design philosophy is the concept of privacy and concentration during work hours. Visual contact with the surroundings is purposefully limited to minimize distractions, while materials chosen for the work are as prioritize effective acoustic absorption. This thoughtful approach ensures a conducive environment where productivity thrives, and where every detail contributes to the overall harmony and functionality of the space.',
+          },
         },
         {
           src: '/projects/gasnet-offices/6.jpg',
@@ -1739,16 +2059,31 @@ export const projectsFull = [
           src: '/projects/bombay-express-restaurant-chain/2.jpg',
         },
         {
+          mobileCaption: {
+            text: 'The inaugural Bombay Express branch opened its doors in 2013 in Prague, marking the beginning of our journey with this modern Indian fast-food brand. Since then, they have expanded their presence across three countries: the Czech Republic (8 branches), Austria (1 branch), and Slovakia (2 branches). The menu predominantly features dishes from northern India, reflecting authentic flavors and culinary traditions.',
+          },
+        },
+        {
           src: '/projects/bombay-express-restaurant-chain/3.jpg',
         },
         {
           src: '/projects/bombay-express-restaurant-chain/4.jpg',
         },
         {
+          mobileCaption: {
+            text: 'From its inception, we have nurtured and developed the Bombay Express brand with meticulous attention to branding and design. Central to our strategy is the creation of a cohesive and immersive dining experience that extends beyond culinary delights. Each franchise begins with a carefully crafted theme inspired by the vibrant essence of an Indian train station. This concept not only reflects our brand name but also embodies the idea of constant movement, bustling energy, and a welcoming space where people gather to savor delicious food and connect.',
+          },
+        },
+        {
           src: '/projects/bombay-express-restaurant-chain/5.jpg',
           caption: {
             text: 'From its inception, we have nurtured and developed the Bombay Express brand with meticulous attention to branding and design. Central to our strategy is the creation of a cohesive and immersive dining experience that extends beyond culinary delights. Each franchise begins with a carefully crafted theme inspired by the vibrant essence of an Indian train station. This concept not only reflects our brand name but also embodies the idea of constant movement, bustling energy, and a welcoming space where people gather to savor delicious food and connect.',
             style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'Incorporating elements such as vibrant colors, thematic decor inspired by Indian motifs, and comfortable seating arrangements, our restaurants evoke a sense of journey and discovery. The design ethos is aimed at offering a dynamic yet relaxed atmosphere, where customers can enjoy a taste of India amidst a setting that resonates with cultural richness and warmth.',
           },
         },
         {
@@ -1766,6 +2101,11 @@ export const projectsFull = [
         },
         {
           src: '/projects/bombay-express-restaurant-chain/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'As we expand and open new branches, we remain committed to maintaining this distinctive brand identity. Each new restaurant adheres to our established thematic blueprint, ensuring that every Bombay Express location offers a consistent and memorable experience that keeps customers coming back for more. Our dedication to quality, authenticity, and innovative design continues to drive our growth and success in the competitive fast-casual dining landscape.',
+          },
         },
         {
           src: '/projects/bombay-express-restaurant-chain/10.jpg',

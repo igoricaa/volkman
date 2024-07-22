@@ -166,7 +166,11 @@ export default function ConnectedGrid({ gridContent, endingText }) {
               styles.gridItem,
               image.mobileCaption ? styles.gridItemText : null,
             ].join(' ')}
-            style={projectsGalleryImageStylesMobile[index]}
+            style={
+              image.mobileCaption?.style
+                ? image.mobileCaption.style
+                : projectsGalleryImageStylesMobile[index]
+            }
           >
             {image.src && (
               <div className={styles.gridItemImg}>
@@ -175,7 +179,11 @@ export default function ConnectedGrid({ gridContent, endingText }) {
                   alt={gridContent.alt}
                   fill
                   style={{ objectFit: 'cover' }}
-                  sizes={index === 6 ? '(max-width: 1024px) 100vw, 50vw' : '(max-width: 1024px) 45vw, 50vw'}
+                  sizes={
+                    index === 6
+                      ? '(max-width: 1024px) 100vw, 50vw'
+                      : '(max-width: 1024px) 45vw, 50vw'
+                  }
                   priority
                 />
               </div>
@@ -197,8 +205,8 @@ export default function ConnectedGrid({ gridContent, endingText }) {
             className={styles.gridItem}
             style={{
               '--r': gridContent.images.length + 1,
-              '--c': 2,
-              '--s': 6,
+              '--c': isMobile ? 1 : 2,
+              '--s': isMobile ? 8 : 6,
             }}
           >
             <figcaption
