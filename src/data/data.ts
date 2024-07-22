@@ -571,12 +571,20 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/basics-coffee/1.jpg',
+          caption: {
+            text: "The Czech café concept, born from a collaborative effort with graphic designers, presents a space where patrons can enjoy top - notch coffee in a setting designed to enhance their experience. As you step into our café, you'll notice the attention to detail in every aspect of the environment.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/basics-coffee/2.jpg',
         },
         {
           src: '/projects/basics-coffee/3.jpg',
+          caption: {
+            text: "We've carefully crafted the ambiance to create a welcoming atmosphere where guests can unwind and savor their coffee. Thoughtful lighting adds warmth to the space, while comfortable seating encourages relaxation. The acoustics have been fine - tuned to provide a pleasant backdrop, allowing visitors to enjoy their coffee in peace.",
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/basics-coffee/4.jpg',
@@ -589,6 +597,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/basics-coffee/7.jpg',
+          caption: {
+            text: "In keeping with our commitment to simplicity, we've opted for a design aesthetic that celebrates the beauty of raw materials. By forgoing excessive decoration, we allow the natural characteristics of each element to take center stage, fostering a sense of authenticity and harmony.",
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/basics-coffee/8.jpg',
@@ -598,6 +610,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/basics-coffee/10.jpg',
+          caption: {
+            text: 'Our unique graphic approach serves as a visual representation of our passion for coffee. Through artful expression, we aim to convey what fascinates us about this beloved beverage, inviting guests to explore its complexities with fresh eyes.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/basics-coffee/11.jpg',
