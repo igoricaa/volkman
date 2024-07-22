@@ -1619,6 +1619,10 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/gasnet-offices/1.jpg',
+          caption: {
+            text: 'The interior design of 3500m² is meticulously crafted to optimize functionality and aesthetic appeal. With a deliberate emphasis on a rational layout and a moderate color palette, the space exudes a sense of order and efficiency. While maintaining a disciplined approach, the design integrates carefully chosen artistically expressive elements such as select pieces of furniture, strategic greenery, and tasteful tiling, albeit in measured quantities.',
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/gasnet-offices/2.jpg',
@@ -1637,6 +1641,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/gasnet-offices/7.jpg',
+          caption: {
+            text: 'To infuse vitality and creativity into the workspace, the design incorporates finely graded colors in textiles and furniture. These elements are complemented by a versatile array of accessories strategically placed between workstation dividers, encouraging a playful interaction with the environment. Employees are empowered to personalize their workspace by selecting from a comprehensive range of accessories, including upholstery colors, screens, and office chairs, thereby fostering a sense of ownership and comfort.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/gasnet-offices/8.jpg',
@@ -1652,6 +1660,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/gasnet-offices/12.jpg',
+          caption: {
+            text: 'Central to the design philosophy is the concept of privacy and concentration during work hours. Visual contact with the surroundings is purposefully limited to minimize distractions, while materials chosen for the work are as prioritize effective acoustic absorption. This thoughtful approach ensures a conducive environment where productivity thrives, and where every detail contributes to the overall harmony and functionality of the space.',
+            style: { left: '37vw'},
+          },
         },
         {
           src: '/projects/gasnet-offices/13.jpg',
