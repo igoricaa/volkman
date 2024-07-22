@@ -66,13 +66,13 @@ const Project = ({ params }: { params: { slug: string } }) => {
           <div className={[styles.innerWrapper, styles.mainInfo].join(' ')}>
             <p>{project.year}</p>
             <div className={styles.socialsShareWrapper}>
-              <a href='https://instagram.com/' target='_blank'>
-                IN
-              </a>
-              <a href='https://facebook.com/' target='_blank'>
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=https://volkman.vercel.app/work/${project.slug}`}
+                target='_blank'
+              >
                 FB
               </a>
-              <a href='https://linkedin.com/' target='_blank'>
+              <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://volkman.vercel.app/work/${project.slug}`} target='_blank'>
                 LN
               </a>
             </div>
