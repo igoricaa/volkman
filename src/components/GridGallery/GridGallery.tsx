@@ -82,18 +82,35 @@ const GridGallery = () => {
     scroll();
   }, []);
 
+  const imageSizesBig = `(max-width: 1024px) 25vw, 29vw`;
+  const imageSizesSmall = `(max-width: 1024px) 30px, 300px`;
+  const bigImagesIndexDesktop = [33, 34, 35, 36, 43, 44, 45, 46];
+  const bigImagesIndexMobile = [
+    3, 4, 5, 6, 13, 14, 15, 16, 23, 24, 25, 26, 33, 34, 35, 36, 43, 44, 45, 46,
+    53, 54, 55, 56, 63, 64, 65, 66, 73, 74, 75, 76,
+  ];
+
+  let bigImagesIndex: number[] = [];
+  if (window !== undefined) {
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+
+    bigImagesIndex = isDesktop ? bigImagesIndexDesktop : bigImagesIndexMobile;
+  }
+
   return (
     <div className={styles.galleryWrap}>
       <div
         className={[styles.gallery, styles.galleryGridTiny].join(' ')}
         id='gallery-7'
       >
-        {homeGalleryImages.map((photo, index) => (
+        {[...homeGalleryImages].map((photo, index) => (
           <div className={styles.galleryItem} key={index}>
             <Image
               src={photo.src}
               alt='Marija Volkman - Architect'
-              sizes='(max-width: 1024px) 25vw, 29vw'
+              sizes={
+                bigImagesIndex.includes(index) ? imageSizesBig : imageSizesSmall
+              }
               fill
               style={{ objectFit: 'cover' }}
             />

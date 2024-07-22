@@ -140,14 +140,6 @@ export const homeGalleryImages = [
   { src: '/home/gallery/16.jpeg' },
   { src: '/home/gallery/17.jpeg' },
   { src: '/home/gallery/18.jpeg' },
-  { src: '/home/gallery/19.jpeg' },
-  { src: '/home/gallery/20.jpeg' },
-  { src: '/home/gallery/21.jpeg' },
-  { src: '/home/gallery/22.jpeg' },
-  { src: '/home/gallery/23.jpeg' },
-  { src: '/home/gallery/24.jpeg' },
-  { src: '/home/gallery/25.jpeg' },
-  { src: '/home/gallery/26.jpeg' },
 ];
 
 export const socials = [
