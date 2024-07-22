@@ -7,11 +7,18 @@ import Lenis from 'lenis';
 import styles from './ConnectedGrid.module.scss';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
+import { projectsGalleryImageStyles } from '@/data/data';
+import { useState } from 'react';
 
 export default function ConnectedGrid({ gridContent }) {
   gsap.registerPlugin(ScrollTrigger);
+  const [isMobile, setIsMobile] = useState(false);
+
   useGSAP(() => {
     const gridItems = document.querySelectorAll(`.${styles.gridItem}`);
+
+    if (typeof window !== 'undefined')
+      setIsMobile(window.matchMedia('(max-width: 1024px)').matches);
 
     const initSmoothScrolling = () => {
       let lenis = new Lenis({
@@ -42,7 +49,7 @@ export default function ConnectedGrid({ gridContent }) {
         gsap
           .timeline({
             defaults: {
-              //duration: 1,
+              duration: 1,
               ease: 'power4',
             },
             scrollTrigger: {
@@ -72,20 +79,20 @@ export default function ConnectedGrid({ gridContent }) {
               scale: 1,
             },
             0
-          )
-          .fromTo(
-            item.querySelector(`.${styles.gridItemCaptionCustom}`),
-            {
-              xPercent: () => (isLeftSide ? 100 : -100),
-              opacity: 0,
-            },
-            {
-              ease: 'power1',
-              xPercent: 0,
-              opacity: 1,
-            },
-            0
           );
+        // .fromTo(
+        //   item.querySelector(`.${styles.gridItemCaptionCustom}`),
+        //   {
+        //     xPercent: () => (isLeftSide ? 100 : -100),
+        //     opacity: 0,
+        //   },
+        //   {
+        //     ease: 'power1',
+        //     xPercent: 0,
+        //     opacity: 1,
+        //   },
+        //   0
+        // );
       });
     };
 
@@ -99,7 +106,11 @@ export default function ConnectedGrid({ gridContent }) {
         <figure
           key={`projectImage${index}`}
           className={styles.gridItem}
-          style={gridContent.images[key].style}
+          style={
+            isMobile
+              ? { '--r': index + 1, '--c': index % 2 ? 5 : 1, '--s': 4 }
+              : projectsGalleryImageStyles[index]
+          }
         >
           <div className={styles.gridItemImg}>
             <div className={styles.gridItemImgInner}></div>
@@ -108,7 +119,7 @@ export default function ConnectedGrid({ gridContent }) {
               alt={gridContent.alt}
               fill
               style={{ objectFit: 'cover' }}
-              sizes='(max-width: 1024px) 100vw, 50vw'
+              sizes='(max-width: 1024px) 50vw, 50vw'
               priority
             />
           </div>
@@ -117,9 +128,7 @@ export default function ConnectedGrid({ gridContent }) {
               className={styles.gridItemCaptionCustom}
               style={{ left: 'calc(100vw / ( 8 / 4))' }}
             >
-              <p>
-                {gridContent.images[key].caption}
-              </p>
+              <p>{gridContent.images[key].caption}</p>
             </figcaption>
           )}
         </figure>

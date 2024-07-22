@@ -69,20 +69,10 @@
   }
 }
 
-@media screen and (min-width: 53em) {
-  .grid {
-    grid-template-columns: repeat(7, 1fr);
 
-    .gridItem {
-      grid-column: var(--c) / span var(--s);
-      grid-row: var(--r);
-    }
-  }
-}
-
-
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1024px){
   .grid {
     margin: 5vh auto 5vh;
+    grid-template-columns: repeat(8, 1fr);
   }
 }
