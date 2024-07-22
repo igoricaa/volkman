@@ -7,6 +7,7 @@ import { Flip } from 'gsap/Flip';
 import Lenis from 'lenis';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
+import { homeGalleryImages } from '@/data/data';
 
 const GridGallery = () => {
   gsap.registerPlugin(Flip, ScrollTrigger);
@@ -81,69 +82,17 @@ const GridGallery = () => {
     scroll();
   }, []);
 
-  const galleryImages = [
-    {
-      src: '/home/animation/51.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/52.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/53.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/54.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/55.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/56.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/57.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/58.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/59.jpg',
-      alt: 'Marija Volkman',
-    },
-    {
-      src: '/home/animation/60.jpg',
-      alt: 'Marija Volkman',
-    },
-  ];
-
   return (
     <div className={styles.galleryWrap}>
       <div
         className={[styles.gallery, styles.galleryGridTiny].join(' ')}
         id='gallery-7'
       >
-        {[
-          ...galleryImages,
-          ...galleryImages,
-          ...galleryImages,
-          ...galleryImages,
-          ...galleryImages,
-          ...galleryImages,
-          ...galleryImages,
-          ...galleryImages,
-        ].map((photo, index) => (
+        {homeGalleryImages.map((photo, index) => (
           <div className={styles.galleryItem} key={index}>
             <Image
               src={photo.src}
-              alt={photo.alt}
+              alt='Marija Volkman - Architect'
               sizes='(max-width: 1024px) 25vw, 29vw'
               fill
               style={{ objectFit: 'cover' }}
