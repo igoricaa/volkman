@@ -479,6 +479,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/arden-residence/7.jpg',
+          caption: {
+            text: 'European materials, including refined stone and hardwood, are carefully selected to enhance both aesthetic appeal and structural integrity.',
+            style: { left: '37vw' },
+          },
         },
         {
           src: '/projects/arden-residence/8.jpg',
@@ -488,6 +492,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/arden-residence/10.jpg',
+          caption: {
+            text: 'Each of the six bedrooms provides direct access to outdoor spaces, whether through private terraces or garden views, ensuring a seamless indoor - outdoor experience that enhances the sense of comfort and homeliness alongside the luxurious and spacious ambiance. Complementing the main residence, the guest house features its own distinctive design and access to outdoor amenities.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/arden-residence/11.jpg',
@@ -497,6 +505,10 @@ export const projectsFull = [
         },
         {
           src: '/projects/arden-residence/13.jpg',
+          caption: {
+            text: 'This project embodies a blend of sophistication and functionality, offering residents a luxurious sanctuary that harmonizes with nature within an urban setting — a residence that exudes both elegance and inviting comfort.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/arden-residence/14.jpg',
