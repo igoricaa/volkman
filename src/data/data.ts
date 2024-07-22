@@ -283,6 +283,7 @@ export type Project = {
       };
     }[];
   };
+  endingText?: string;
 };
 
 export const projectsGalleryImageStyles = [
@@ -1170,18 +1171,36 @@ export const projectsFull = [
       images: [
         {
           src: '/projects/costa-rica-river-lodge/1.jpg',
+          caption: {
+            text: "Winning first place in a private competition for the design of a residential complex in Bahia Ballena, Costa Rica — a location nestled just a stone's throw away from the majestic sea — was an achievement that filled us with pride and excitement. Drawing inspiration from the serene beauty of the surroundings, we embarked on a design journey that aimed to seamlessly blend with the natural landscape while offering a harmonious living experience.",
+            style: { left: '49vw' },
+          },
         },
         {
           src: '/projects/costa-rica-river-lodge/2.jpg',
+          caption: {
+            text: 'Our vision for the main buildings centered around a visually subtle aesthetic, characterized by horizontal masses delicately supported by understated columns. This design choice not only complemented the coastal environment but also emphasized a sense of openness and connection with the surrounding nature.',
+            style: { left: '-32vw', textAlign: 'right' },
+          },
         },
         {
           src: '/projects/costa-rica-river-lodge/3.jpg',
+          caption: {
+            text: 'Incorporating the unique topography of the land, we envisioned amorphous huts nestled into the hillside of the forest, their distinctive shape drawing inspiration from the graceful form of an armadillo. These structures not only provided a charming and organic addition to the landscape but also offered a sense of privacy and tranquility for residents.',
+            style: { left: '25.5vw' },
+          },
         },
         {
           src: '/projects/costa-rica-river-lodge/4.jpg',
+          caption: {
+            text: 'Conscious of the environmental challenges posed by the terrain, we carefully considered the layout of the complex. The sole access road to the future resort opened onto a central platform, from which residents could navigate the area on foot via winding pathways. Given the sloping terrain and the risk of mudslides during heavy rains, we opted against building houses with traditional foundations in certain areas of the forest.',
+            style: { left: '25vw' },
+          },
         },
       ],
     },
+    endingText:
+      'Additionally, to mitigate the risk of flooding, we avoided placing any structures in areas prone to inundation due to the meandering river nearby. In essence, our design for the residential complex in Bahia Ballena was a testament to our commitment to harmonizing architecture with nature, creating a tranquil and sustainable haven where residents could truly connect with the beauty of their surroundings.',
   },
   {
     title: 'Kitchen Concept 54',

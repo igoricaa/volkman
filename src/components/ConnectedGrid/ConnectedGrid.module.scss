@@ -27,6 +27,12 @@
       p {
         font-size: 1.5rem;
       }
+
+      &.endingText {
+        position: unset;
+        margin-top: 3rem;
+        width: 50vw;
+      }
     }
 
     .gridItemImg {
@@ -69,8 +75,7 @@
   }
 }
 
-
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .grid {
     margin: 5vh auto 5vh;
     grid-template-columns: repeat(8, 1fr);

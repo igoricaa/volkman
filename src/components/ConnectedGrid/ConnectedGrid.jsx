@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { projectsGalleryImageStyles } from '@/data/data';
 import { useState } from 'react';
 
-export default function ConnectedGrid({ gridContent }) {
+export default function ConnectedGrid({ gridContent, endingText }) {
   gsap.registerPlugin(ScrollTrigger);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -136,6 +136,20 @@ export default function ConnectedGrid({ gridContent }) {
           )}
         </figure>
       ))}
+      {endingText && (
+        <figure
+          className={styles.gridItem}
+          style={{ '--r': gridContent.images.length + 1, '--c': 2, '--s': 6 }}
+        >
+          <figcaption
+            className={[styles.gridItemCaptionCustom, styles.endingText].join(
+              ' '
+            )}
+          >
+            <p>{endingText}</p>
+          </figcaption>
+        </figure>
+      )}
     </div>
   );
 }

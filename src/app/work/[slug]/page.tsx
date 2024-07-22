@@ -139,7 +139,10 @@ const Project = ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
 
-      <ConnectedGrid gridContent={project.grid} />
+      <ConnectedGrid
+        gridContent={project.grid}
+        endingText={project.endingText}
+      />
 
       <section className={styles.adjacentProjects}>
         {project && <AdjacentProject type='prev' project={prevProject} />}
