@@ -72,20 +72,20 @@ export default function ConnectedGrid({ gridContent }) {
               scale: 1,
             },
             0
+          )
+          .fromTo(
+            item.querySelector(`.${styles.gridItemCaptionCustom}`),
+            {
+              xPercent: () => (isLeftSide ? 100 : -100),
+              opacity: 0,
+            },
+            {
+              ease: 'power1',
+              xPercent: 0,
+              opacity: 1,
+            },
+            0
           );
-        // .fromTo(
-        //   item.querySelector(`.${styles.gridItemCaption}`),
-        //   {
-        //     xPercent: () => (isLeftSide ? 100 : -100),
-        //     opacity: 0,
-        //   },
-        //   {
-        //     ease: 'power1',
-        //     xPercent: 0,
-        //     opacity: 1,
-        //   },
-        //   0
-        // );
       });
     };
 
@@ -112,6 +112,16 @@ export default function ConnectedGrid({ gridContent }) {
               priority
             />
           </div>
+          {gridContent.images[key].caption && (
+            <figcaption
+              className={styles.gridItemCaptionCustom}
+              style={{ left: 'calc(100vw / ( 8 / 4))' }}
+            >
+              <p>
+                {gridContent.images[key].caption}
+              </p>
+            </figcaption>
+          )}
         </figure>
       ))}
 

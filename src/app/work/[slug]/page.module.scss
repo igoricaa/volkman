@@ -1,12 +1,18 @@
 .pageHeader {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding-bottom: 9.5rem;
 
   h1 {
     font-size: 4.5rem;
     max-width: 23rem;
+  }
+
+  .archicraftLogo {
+    position: relative;
+    width: 97px;
+    height: 45px;
+    margin-top: 1rem;
   }
 }
 
@@ -172,6 +178,13 @@
     h1 {
       font-size: 3.5rem;
     }
+
+    .archicraftLogo {
+      width: 76px;
+      height: 36px;
+      min-width: 76px;
+      min-height: 36px;
+    }
   }
 
   .adjacentProjects {
@@ -239,6 +252,14 @@
 
     h1 {
       font-size: 2.75rem;
+    }
+
+    .archicraftLogo {
+      width: 61px;
+      height: 30px;
+      min-width: 61px;
+      min-height: 30px;
+      margin-top: 0.65rem;
     }
   }
 

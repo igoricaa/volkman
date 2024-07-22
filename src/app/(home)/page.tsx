@@ -50,11 +50,9 @@ export default function Home() {
             Volkman
           </h1>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-            tenetur autem nobis, quo fuga voluptatum sit, cum dignissimos saepe
-            consequuntur nesciunt.
-          </p>
+          <p>Architect based in Los Angeles</p>
+          <p>European Finesse, American Perseverance:</p>
+          <p> Crafting Timeless Architecture.</p>
         </div>
       </section>
 
@@ -63,21 +61,15 @@ export default function Home() {
         <div className={styles.innerWrapper}>
           <div className={styles.columnWrapper}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-              tenetur autem nobis, quo fuga voluptatum sit, cum dignissimos
-              saepe consequuntur nesciunt.
+              I find joy in the journey of creation.
+              <br />
+              For me, each is not just an opportunity to design functional
+              spaces, but to contribute something meaningful to the world.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-              tenetur autem nobis, quo fuga voluptatum sit, cum dignissimos
-              saepe consequuntur nesciunt.
-            </p>
-          </div>
-          <div className={styles.columnWrapper}>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-              tenetur autem nobis, quo fuga voluptatum sit, cum dignissimos
-              saepe consequuntur nesciunt.
+              This joy, combined with a deep reverence for the planet and an
+              openness to the stories of others, forms the foundation of my
+              life's work and passion for architecture.
             </p>
           </div>
         </div>

@@ -70,7 +70,7 @@ const TransitionLink = ({
       .to(
         overlayPath,
         {
-          duration: 0.8,
+          duration: 0.4,
           ease: 'power4.in',
           attr: { d: paths.step1.inBetween.curve1 },
         },
@@ -82,9 +82,9 @@ const TransitionLink = ({
         attr: { d: paths.step1.filled },
       });
 
-    await sleep(1000);
+    await sleep(600);
     router.push(href);
-    await sleep(1000);
+    await sleep(600);
 
     gsap
       .timeline({
@@ -99,7 +99,7 @@ const TransitionLink = ({
         attr: { d: paths.step2.inBetween.curve1 },
       })
       .to(overlayPath, {
-        duration: 1,
+        duration: 0.6,
         ease: 'power4',
         attr: { d: paths.step2.unfilled },
       });

@@ -2,6 +2,7 @@ import ConnectedGrid from '@/components/ConnectedGrid/ConnectedGrid';
 import styles from './page.module.scss';
 import { Project as ProjectModel, projectsFull } from '@/data/data';
 import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
+import Image from 'next/image';
 
 // TODO: add error page
 const Project = ({ params }: { params: { slug: string } }) => {
@@ -40,6 +41,21 @@ const Project = ({ params }: { params: { slug: string } }) => {
     <main className='main'>
       <div className={styles.pageHeader}>
         <h1>{project.title}</h1>
+
+        {project.archicraftUrl && (
+          <a
+            href={project.archicraftUrl}
+            target='_blank'
+            className={styles.archicraftLogo}
+          >
+            <Image
+              src='/logos/archicraft-logo.svg'
+              fill
+              alt='Archicraft Logo'
+              priority
+            />
+          </a>
+        )}
       </div>
 
       <div className={styles.desktopWrapper}>
@@ -72,7 +88,10 @@ const Project = ({ params }: { params: { slug: string } }) => {
               >
                 FB
               </a>
-              <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://volkman.vercel.app/work/${project.slug}`} target='_blank'>
+              <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=https://volkman.vercel.app/work/${project.slug}`}
+                target='_blank'
+              >
                 LN
               </a>
             </div>

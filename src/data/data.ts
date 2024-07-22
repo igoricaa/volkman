@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export const routes = [
   {
     title: 'Home',
@@ -92,6 +90,12 @@ export const projectsFeatured = [
     featuredPhoto: 'arden-residence/featuredPhoto.jpg',
   },
   {
+    title: 'Cafe Cube',
+    slug: 'cafe-cube',
+    category: 'Hospitality',
+    featuredPhoto: 'cafe-cube/featuredPhoto.jpg',
+  },
+  {
     title: 'Basics Coffee',
     slug: 'basics-coffee',
     category: 'Hospitality',
@@ -110,10 +114,16 @@ export const projectsFeatured = [
     featuredPhoto: 'cottage/featuredPhoto.jpg',
   },
   {
+    title: 'Costa Rica River Lodge',
+    slug: 'costa-rica-river-lodge',
+    category: 'Hospitality',
+    featuredPhoto: 'costa-rica-river-lodge/featuredPhoto.jpg',
+  },
+  {
     title: 'Motorcycle Loft',
     slug: 'motorcycle-loft',
     category: 'Residential',
-    featuredPhoto: 'motorcycle-loft/featuredPhoto.jpg',
+    featuredPhoto: 'motorcycle-roft/featuredPhoto.jpg',
   },
   {
     title: 'Modern Chalet',
@@ -168,7 +178,7 @@ export const projectsFeatured = [
     slug: 'bombay-express-restaurant-chain',
     category: 'Hospitality',
     featuredPhoto: 'bombay-express-restaurant-chain/featuredPhoto.jpg',
-  }
+  },
 ];
 
 export type Project = {
@@ -179,6 +189,7 @@ export type Project = {
   location: string;
   client: string;
   year: string;
+  archicraftUrl?: string;
   grid: {
     alt: string;
     images: {
@@ -202,12 +213,16 @@ export const projectsFull = [
     location: 'Prague, Czech Republic',
     client: 'Lagardére Travel Retail',
     year: '2021',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/station-restaurant/',
     grid: {
       alt: 'Masarycka Restaurant',
       images: [
         {
           src: '/projects/masarycka-restaurant/1.jpg',
           style: { '--r': 1, '--c': 1, '--s': 4 },
+          caption:
+            'Masarycka stands proudly as a recipient of prestigious awards, atestament to its exceptional design and culinary excellence. Thisrevered establishment seamlesly blends the grandeur of the historicImperial Restaurant with the contemporary allure of a modern stationeatery, creating a truly unique dining defstination.',
         },
         {
           src: '/projects/masarycka-restaurant/2.jpg',
@@ -314,6 +329,8 @@ export const projectsFull = [
         {
           src: '/projects/arden-residence/1.jpg',
           style: { '--r': 1, '--c': 1, '--s': 4 },
+          caption:
+            "This project features a remarkable residential development nestled in California's urban landscape: a 5100 square-foot main house accompanied by an 800 square-foot guest house. This design epitomizes contemporary luxury, showcasing European materials and emphasizing seamless integration with a private garden sanctuary, offering a tranquil retreat from city life.",
         },
         {
           src: '/projects/arden-residence/2.jpg',
@@ -322,6 +339,8 @@ export const projectsFull = [
         {
           src: '/projects/arden-residence/3.jpg',
           style: { '--r': 3, '--c': 3, '--s': 2 },
+          caption:
+            'The main house is designed with an expansive open floor plan that maximizes natural light and airflow. Expansive sliding doors effortlessly blend indoor and outdoor spaces, leading to a serene garden and pool area — a secluded oasis amidst the urban hustle.',
         },
         {
           src: '/projects/arden-residence/4.jpg',
@@ -391,13 +410,40 @@ export const projectsFull = [
     },
   },
   {
+    title: 'Cafe Cube',
+    slug: 'cafe-cube',
+    category: 'Hospitality',
+    featuredPhoto: 'apartment-shou-sugi-ban/featuredPhoto.jpg',
+    location: 'Los Angeles, California',
+    client: 'Cube Cafe',
+    year: '2020',
+    archicraftUrl: 'https://www.archicraft.cz/en/portfolio-item/cube-cafe/',
+    grid: {
+      alt: 'Cafe Cube',
+      images: [
+        {
+          src: '/projects/cafe-cube/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+          caption:
+            "The Cement Building, a landmark in Downtown LA, hosts a thriving community of creators. We're crafting a gastro hub on the ground floor to serve the neighborhood's diverse tastes and foster community connections. Join us for delicious meals and vibrant gatherings, where every bite celebrates art, culture, and community.",
+        },
+        {
+          src: '/projects/cafe-cube/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+      ],
+    },
+  },
+  {
     title: 'Basics Coffee',
     slug: 'basics-coffee',
     category: 'Residential',
     featuredPhoto: 'arden-residence/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
-    client: '',
+    client: 'Procres',
     year: '2021-2022',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/basics-coffee-2/',
     grid: {
       alt: 'Basics Coffee',
       images: [
@@ -482,8 +528,10 @@ export const projectsFull = [
     category: 'Office fittout',
     featuredPhoto: 'bird-and-bird/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
-    client: '',
+    client: 'Bird & Bird s.r.o.',
     year: '2022',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/birdbird-office/',
     grid: {
       alt: 'Bird & Bird',
       images: [
@@ -670,6 +718,8 @@ export const projectsFull = [
     location: 'Czech Republic',
     client: 'Private Investor',
     year: '2022',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/cottage-in-klinec/',
     grid: {
       alt: 'Cottage',
       images: [
@@ -816,6 +866,10 @@ export const projectsFull = [
       ],
     },
   },
+  // {
+  //   title: 'Row House LOFT',
+  //   archicraftUrl: 'https://www.archicraft.cz/en/portfolio-item/row-house-loft/',
+  // },
   {
     title: 'Motorcycle Loft',
     slug: 'motorcycle-loft',
@@ -824,6 +878,8 @@ export const projectsFull = [
     location: 'Prague, Czech Republic',
     client: 'Private Client',
     year: '2019',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/the-motorcycle-residence/',
     grid: {
       alt: 'Motorcycle Loft',
       images: [
@@ -946,6 +1002,8 @@ export const projectsFull = [
     location: 'Costa Rica',
     client: 'Private Client',
     year: '2022',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/mountain-apartments/',
     grid: {
       alt: 'Modern Chalet',
       images: [
@@ -992,6 +1050,8 @@ export const projectsFull = [
     location: 'Prague, Czech Republic',
     client: 'Kaprain Group',
     year: '2021',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/dinosauria-museum-prague-2/',
     grid: {
       alt: 'Dinosaria Museum',
       images: [
@@ -1023,6 +1083,38 @@ export const projectsFull = [
     },
   },
   {
+    title: 'Costa Rica River Lodge',
+    slug: 'costa-rica-river-lodge',
+    category: 'Hospitality',
+    featuredPhoto: 'costa-rica-river-lodge/featuredPhoto.jpg',
+    location: 'Costa Rica',
+    client: 'Private Client',
+    year: '2022',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/costa-rica-river-lodge/',
+    grid: {
+      alt: 'Costa Rica River Lodge',
+      images: [
+        {
+          src: '/projects/costa-rica-river-lodge/1.jpg',
+          style: { '--r': 1, '--c': 1, '--s': 4 },
+        },
+        {
+          src: '/projects/costa-rica-river-lodge/2.jpg',
+          style: { '--r': 2, '--c': 5, '--s': 3 },
+        },
+        {
+          src: '/projects/costa-rica-river-lodge/3.jpg',
+          style: { '--r': 3, '--c': 3, '--s': 2 },
+        },
+        {
+          src: '/projects/costa-rica-river-lodge/4.jpg',
+          style: { '--r': 4, '--c': 1, '--s': 2 },
+        },
+      ],
+    },
+  },
+  {
     title: 'Kitchen Concept 54',
     slug: 'kitchen-concept-54',
     category: 'Commercial',
@@ -1030,6 +1122,8 @@ export const projectsFull = [
     location: 'Anywhere',
     client: 'Intergast s.r.o.',
     year: '2022',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/kitchen-concept-54/',
     grid: {
       alt: 'Kitchen Concept 54',
       images: [
@@ -1068,6 +1162,8 @@ export const projectsFull = [
     location: 'Prague, Czech Republic',
     client: 'Private Client',
     year: '2017',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/apartment-shou-sugi-ban/',
     grid: {
       alt: 'Shou Sugi Ban Apartment',
       images: [
@@ -1134,6 +1230,8 @@ export const projectsFull = [
     location: 'Washington, USA',
     client: 'Competition',
     year: '2011',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/czcech-embassy-in-washington/',
     grid: {
       alt: 'Czech Embassy in Washington',
       images: [
@@ -1168,6 +1266,8 @@ export const projectsFull = [
     location: 'Kladno, Czech Republic',
     client: 'Hladinka',
     year: '2020',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/hladinka-restaurant/',
     grid: {
       alt: 'Hladinka Restaurant',
       images: [
@@ -1234,6 +1334,8 @@ export const projectsFull = [
     location: 'Prague, Czech Republic',
     client: 'Private Client',
     year: '2019',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/apartment-red-dot/',
     grid: {
       alt: 'Red Dot Apartment',
       images: [
@@ -1292,6 +1394,8 @@ export const projectsFull = [
     location: 'Brno, Czech Republic',
     client: 'Gasnet',
     year: '2023',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/gasnet-offices-brno-2022/',
     grid: {
       alt: 'Gasnet Offices',
       images: [
@@ -1358,6 +1462,44 @@ export const projectsFull = [
       ],
     },
   },
+  // {
+  //   title: 'Bistro MOJO',
+  //   slug: 'bistro-mojo',
+  //   category: 'Hospitality',
+  //   featuredPhoto: 'bistro-mojo/featuredPhoto.jpg',
+  //   location: 'Prague, Czech Republic',
+  //   client: 'Bistro MOJO',
+  //   year: '2023',
+  //   archicraftUrl:
+  //     'https://www.archicraft.cz/en/portfolio-item/bistro-mojo-2/',
+  //   grid: {
+  //     alt: 'Bistro MOJO',
+  //     images: [
+  //       {
+  //         src: '/projects/bistro-mojo/1.jpg',
+  //         style: { '--r': 1, '--c': 1, '--s': 4 },
+  //       },
+  //     ],
+  //   },
+  // },
+  // {
+  //   title: 'Dentsu Offices',
+  //   slug: 'dentsu-offices',
+  //   category: 'Office fittout',
+  //   featuredPhoto: 'dentsu-offices/featuredPhoto.jpg',
+  //   location: 'Prague, Czech Republic',
+  //   client: 'Dentsu',
+  //   year: '2023',
+  //   archicraftUrl:
+  //     'https://www.archicraft.cz/en/portfolio-item/dentsu-aegis-network-office-2/',
+  //   grid: {
+  //     alt: 'Dentsu Offices',
+  //     images: [
+  //       {
+  //         src: '/projects/dentsu-offices/1.jpg',
+  //         style: { '--r': 1, '--c': 1, '--s': 4 },
+  //       },
+  // },
   {
     title: 'Bombay Express Restaurant Chain',
     slug: 'bombay-express-restaurant-chain',
@@ -1366,6 +1508,8 @@ export const projectsFull = [
     location: 'Czech Republic',
     client: 'Bombay Express',
     year: '2013 - ongoing',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/bombay-express-restaurant-chain/',
     grid: {
       alt: 'Bombay Express Restaurant Chain',
       images: [
