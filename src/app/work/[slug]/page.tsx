@@ -4,6 +4,12 @@ import { Project as ProjectModel, projectsFull } from '@/data/data';
 import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
 import Image from 'next/image';
 
+export async function generateStaticParams() {
+  return projectsFull.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 // TODO: add error page
 const Project = ({ params }: { params: { slug: string } }) => {
   const getCurrentProjectAndIndex = (
