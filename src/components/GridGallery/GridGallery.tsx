@@ -4,7 +4,6 @@ import styles from './GridGallery.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
-import Lenis from 'lenis';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import { homeGalleryImages } from '@/data/data';
@@ -25,22 +24,6 @@ const GridGallery = () => {
   useGSAP(() => {
     const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
     setBigImagesIndex(isDesktop ? bigImagesIndexDesktop : bigImagesIndexMobile);
-
-    const initSmoothScrolling = () => {
-      let lenis = new Lenis({
-        lerp: 0.1,
-        smoothWheel: true,
-      });
-
-      lenis.on('scroll', () => ScrollTrigger.update());
-
-      const scrollFn = (time: any) => {
-        lenis.raf(time);
-        requestAnimationFrame(scrollFn);
-      };
-
-      requestAnimationFrame(scrollFn);
-    };
 
     const triggerFlipOnScroll = (galleryEl: any, options: any) => {
       let settings = {
@@ -91,7 +74,6 @@ const GridGallery = () => {
       triggerFlipOnScroll(gallery, {});
     };
 
-    initSmoothScrolling();
     scroll();
   }, []);
 

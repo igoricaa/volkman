@@ -6,7 +6,7 @@ import Footer from '@/components/Footer/Footer';
 import PageTransition from '@/components/PageTransition/PageTransition';
 import SplashScreen from '@/components/PageTransition/SplashScreen/SplashScreen';
 import BackgroundImage from '@/components/BackgroundImage/BackgroundImage';
-
+import Lenis from '@/components/Lenis';
 
 const gilroy = localFont({
   src: [
@@ -35,7 +35,6 @@ const gilroy = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://marija-volkman.com'),
   title: {
     default: 'Marija Volkman',
     template: '%s | Marija Volkman',
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Marija Volkman',
     description: 'Official website of Marija Volkman.',
-    url: 'marija-volkman.com',
+    url: 'https://marija-volkman.com',
     siteName: 'Marija Volkman',
     locale: 'en_US',
     type: 'website',
@@ -63,12 +62,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
-        <PageTransition />
-        {/* <SplashScreen /> */}
-        <BackgroundImage />
-        <Header />
-        {children}
-        <Footer />
+        <Lenis>
+          <PageTransition />
+          {/* <SplashScreen /> */}
+          <BackgroundImage />
+          <Header />
+          {children}
+          <Footer />
+        </Lenis>
       </body>
     </html>
   );

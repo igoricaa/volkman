@@ -3,7 +3,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
-import Lenis from 'lenis';
 import styles from './BentoGallery.module.scss';
 import { useGSAP } from '@gsap/react';
 import { desktopImages, mobileImages, restProps } from './imageProps';
@@ -12,22 +11,6 @@ const BentoGallery = () => {
   gsap.registerPlugin(Flip, ScrollTrigger);
 
   useGSAP(() => {
-    const initSmoothScrolling = () => {
-      let lenis = new Lenis({
-        lerp: 0.1,
-        smoothWheel: true,
-      });
-
-      lenis.on('scroll', () => ScrollTrigger.update());
-
-      const scrollFn = (time: any) => {
-        lenis.raf(time);
-        requestAnimationFrame(scrollFn);
-      };
-
-      requestAnimationFrame(scrollFn);
-    };
-
     const triggerFlipOnScroll = (galleryEl: any, options: any) => {
       let settings = {
         flip: {
@@ -76,7 +59,6 @@ const BentoGallery = () => {
       triggerFlipOnScroll(gallery, {});
     };
 
-    initSmoothScrolling();
     scroll();
   }, []);
 

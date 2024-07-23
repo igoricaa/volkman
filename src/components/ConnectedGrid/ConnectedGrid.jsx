@@ -1,9 +1,7 @@
 'use client';
 
-export * from 'lenis/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
 import styles from './ConnectedGrid.module.scss';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
@@ -32,22 +30,6 @@ export default function ConnectedGrid({ gridContent, endingText }) {
   useGSAP(() => {
     const grid = document.querySelector(`.${styles.grid}`);
     const gridItems = grid.querySelectorAll(`.${styles.gridItem}`);
-
-    const initSmoothScrolling = () => {
-      let lenis = new Lenis({
-        lerp: 0.15,
-        smoothWheel: true,
-      });
-
-      lenis.on('scroll', () => ScrollTrigger.update());
-
-      const scrollFn = (time) => {
-        lenis.raf(time);
-        requestAnimationFrame(scrollFn);
-      };
-
-      requestAnimationFrame(scrollFn);
-    };
 
     const scroll = () => {
       gridItems.forEach((item) => {
@@ -107,7 +89,6 @@ export default function ConnectedGrid({ gridContent, endingText }) {
       });
     };
 
-    initSmoothScrolling();
     scroll();
   }, [isMobile]);
 
