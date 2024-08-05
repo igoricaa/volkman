@@ -25,7 +25,7 @@ const AboutMe = () => {
           European cultures, I developed a passion for architecture. That took
           me to Prague, Czech Republic, where I was admitted to architecture
           school. After hunkering down to learn the Czech language within
-          several months in order to understand wha t I was being taught, I
+          several months in order to understand what I was being taught, I
           earned my Master's degree and launched my career fresh out of
           university.
         </p>
