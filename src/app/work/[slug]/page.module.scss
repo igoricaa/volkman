@@ -97,8 +97,16 @@
   &:hover {
     background-color: #e6e6e6;
 
-    h3 {
-      color: #000;
+    & > a {
+      > span {
+        &:first-of-type {
+          color: #000;
+        }
+      }
+
+      h3 {
+        color: #000;
+      }
     }
   }
 
@@ -135,7 +143,7 @@
     & > a {
       & > span {
         &:first-of-type {
-          right: 3rem;
+          left: 3rem;
         }
       }
     }
@@ -158,7 +166,7 @@
     & > a {
       & > span {
         &:first-of-type {
-          left: 3rem;
+          right: 3rem;
         }
       }
     }

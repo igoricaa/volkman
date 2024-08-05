@@ -14,6 +14,7 @@ export default function BackToTopButton({ classes }: { classes?: string[] }) {
     <Button
       classes={['backToTopButton', ...(classes ?? [])]}
       onClick={scrollToTop}
+      isMagnetic={false}
     >
       <p>Back to top</p>
     </Button>
