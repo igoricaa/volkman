@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   padding: 0 var(--padding-side);
+  position: relative;
 
   .heroBgWrapper {
     position: absolute;
@@ -11,8 +12,13 @@
     height: 100%;
     z-index: -2;
 
-    img {
-      max-height: 100vh;
+    picture {
+      display: block;
+      height: 100%;
+      
+      img {
+        max-height: 100vh;
+      }
     }
   }
 
