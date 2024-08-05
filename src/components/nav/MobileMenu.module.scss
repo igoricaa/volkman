@@ -121,7 +121,7 @@
             transform: translateY(0em);
             text-transform: uppercase;
             font-size: 1.13em;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
           }
 
           ul {
@@ -131,13 +131,13 @@
               }
 
               a {
-                font-size: calc(var(--menu__font-size) * 0.25);
+                font-size: 1.25rem;
+                font-weight: 500;
                 color: #232323;
                 transition: all var(--animation-smooth), color 0.2s ease-in-out;
                 position: relative;
                 padding-right: 1em;
                 display: block;
-                text-transform: uppercase;
 
                 &::before {
                   content: '';
@@ -189,11 +189,11 @@
 
         .bar {
           &:nth-child(1) {
-            transform: translateY(0em) rotate(45deg);
+            transform: translateY(0em) rotate(45deg) !important;
           }
 
           &:nth-child(2) {
-            transform: translateY(0em) rotate(-45deg);
+            transform: translateY(0em) rotate(-45deg) !important;
           }
         }
       }
@@ -223,88 +223,88 @@
       }
     }
   }
+}
 
-  @media screen and (max-width: 680px) {
-    .mobileMenu {
-      .burgerWrapper {
-        right: 17px;
-        top: 22px;
+@media screen and (max-width: 680px) {
+  .mobileMenu {
+    .burgerWrapper {
+      right: 17px;
+      top: 22px;
 
-        .burger {
-          width: 3rem;
-          height: 3rem;
+      .burger {
+        width: 3rem;
+        height: 3rem;
 
+        .bar {
+          width: 17.5px;
+
+          &:nth-child(1) {
+            transform: translateY(-2px) rotate(0.001deg);
+          }
+
+          &:nth-child(2) {
+            transform: translateY(2px) rotate(0.001deg);
+          }
+        }
+
+        &:hover {
           .bar {
-            width: 17.5px;
-
             &:nth-child(1) {
-              transform: translateY(-2px) rotate(0.001deg);
+              transform: translateY(2px) rotate(0.001deg);
             }
 
             &:nth-child(2) {
-              transform: translateY(2px) rotate(0.001deg);
-            }
-          }
-
-          &:hover {
-            .bar {
-              &:nth-child(1) {
-                transform: translateY(2px) rotate(0.001deg);
-              }
-
-              &:nth-child(2) {
-                transform: translateY(-2px) rotate(0.001deg);
-              }
+              transform: translateY(-2px) rotate(0.001deg);
             }
           }
         }
       }
+    }
 
-      .modalNavMobile {
-        top: 22px;
-        bottom: 33px;
-        left: unset;
-        right: 17px;
+    .modalNavMobile {
+      top: 22px;
+      bottom: 33px;
+      left: unset;
+      right: 17px;
 
-        .modalBlock {
-          padding: 20px;
+      .modalBlock {
+        padding: 1.5rem 1rem;
 
-          .modalBlockBackground {
-            width: 3rem;
-            height: 3rem;
+        .modalBlockBackground {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        .mobileMenuWrapper {
+          .modalSmallTitle {
+            font-size: 10px;
           }
 
-          .mobileMenuWrapper {
-            .modalSmallTitle {
-              font-size: 10px;
-            }
+          ul {
+            li {
+              a {
+                > span {
+                  font-size: 22p;
 
-            ul {
-              li {
-                a {
-                  > span {
-                    font-size: 22p;
-
-                    &::before {
-                      width: 6px;
-                      height: 6px;
-                    }
+                  &::before {
+                    width: 6px;
+                    height: 6px;
                   }
                 }
+              }
 
-                &:not(:last-child) {
-                  margin-bottom: 10px;
-                }
+              &:not(:last-child) {
+                margin-bottom: 1rem;
               }
             }
           }
         }
       }
+    }
 
-      &.active {
-        .burger {
-          transform: translate(-3px, 3px);
-        }
+    &.active {
+      .burger {
+        transform: translate(-3px, 3px);
       }
     }
   }
