@@ -7,9 +7,9 @@ import styles from './BentoGallery.module.scss';
 import { useGSAP } from '@gsap/react';
 import { desktopImages, mobileImages, restProps } from './imageProps';
 
-const BentoGallery = () => {
-  gsap.registerPlugin(Flip, ScrollTrigger);
+gsap.registerPlugin(Flip, ScrollTrigger);
 
+const BentoGallery = () => {
   useGSAP(() => {
     const triggerFlipOnScroll = (galleryEl: any, options: any) => {
       let settings = {

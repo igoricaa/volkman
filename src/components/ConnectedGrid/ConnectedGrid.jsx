@@ -11,8 +11,9 @@ import {
 } from '@/data/data';
 import { useState, useEffect } from 'react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ConnectedGrid({ gridContent, endingText }) {
-  gsap.registerPlugin(ScrollTrigger);
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {

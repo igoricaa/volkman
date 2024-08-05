@@ -9,8 +9,9 @@ import Image from 'next/image';
 import { homeGalleryImages } from '@/data/data';
 import { useState } from 'react';
 
+gsap.registerPlugin(Flip, ScrollTrigger);
+
 const GridGallery = () => {
-  gsap.registerPlugin(Flip, ScrollTrigger);
   const [bigImagesIndex, setBigImagesIndex] = useState<number[]>([]);
 
   const imageSizesBig = `(max-width: 1024px) 25vw, 29vw`;
