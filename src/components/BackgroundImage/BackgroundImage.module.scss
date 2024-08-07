@@ -10,10 +10,7 @@
     width: 132vw;
     aspect-ratio: 2537 / 1351;
     position: relative;
-
-    &:first-of-type {
-      opacity: 0.62;
-    }
+    opacity: 0.62;
 
     &:not(:first-of-type) {
       margin-top: 17.1vw;
