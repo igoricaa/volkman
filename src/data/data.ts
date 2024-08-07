@@ -362,6 +362,21 @@ export const projectsGalleryImageStylesMobile = [
   { '--r': 46, '--c': 5, '--s': 4 },
 ];
 
+export interface ImageData {
+  src?: string;
+  mobileCaption?: {
+    style?: any;
+    text?: string;
+  };
+  caption?: {
+    style: {
+      left: string;
+      textAlign?: 'left' | 'center' | 'right' | undefined;
+    };
+    text: string;
+  };
+}
+
 export type Project = {
   title: string;
   slug: string;
@@ -377,7 +392,10 @@ export type Project = {
       src?: string;
       caption?: {
         text: string;
-        style: { left: string; textAlign?: string };
+        style: {
+          left: string;
+          textAlign?: 'left' | 'center' | 'right' | undefined;
+        };
       };
       mobileCaption?: {
         text: string;

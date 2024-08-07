@@ -9,22 +9,8 @@ import styles from './ConnectedGrid.module.scss';
 import {
   projectsGalleryImageStyles,
   projectsGalleryImageStylesMobile,
+  ImageData,
 } from '@/data/data';
-
-interface ImageData {
-  src?: string;
-  mobileCaption?: {
-    style?: any;
-    text?: string;
-  };
-  caption?: {
-    style: {
-      left: string;
-      textAlign: 'left' | 'center' | 'right';
-    };
-    text: string;
-  };
-}
 
 interface GridItemProps {
   image: ImageData;

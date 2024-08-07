@@ -1,28 +1,14 @@
 'use client';
 
-import { useRef, useCallback } from 'react';
+import { useCallback } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ConnectedGrid.module.scss';
 import { useMediaQuery } from '@/utils/useMediaQuery';
 import GridItem from './GridItem';
+import { ImageData } from '@/data/data';
 
 gsap.registerPlugin(ScrollTrigger);
-
-interface ImageData {
-  src?: string;
-  mobileCaption?: {
-    style?: any;
-    text?: string;
-  };
-  caption?: {
-    style: {
-      left: string;
-      textAlign: 'left' | 'center' | 'right';
-    };
-    text: string;
-  };
-}
 
 interface GridContentData {
   images: ImageData[];
@@ -30,7 +16,7 @@ interface GridContentData {
 }
 
 interface ConnectedGridProps {
-  gridContent: any;
+  gridContent: GridContentData;
   endingText?: string;
 }
 
@@ -42,9 +28,7 @@ export default function ConnectedGrid({
 
   const filteredImages = useCallback(
     () =>
-      gridContent.images.filter(
-        (image: ImageData) => isMobile || !image.mobileCaption
-      ),
+      gridContent.images.filter((image) => isMobile || !image.mobileCaption),
     [gridContent.images, isMobile]
   );
 
@@ -54,7 +38,7 @@ export default function ConnectedGrid({
         isMobile ? styles.gridMobile : styles.gridDesktop
       }`}
     >
-      {filteredImages().map((image: ImageData, index: number) => (
+      {filteredImages().map((image, index) => (
         <GridItem
           key={`projectImage${index}`}
           image={image}
