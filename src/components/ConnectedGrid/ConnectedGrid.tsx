@@ -1,4 +1,3 @@
-// ConnectedGrid.tsx
 'use client';
 
 import { useRef, useCallback } from 'react';
@@ -31,7 +30,7 @@ interface GridContentData {
 }
 
 interface ConnectedGridProps {
-  gridContent: GridContentData;
+  gridContent: any;
   endingText?: string;
 }
 
@@ -43,7 +42,9 @@ export default function ConnectedGrid({
 
   const filteredImages = useCallback(
     () =>
-      gridContent.images.filter((image) => isMobile || !image.mobileCaption),
+      gridContent.images.filter(
+        (image: ImageData) => isMobile || !image.mobileCaption
+      ),
     [gridContent.images, isMobile]
   );
 
@@ -53,7 +54,7 @@ export default function ConnectedGrid({
         isMobile ? styles.gridMobile : styles.gridDesktop
       }`}
     >
-      {filteredImages().map((image, index) => (
+      {filteredImages().map((image: ImageData, index: number) => (
         <GridItem
           key={`projectImage${index}`}
           image={image}
