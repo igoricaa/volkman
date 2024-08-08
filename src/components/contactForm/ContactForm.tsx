@@ -2,8 +2,9 @@
 
 import { useForm } from 'react-hook-form';
 import styles from './ContactForm.module.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Button from '../common/Button/Button';
+import CheckIcon from '../CheckIcon';
 
 type FormData = {
   access_key: string;
@@ -22,14 +23,8 @@ const ContactForm = () => {
     reset,
     formState: { errors },
   } = useForm<FormData>();
-  const [isDesktop, setIsDesktop] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState('');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined')
-      setIsDesktop(window.matchMedia('(min-width: 1024px)').matches);
-  }, []);
 
   const onSubmit = async (formData: FormData) => {
     await fetch('https://api.web3forms.com/submit', {
@@ -41,14 +36,14 @@ const ContactForm = () => {
       body: JSON.stringify(formData, null, 2),
     })
       .then(async (response) => {
-        const json = await response.json();
-        if (json.success) {
+        const result = await response.json();
+        if (result.success) {
           setIsSuccess(true);
-          setMessage(json.message);
+          setMessage(result.message);
           reset();
         } else {
           setIsSuccess(false);
-          setMessage(json.message);
+          setMessage(result.message);
         }
       })
       .catch((error) => {
@@ -61,7 +56,7 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
       <input
         type='hidden'
-        value='288b39cc-0062-49e5-b483-39073dfca1a9'
+        value='42127bc9-2bb3-4549-ac53-babaab139c16'
         {...register('access_key')}
       />
       <input
@@ -91,9 +86,13 @@ const ContactForm = () => {
           id='name'
           type='text'
           placeholder='Name Surname'
-          {...register('name', { required: true, maxLength: 80 })}
+          {...register('name', {
+            required: { value: true, message: 'Required field' },
+            maxLength: { value: 50, message: 'Maximum length is 50' },
+          })}
           autoComplete='name'
         />
+        {errors.name && <p className={styles.error}>{errors.name.message}</p>}
       </div>
       <div className={styles.fieldWrapper}>
         <label htmlFor='last_name'>Your whatever?</label>
@@ -101,9 +100,15 @@ const ContactForm = () => {
           id='last_name'
           type='text'
           placeholder='Last name'
-          {...register('last_name', { required: true, maxLength: 100 })}
+          {...register('last_name', {
+            required: { value: true, message: 'Required field' },
+            maxLength: { value: 50, message: 'Maximum length is 50' },
+          })}
           autoComplete='family-name'
         />
+        {errors.last_name && (
+          <p className={styles.error}>{errors.last_name.message}</p>
+        )}
       </div>
       <div className={styles.fieldWrapper}>
         <label htmlFor='email'>What's your email?</label>
@@ -111,9 +116,16 @@ const ContactForm = () => {
           id='email'
           type='email'
           placeholder='namesurname@email.com'
-          {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+          {...register('email', {
+            required: { value: true, message: 'Required field' },
+            pattern: {
+              value: /^\S+@\S+$/i,
+              message: 'Please enter a valid email address',
+            },
+          })}
           autoComplete='email'
         />
+        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
       </div>
       <div className={styles.fieldWrapper}>
         <label htmlFor='message'>Your message</label>
@@ -121,12 +133,22 @@ const ContactForm = () => {
           id='message'
           placeholder={'Your message'}
           rows={7}
-          {...register('message', { required: true, min: 10 })}
+          {...register('message', {
+            required: { value: true, message: 'Message is required' },
+            minLength: { value: 10, message: 'Minimum length is 10' },
+            maxLength: { value: 1000, message: 'Maximum length is 1000' },
+          })}
         />
+        {errors.message && (
+          <p className={styles.error}>{errors.message.message}</p>
+        )}
       </div>
 
-      <Button type='submit' classes={['roundedButton', 'centered']}>
-        <p>Send</p>
+      <Button
+        type='submit'
+        classes={['roundedButton', 'centered', isSuccess ? 'disabled' : '']}
+      >
+        {isSuccess ? <CheckIcon /> : <p>Send</p>}
       </Button>
     </form>
   );

@@ -9,6 +9,11 @@
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding: 3rem 0 3.5rem;
     gap: 1.5rem;
+    position: relative;
+
+    &:last-of-type {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
 
     label {
       font-size: 1.5rem;
@@ -25,6 +30,13 @@
       border: none;
       background: none;
       color: #fff;
+    }
+
+    .error {
+      font-weight: 300;
+      position: absolute;
+      color: #EEBF9E;
+      bottom: -25.5px;
     }
 
     textarea {
