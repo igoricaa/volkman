@@ -24,7 +24,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<FormData>();
   const [isSuccess, setIsSuccess] = useState(false);
-  const [Message, setMessage] = useState('');
+  const [message, setMessage] = useState('');
 
   const onSubmit = async (formData: FormData) => {
     await fetch('https://api.web3forms.com/submit', {
@@ -39,16 +39,22 @@ const ContactForm = () => {
         const result = await response.json();
         if (result.success) {
           setIsSuccess(true);
-          setMessage(result.message);
           reset();
+          setMessage(
+            'Your message has been sent successfully. Thank you for contacting me!'
+          );
         } else {
           setIsSuccess(false);
-          setMessage(result.message);
+          setMessage(
+            'There was an error while sending your message. Please try again.'
+          );
         }
       })
       .catch((error) => {
         setIsSuccess(false);
-        setMessage('Client Error. Please check the console.log for more info');
+        setMessage(
+          'There was an error while sending your message. Please try again.'
+        );
       });
   };
 
@@ -69,17 +75,6 @@ const ContactForm = () => {
         value='Kontakt forma marijavolkman.com'
         {...register('from_name')}
       />
-      {/* <label htmlFor='email'>Your email</label>
-        <input
-          {...register('email', {
-            required: { value: true, message: 'Required field' },
-            pattern: {
-              value: /^\S+@\S+$/i,
-              message: 'Please enter a valid email address',
-            },
-          })}
-          className={errors.email ? styles.error : ''}
-        /> */}
       <div className={styles.fieldWrapper}>
         <label htmlFor='name'>What's your name?</label>
         <input
@@ -141,6 +136,13 @@ const ContactForm = () => {
         />
         {errors.message && (
           <p className={styles.error}>{errors.message.message}</p>
+        )}
+        {message && (
+          <p
+            className={isSuccess ? styles.successMessage : styles.errorMessage}
+          >
+            {message}
+          </p>
         )}
       </div>
 

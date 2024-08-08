@@ -32,11 +32,21 @@
       color: #fff;
     }
 
-    .error {
+    .error,
+    .errorMessage,
+    .successMessage {
       font-weight: 300;
       position: absolute;
-      color: #EEBF9E;
+      color: #eebf9e;
       bottom: -25.5px;
+    }
+
+    .errorMessage {
+      color: red;
+    }
+
+    .successMessage {
+      color: green;
     }
 
     textarea {
