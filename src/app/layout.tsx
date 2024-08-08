@@ -35,6 +35,8 @@ const gilroy = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://marija-volkman.com'),
+
   title: {
     default: 'Marija Volkman',
     template: '%s | Marija Volkman',

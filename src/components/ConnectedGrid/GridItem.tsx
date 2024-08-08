@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useCallback } from 'react';
+import { useMemo, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -20,6 +20,11 @@ interface GridItemProps {
 }
 
 gsap.registerPlugin(ScrollTrigger);
+const indexes1204 = [1, 13, 15, 26, 28, 39, 41];
+const indexes903 = [2, 7, 12, 14, 20, 25, 27, 33, 38, 40];
+const indexes602 = [3, 4, 8, 10, 11, 17, 21, 23, 24, 30, 34, 36, 37, 43];
+const indexes301 = [6, 16, 19, 29, 32, 42];
+const indexes1505 = [5, 9, 18, 22, 31, 35, 44];
 
 const GridItem: React.FC<GridItemProps> = ({ image, index, isMobile, alt }) => {
   const figureRef = useRef<HTMLElement>(null);
@@ -99,9 +104,28 @@ const GridItem: React.FC<GridItemProps> = ({ image, index, isMobile, alt }) => {
             fill
             style={{ objectFit: 'cover' }}
             sizes={
-              isMobile && index === 6 ? '95vw' : isMobile ? '45vw' : '50vw'
+              isMobile && index === 6
+                ? '95vw'
+                : isMobile
+                ? '45vw'
+                : useMemo(
+                    () =>
+                      indexes1204.includes(index)
+                        ? '47vw'
+                        : indexes903.includes(index)
+                        ? '36vw'
+                        : indexes602.includes(index)
+                        ? '24vw'
+                        : indexes301.includes(index)
+                        ? '12vw'
+                        : indexes1505.includes(index)
+                        ? '59vw'
+                        : '47vw',
+                    [index]
+                  )
             }
             priority
+            quality={60}
           />
         </div>
       )}
