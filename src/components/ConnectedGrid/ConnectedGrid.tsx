@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ConnectedGrid.module.scss';
@@ -25,6 +25,10 @@ export default function ConnectedGrid({
   endingText,
 }: ConnectedGridProps) {
   const isMobile = useMediaQuery('(max-width: 1023px)');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [gridContent]);
 
   const filteredImages = useCallback(
     () =>
