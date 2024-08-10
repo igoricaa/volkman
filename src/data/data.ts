@@ -233,6 +233,18 @@ export const projectsFeatured = [
     featuredPhoto: 'shou-sugi-ban-apartment/featuredPhoto.jpg',
   },
   {
+    title: 'Dentsu Aegis Network Offices',
+    slug: 'dentsu-aegis-offices',
+    category: 'Office fittout',
+    featuredPhoto: 'dentsu-aegis-offices/featuredPhoto.jpg',
+  },
+  {
+    title: 'Bistro MOJO',
+    slug: 'bistro-mojo',
+    category: 'Hospitality',
+    featuredPhoto: 'bistro-mojo/featuredPhoto.jpg',
+  },
+  {
     title: 'Czech Embassy in Washington',
     slug: 'czech-embassy-washington',
     category: 'Institutional',
@@ -2015,44 +2027,226 @@ export const projectsFull: Project[] = [
       ],
     },
   },
-  // {
-  //   title: 'Bistro MOJO',
-  //   slug: 'bistro-mojo',
-  //   category: 'Hospitality',
-  //   featuredPhoto: 'bistro-mojo/featuredPhoto.jpg',
-  //   location: 'Prague, Czech Republic',
-  //   client: 'Bistro MOJO',
-  //   year: '2023',
-  //   archicraftUrl:
-  //     'https://www.archicraft.cz/en/portfolio-item/bistro-mojo-2/',
-  //   grid: {
-  //     alt: 'Bistro MOJO',
-  //     images: [
-  //       {
-  //         src: '/projects/bistro-mojo/1.jpg',
-
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   title: 'Dentsu Offices',
-  //   slug: 'dentsu-offices',
-  //   category: 'Office fittout',
-  //   featuredPhoto: 'dentsu-offices/featuredPhoto.jpg',
-  //   location: 'Prague, Czech Republic',
-  //   client: 'Dentsu',
-  //   year: '2023',
-  //   archicraftUrl:
-  //     'https://www.archicraft.cz/en/portfolio-item/dentsu-aegis-network-office-2/',
-  //   grid: {
-  //     alt: 'Dentsu Offices',
-  //     images: [
-  //       {
-  //         src: '/projects/dentsu-offices/1.jpg',
-
-  //       },
-  // },
+  {
+    title: 'Bistro MOJO',
+    slug: 'bistro-mojo',
+    category: 'Hospitality',
+    featuredPhoto: 'bistro-mojo/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Olive Food',
+    year: '2019',
+    archicraftUrl: 'https://www.archicraft.cz/en/portfolio-item/bistro-mojo-2/',
+    grid: {
+      alt: 'Bistro MOJO',
+      images: [
+        {
+          src: '/projects/bistro-mojo/1.jpg',
+          caption: {
+            text: 'Adapting to changing circumstances is crucial in any project, especially when it evolves into something entirely unexpected. The MOJO restaurant project in Prague serves as a perfect example of this flexibility and resilience in action.',
+            style: { left: '48.5vw' },
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/2.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Adapting to changing circumstances is crucial in any project, especially when it evolves into something entirely unexpected. The MOJO restaurant project in Prague serves as a perfect example of this flexibility and resilience in action.',
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/3.jpg',
+        },
+        {
+          src: '/projects/bistro-mojo/4.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Despite the initial plans, the project took a different direction along the way. However, rather than abandoning the client in the face of these challenges, we remained steadfast in our commitment to delivering a remarkable outcome. Together with the client, we navigated through the uncertainties and obstacles, ensuring that the project reached its full potential.',
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/5.jpg',
+          caption: {
+            text: 'Despite the initial plans, the project took a different direction along the way. However, rather than abandoning the client in the face of these challenges, we remained steadfast in our commitment to delivering a remarkable outcome. Together with the client, we navigated through the uncertainties and obstacles, ensuring that the project reached its full potential.',
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: "While our involvement extended to designing the restaurant's name and visual identity, our primary focus was on crafting an interior that would redefine the dining experience. Drawing upon our expertise and creativity, we transformed the space into a haven of distinctive design, elevating every aspect of the sitting experience.",
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/6.jpg',
+        },
+        {
+          src: '/projects/bistro-mojo/7.jpg',
+          caption: {
+            text: "While our involvement extended to designing the restaurant's name and visual identity, our primary focus was on crafting an interior that would redefine the dining experience. Drawing upon our expertise and creativity, we transformed the space into a haven of distinctive design, elevating every aspect of the sitting experience.",
+            style: { left: '37vw' },
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/8.jpg',
+        },
+        {
+          src: '/projects/bistro-mojo/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Through careful attention to detail and innovative design solutions, we succeeded in creating an atmosphere that captivates and delights patrons, setting the stage for unforgettable dining moments. Our ability to adapt and respond flexibly to changing circumstances allowed us to overcome challenges and ultimately deliver a result that exceeded expectations.',
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/10.jpg',
+          caption: {
+            text: 'Through careful attention to detail and innovative design solutions, we succeeded in creating an atmosphere that captivates and delights patrons, setting the stage for unforgettable dining moments. Our ability to adapt and respond flexibly to changing circumstances allowed us to overcome challenges and ultimately deliver a result that exceeded expectations.',
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/11.jpg',
+        },
+        {
+          src: '/projects/bistro-mojo/12.jpg',
+        },
+        {
+          src: '/projects/bistro-mojo/13.jpg',
+          caption: {
+            text: 'The MOJO restaurant project stands as a testament to the power of collaboration, creativity, and resilience. It is a testament to our unwavering commitment to our clients and our ability to transform challenges into opportunities for innovation and growth.',
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/14.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'The MOJO restaurant project stands as a testament to the power of collaboration, creativity, and resilience. It is a testament to our unwavering commitment to our clients and our ability to transform challenges into opportunities for innovation and growth.',
+          },
+        },
+        {
+          src: '/projects/bistro-mojo/15.jpg',
+        },
+        {
+          src: '/projects/bistro-mojo/16.jpg',
+        },
+      ],
+    },
+  },
+  {
+    title: 'Dentsu Aegis Network Offices',
+    slug: 'dentsu-aegis-offices',
+    category: 'Office fittout',
+    featuredPhoto: 'dentsu-aegis-offices/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Dentsu',
+    year: '2017',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/dentsu-aegis-network-office-2/',
+    grid: {
+      alt: 'Dentsu Offices',
+      images: [
+        {
+          src: '/projects/dentsu-aegis-offices/1.jpg',
+          caption: {
+            text: 'Our team proudly earned the opportunity to undertake a complex project involving the design of office spaces for a prominent multinational communications agency. Collaborating closely with the esteemed firm Vrtiška & Žák, we embarked on a journey to reimagine a two-story open-space office environment.',
+            style: { left: '48.5vw' },
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/2.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Our team proudly earned the opportunity to undertake a complex project involving the design of office spaces for a prominent multinational communications agency. Collaborating closely with the esteemed firm Vrtiška & Žák, we embarked on a journey to reimagine a two-story open-space office environment.',
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/3.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/4.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "Drawing inspiration from the agency's innovative ethos, we introduced a fusion of functionality and aesthetics by incorporating a variety of elements, including bespoke containers and strategically placed acoustic boxes. These additions not only provided practical solutions for privacy and organization but also contributed to the overall industrial theme of the space.",
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/5.jpg',
+          caption: {
+            text: "Drawing inspiration from the agency's innovative ethos, we introduced a fusion of functionality and aesthetics by incorporating a variety of elements, including bespoke containers and strategically placed acoustic boxes. These additions not only provided practical solutions for privacy and organization but also contributed to the overall industrial theme of the space.",
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          mobileCaption: {
+            text: 'One of the most captivating features of our design scheme was the integration of striking red bookcases. Positioned strategically throughout the office, these bold accents not only served as functional storage solutions but also doubled as focal points, captivating the attention of visitors and employees alike. Against the backdrop of the bustling workplace, these vibrant elements injected a sense of energy and dynamism into the environment.',
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/6.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/7.jpg',
+          caption: {
+            text: 'One of the most captivating features of our design scheme was the integration of striking red bookcases. Positioned strategically throughout the office, these bold accents not only served as functional storage solutions but also doubled as focal points, captivating the attention of visitors and employees alike. Against the backdrop of the bustling workplace, these vibrant elements injected a sense of energy and dynamism into the environment.',
+            style: { left: '37vw' },
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/8.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'By seamlessly blending form and function, our collaborative effort with Vrtiška & Žák resulted in the creation of a truly unique office space that not only met the demands of the client but also exceeded expectations. Through thoughtful design choices and meticulous attention to detail, we were able to transform a conventional workspace into an inspiring hub of creativity and productivity.',
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/10.jpg',
+          caption: {
+            text: 'By seamlessly blending form and function, our collaborative effort with Vrtiška & Žák resulted in the creation of a truly unique office space that not only met the demands of the client but also exceeded expectations. Through thoughtful design choices and meticulous attention to detail, we were able to transform a conventional workspace into an inspiring hub of creativity and productivity.',
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/11.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/12.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/13.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/14.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/15.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/16.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/17.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/18.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/19.jpg',
+        },
+        {
+          src: '/projects/dentsu-aegis-offices/20.jpg',
+        },
+      ],
+    },
+  },
   {
     title: 'Bombay Express Restaurant Chain',
     slug: 'bombay-express-restaurant-chain',
