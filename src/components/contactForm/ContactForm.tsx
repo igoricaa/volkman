@@ -90,7 +90,7 @@ const ContactForm = () => {
         {errors.name && <p className={styles.error}>{errors.name.message}</p>}
       </div>
       <div className={styles.fieldWrapper}>
-        <label htmlFor='last_name'>Your whatever?</label>
+        <label htmlFor='last_name'>Your surname?</label>
         <input
           id='last_name'
           type='text'
