@@ -26,11 +26,17 @@ const Footer = () => {
         <div className={styles.contactInfo}>
           <h4>Contact</h4>
           <div className={styles.innerWrapper}>
-            <a href='https://maps.app.goo.gl/fgnxdamRC3pRDR9h7' target='_blank'>
-              700 N San Vicente Blvd,
+            <a href='https://maps.app.goo.gl/1pseyMkUPaXeRiX7A' target='_blank'>
+              Design Pacific Center,
             </a>
-            <a href='https://maps.app.goo.gl/fgnxdamRC3pRDR9h7' target='_blank'>
-              Los Angeles
+            <a href='https://maps.app.goo.gl/1pseyMkUPaXeRiX7A' target='_blank'>
+              750 N San Vicente Blvd,
+            </a>
+            <a href='https://maps.app.goo.gl/1pseyMkUPaXeRiX7A' target='_blank'>
+              Ste 800 West,
+            </a>
+            <a href='https://maps.app.goo.gl/1pseyMkUPaXeRiX7A' target='_blank'>
+              Los Angeles, CA 90069
             </a>
             <a href='tel:0018184581762'>+1 818 458 1762</a>
             <a href='mailto:volkmanm@archicraft.co'>volkmanm@archicraft.co</a>

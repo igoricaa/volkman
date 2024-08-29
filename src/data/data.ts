@@ -19,20 +19,26 @@ export const routes = [
 
 export const awards = [
   {
+    title: 'AMERICAN INSTITUTE OF ARCHITECT',
+    context: 'AIA LA RESTAURANT AWARDS HONOR AWARD for Masarycka Restaurant',
+    year: '2022',
+  },
+  {
     title: 'CZECH INSTITUTE OF DESIGN',
     context:
       'Interior of the Year - Public Spaces for Masarycka Restaurant awarded by Institute of Design, Czech Republic',
     year: '2021',
   },
   {
-    title: 'AMERICAN INSTITUTE OF ARCHITECT',
-    context: 'AIA LA RESTAURANT AWARDS HONOR AWARD for Masarycka Restaurant',
-    year: '2022',
-  },
-  {
     title: 'BIG SEE',
     context: 'BIG SEE Interior Design Award - Winner for Motorcycle Loft',
     year: '2021',
+  },
+  {
+    title: 'LOS ANGELES BUSINESS COUNCIL',
+    context:
+      'Renovation Award for Commercial project Indian Paintbrush Productions',
+    year: '2012',
   },
   {
     title: 'AMERICAN INSTITUTE OF ARCHITECT',
@@ -44,12 +50,6 @@ export const awards = [
     context:
       'AIA LA NEXT AWARDS BEST IN SHOW for Embassy of the Czech Republic',
     year: '2010',
-  },
-  {
-    title: 'LOS ANGELES BUSINESS COUNCIL',
-    context:
-      'Renovation Award for Commercial project Indian Paintbrush Productions',
-    year: '2012',
   },
   {
     title: 'CHAMBER OF ARCHITECTS CZECH REPUBLIC',
@@ -148,12 +148,12 @@ export const socials = [
     href: 'https://www.instagram.com/marijavolkman/',
   },
   {
-    title: 'Facebook',
-    href: 'https://www.facebook.com/marija.volkman',
+    title: 'Pinterest',
+    href: 'https://www.pinterest.com/makivolk/',
   },
   {
     title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/marija-volkman-0a8b5b1a/',
+    href: 'https://www.linkedin.com/in/marija-volkman//',
   },
 ];
 
@@ -161,16 +161,16 @@ export type ProjectsView = 'list' | 'grid';
 
 export const projectsFeatured = [
   {
+    title: '1155 Arden',
+    slug: '1155-arden',
+    category: 'Residential',
+    featuredPhoto: '1155-arden/featuredPhoto.jpg',
+  },
+  {
     title: 'Masarycka Restaurant',
     slug: 'masarycka-restaurant',
     category: 'Hospitality',
     featuredPhoto: 'masarycka-restaurant/featuredPhoto.jpg',
-  },
-  {
-    title: 'Arden Residence',
-    slug: 'arden-residence',
-    category: 'Residential',
-    featuredPhoto: 'arden-residence/featuredPhoto.jpg',
   },
   {
     title: 'Cafe Cube',
@@ -215,10 +215,10 @@ export const projectsFeatured = [
     featuredPhoto: 'modern-chalet/featuredPhoto.jpeg',
   },
   {
-    title: 'Dinosaria Museum',
-    slug: 'dinosaria-museum',
+    title: 'Dinosauria Museum',
+    slug: 'dinosauria-museum',
     category: 'Exibition Design',
-    featuredPhoto: 'dinosaria-museum/featuredPhoto.jpg',
+    featuredPhoto: 'dinosauria-museum/featuredPhoto.jpg',
   },
   {
     title: 'Kitchen Concept 54',
@@ -556,9 +556,9 @@ export const projectsFull: Project[] = [
   },
   {
     title: 'Arden Residence',
-    slug: 'arden-residence',
+    slug: '1155-arden',
     category: 'Residential',
-    featuredPhoto: 'arden-residence/featuredPhoto.jpg',
+    featuredPhoto: '1155-arden/featuredPhoto.jpg',
     location: 'Los Angeles, California',
     client: 'Rismondo Design',
     year: '2024',
@@ -566,14 +566,14 @@ export const projectsFull: Project[] = [
       alt: 'Arden Residence',
       images: [
         {
-          src: '/projects/arden-residence/1.jpg',
+          src: '/projects/1155-arden/1.jpg',
           caption: {
             text: "This project features a remarkable residential development nestled in California's urban landscape: a 5100 square-foot main house accompanied by an 800 square-foot guest house. This design epitomizes contemporary luxury, showcasing European materials and emphasizing seamless integration with a private garden sanctuary, offering a tranquil retreat from city life.",
             style: { left: '48.5vw' },
           },
         },
         {
-          src: '/projects/arden-residence/2.jpg',
+          src: '/projects/1155-arden/2.jpg',
         },
         {
           mobileCaption: {
@@ -581,14 +581,14 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/arden-residence/3.jpg',
+          src: '/projects/1155-arden/3.jpg',
           caption: {
             text: 'The main house is designed with an expansive open floor plan that maximizes natural light and airflow. Expansive sliding doors effortlessly blend indoor and outdoor spaces, leading to a serene garden and pool area — a secluded oasis amidst the urban hustle.',
             style: { left: '25vw' },
           },
         },
         {
-          src: '/projects/arden-residence/4.jpg',
+          src: '/projects/1155-arden/4.jpg',
         },
         {
           mobileCaption: {
@@ -596,7 +596,7 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/arden-residence/5.jpg',
+          src: '/projects/1155-arden/5.jpg',
         },
         {
           mobileCaption: {
@@ -604,20 +604,20 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/arden-residence/6.jpg',
+          src: '/projects/1155-arden/6.jpg',
         },
         {
-          src: '/projects/arden-residence/7.jpg',
+          src: '/projects/1155-arden/7.jpg',
           caption: {
             text: 'European materials, including refined stone and hardwood, are carefully selected to enhance both aesthetic appeal and structural integrity.',
             style: { left: '37vw' },
           },
         },
         {
-          src: '/projects/arden-residence/8.jpg',
+          src: '/projects/1155-arden/8.jpg',
         },
         {
-          src: '/projects/arden-residence/9.jpg',
+          src: '/projects/1155-arden/9.jpg',
         },
         {
           mobileCaption: {
@@ -625,27 +625,27 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/arden-residence/10.jpg',
+          src: '/projects/1155-arden/10.jpg',
           caption: {
             text: 'Each of the six bedrooms provides direct access to outdoor spaces, whether through private terraces or garden views, ensuring a seamless indoor - outdoor experience that enhances the sense of comfort and homeliness alongside the luxurious and spacious ambiance. Complementing the main residence, the guest house features its own distinctive design and access to outdoor amenities.',
             style: { left: '-30vw', textAlign: 'right' },
           },
         },
         {
-          src: '/projects/arden-residence/11.jpg',
+          src: '/projects/1155-arden/11.jpg',
         },
         {
-          src: '/projects/arden-residence/12.jpg',
+          src: '/projects/1155-arden/12.jpg',
         },
         {
-          src: '/projects/arden-residence/13.jpg',
+          src: '/projects/1155-arden/13.jpg',
           caption: {
             text: 'This project embodies a blend of sophistication and functionality, offering residents a luxurious sanctuary that harmonizes with nature within an urban setting — a residence that exudes both elegance and inviting comfort.',
             style: { left: '-30vw', textAlign: 'right' },
           },
         },
         {
-          src: '/projects/arden-residence/14.jpg',
+          src: '/projects/1155-arden/14.jpg',
         },
         {
           mobileCaption: {
@@ -653,20 +653,20 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/arden-residence/15.jpg',
+          src: '/projects/1155-arden/15.jpg',
         },
         {
-          src: '/projects/arden-residence/16.jpg',
+          src: '/projects/1155-arden/16.jpg',
         },
 
         {
-          src: '/projects/arden-residence/17.jpg',
+          src: '/projects/1155-arden/17.jpg',
         },
         {
-          src: '/projects/arden-residence/18.jpg',
+          src: '/projects/1155-arden/18.jpg',
         },
         {
-          src: '/projects/arden-residence/19.jpg',
+          src: '/projects/1155-arden/19.jpg',
         },
       ],
     },
@@ -700,9 +700,9 @@ export const projectsFull: Project[] = [
     title: 'Basics Coffee',
     slug: 'basics-coffee',
     category: 'Residential',
-    featuredPhoto: 'arden-residence/featuredPhoto.jpg',
+    featuredPhoto: '1155-arden/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
-    client: 'Procres',
+    client: 'BASICS COFFEE sro',
     year: '2021-2022',
     archicraftUrl:
       'https://www.archicraft.cz/en/portfolio-item/basics-coffee-2/',
@@ -1373,27 +1373,27 @@ export const projectsFull: Project[] = [
     },
   },
   {
-    title: 'Dinosaria Museum',
-    slug: 'dinosaria-museum',
+    title: 'Dinosauria Museum',
+    slug: 'dinosauria-museum',
     category: 'Exibition Design',
-    featuredPhoto: 'dinosaria-museum/featuredPhoto.jpg',
+    featuredPhoto: 'dinosauria-museum/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
     client: 'Kaprain Group',
     year: '2021',
     archicraftUrl:
       'https://www.archicraft.cz/en/portfolio-item/dinosauria-museum-prague-2/',
     grid: {
-      alt: 'Dinosaria Museum',
+      alt: 'Dinosauria Museum',
       images: [
         {
-          src: '/projects/dinosaria-museum/1.jpg',
+          src: '/projects/dinosauria-museum/1.jpg',
           caption: {
             text: "In collaboration with the esteemed Berlin - based studio Art+COM and the innovative digital agency Lunchmeat, our team had the distinct privilege of designing the captivating interactive museum, Dinosauria Museum Prague. Boasting one of the world's largest private collections of dinosaur skeletons and models, this museum stands as a testament to the awe-inspiring wonders of prehistoric life.",
             style: { left: '48.5vw' },
           },
         },
         {
-          src: '/projects/dinosaria-museum/2.jpg',
+          src: '/projects/dinosauria-museum/2.jpg',
           caption: {
             text: "Nestled within the vibrant POP Airport area near Prague airport, the Dinosauria Museum sprawls across an impressive 40,000 square feet of space. Here, visitors are treated to a breathtaking display of dinosaur skeletons dating back as far as 66 to 154 million years, renowned for their remarkable completeness and exceptional quality. Among the standout exhibits are the imposing model of a tyrannosaurus rex and the graceful flight of a pterosaur, further enriching the museum's diverse collection.",
             style: { left: '-30vw', textAlign: 'right' },
@@ -1405,10 +1405,10 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/dinosaria-museum/3.jpg',
+          src: '/projects/dinosauria-museum/3.jpg',
         },
         {
-          src: '/projects/dinosaria-museum/4.jpg',
+          src: '/projects/dinosauria-museum/4.jpg',
           caption: {
             text: "From the initial conceptualization to the meticulous documentation and installation, our team meticulously oversaw every aspect of the museum's architecture. With a keen eye for detail and a dedication to excellence, we ensured that each element seamlessly integrated with the museum's overall design vision.",
             style: { left: '25vw' },
@@ -1420,7 +1420,7 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/dinosaria-museum/5.jpg',
+          src: '/projects/dinosauria-museum/5.jpg',
           caption: {
             text: 'Our involvement extended to the final stages of project management, ensuring a smooth transition leading up to the grand opening of Dinosauria. It was a privilege to be part of this groundbreaking endeavor, bringing the wonders of the ancient world to life for visitors of all ages to enjoy and explore.',
             style: { left: '-30vw', textAlign: 'right' },
@@ -1433,7 +1433,7 @@ export const projectsFull: Project[] = [
           },
         },
         {
-          src: '/projects/dinosaria-museum/6.jpg',
+          src: '/projects/dinosauria-museum/6.jpg',
         },
         {
           mobileCaption: {
