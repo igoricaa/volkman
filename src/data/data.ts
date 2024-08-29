@@ -562,6 +562,7 @@ export const projectsFull: Project[] = [
     location: 'Los Angeles, California',
     client: 'Rismondo Design',
     year: '2024',
+    archicraftUrl: 'https://archicraft.co/portfolio-item/rismondo-design/',
     grid: {
       alt: 'Arden Residence',
       images: [
@@ -700,7 +701,7 @@ export const projectsFull: Project[] = [
     title: 'Basics Coffee',
     slug: 'basics-coffee',
     category: 'Residential',
-    featuredPhoto: '1155-arden/featuredPhoto.jpg',
+    featuredPhoto: 'basics-coffee/featuredPhoto.jpg',
     location: 'Prague, Czech Republic',
     client: 'BASICS COFFEE sro',
     year: '2021-2022',
