@@ -92,7 +92,7 @@ const DesktopProjectInfo = ({ project }: { project: ProjectModel }) => (
       </div>
       <div className={`${styles.innerWrapper} ${styles.mainInfo}`}>
         <div>{project.year}</div>
-        <SocialLinks />
+        <SocialLinks slug={project.slug} />
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@ const MobileProjectInfo = ({ project }: { project: ProjectModel }) => (
       <InfoRow label='Client' value={project.client} />
       <InfoRow label='Realization' value={project.year} />
       <InfoRow label='Location' value={project.location} />
-      <InfoRow label='Share' value={<SocialLinks />} />
+      <InfoRow label='Share' value={<SocialLinks slug={project.slug} />} />
     </div>
   </div>
 );
@@ -122,16 +122,25 @@ const InfoRow = ({
   </div>
 );
 
-const SocialLinks = () => (
-  <div className={styles.socialsShareWrapper}>
-    <a href='https://facebook.com/' target='_blank' rel='noopener noreferrer'>
-      FB
-    </a>
-    <a href='https://linkedin.com/' target='_blank' rel='noopener noreferrer'>
-      LN
-    </a>
-  </div>
-);
+const SocialLinks = ({ slug }: { slug: string }) => {
+  const lnUrl = `https://linkedin.com/shareArticle?url=https://www.marijavolkman.com/work/${slug}/&title=EveSkyFinance`;
+  const pUrl = `https://pinterest.com/pin/create/button/?url=https://www.marijavolkman.com/work/${slug}/`;
+  const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=https://www.marijavolkman.com/work/${slug}/`;
+
+  return (
+    <div className={styles.socialsShareWrapper}>
+      <a href={fbUrl} target='_blank' rel='noopener noreferrer'>
+        FB
+      </a>
+      <a href={lnUrl} target='_blank' rel='noopener noreferrer'>
+        LN
+      </a>
+      <a href={pUrl} className='pinitbutton' target='_blank'>
+        P
+      </a>
+    </div>
+  );
+};
 
 const AdjacentProject = ({
   type,

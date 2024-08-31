@@ -35,7 +35,7 @@ const gilroy = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://marija-volkman.com'),
+  metadataBase: new URL('https://marijavolkman.com'),
 
   title: {
     default: 'Marija Volkman',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Marija Volkman',
     description: 'Official website of Marija Volkman.',
-    url: 'https://marija-volkman.com',
+    url: 'https://marijavolkman.com',
     siteName: 'Marija Volkman',
     locale: 'en_US',
     type: 'website',

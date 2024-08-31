@@ -153,7 +153,7 @@ export const socials = [
   },
   {
     title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/marija-volkman//',
+    href: 'https://www.linkedin.com/in/marija-volkman/',
   },
 ];
 
