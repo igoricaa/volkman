@@ -108,21 +108,17 @@ const GridItem: React.FC<GridItemProps> = ({ image, index, isMobile, alt }) => {
                 ? '95vw'
                 : isMobile
                 ? '45vw'
-                : useMemo(
-                    () =>
-                      indexes1204.includes(index + 1)
-                        ? '47vw'
-                        : indexes903.includes(index + 1)
-                        ? '36vw'
-                        : indexes602.includes(index + 1)
-                        ? '24vw'
-                        : indexes301.includes(index + 1)
-                        ? '12vw'
-                        : indexes1505.includes(index + 1)
-                        ? '59vw'
-                        : '47vw',
-                    [index]
-                  )
+                : indexes1204.includes(index + 1)
+                ? '47vw'
+                : indexes903.includes(index + 1)
+                ? '36vw'
+                : indexes602.includes(index + 1)
+                ? '24vw'
+                : indexes301.includes(index + 1)
+                ? '12vw'
+                : indexes1505.includes(index + 1)
+                ? '59vw'
+                : '47vw'
             }
             quality={60}
           />
