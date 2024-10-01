@@ -785,27 +785,6 @@ export const projectsFull: Project[] = [
         {
           src: '/projects/basics-coffee/11.jpg',
         },
-        {
-          src: '/projects/basics-coffee/12.jpg',
-        },
-        {
-          src: '/projects/basics-coffee/13.jpg',
-        },
-        {
-          src: '/projects/basics-coffee/14.jpg',
-        },
-        {
-          src: '/projects/basics-coffee/15.jpg',
-        },
-        {
-          src: '/projects/basics-coffee/16.jpg',
-        },
-        {
-          src: '/projects/basics-coffee/17.jpg',
-        },
-        {
-          src: '/projects/basics-coffee/18.jpg',
-        },
       ],
     },
   },
@@ -951,42 +930,6 @@ export const projectsFull: Project[] = [
         {
           src: '/projects/bird-and-bird/31.jpg',
         },
-        {
-          src: '/projects/bird-and-bird/32.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/33.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/34.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/35.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/36.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/37.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/38.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/39.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/40.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/41.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/42.jpg',
-        },
-        {
-          src: '/projects/bird-and-bird/43.jpg',
-        },
       ],
     },
   },
@@ -1107,42 +1050,6 @@ export const projectsFull: Project[] = [
         },
         {
           src: '/projects/cottage/23.jpg',
-        },
-        {
-          src: '/projects/cottage/24.jpg',
-        },
-        {
-          src: '/projects/cottage/25.jpg',
-        },
-        {
-          src: '/projects/cottage/26.jpg',
-        },
-        {
-          src: '/projects/cottage/27.jpg',
-        },
-        {
-          src: '/projects/cottage/28.jpg',
-        },
-        {
-          src: '/projects/cottage/29.jpg',
-        },
-        {
-          src: '/projects/cottage/30.jpg',
-        },
-        {
-          src: '/projects/cottage/31.jpg',
-        },
-        {
-          src: '/projects/cottage/32.jpg',
-        },
-        {
-          src: '/projects/cottage/33.jpg',
-        },
-        {
-          src: '/projects/cottage/34.jpg',
-        },
-        {
-          src: '/projects/cottage/35.jpg',
         },
       ],
     },
@@ -1376,27 +1283,6 @@ export const projectsFull: Project[] = [
         },
         {
           src: '/projects/motorcycle-loft/20.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/21.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/22.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/23.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/24.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/25.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/26.jpg',
-        },
-        {
-          src: '/projects/motorcycle-loft/27.jpg',
         },
       ],
     },
@@ -1947,15 +1833,6 @@ export const projectsFull: Project[] = [
         {
           src: '/projects/hladinka-restaurant/10.jpg',
         },
-        {
-          src: '/projects/hladinka-restaurant/11.jpg',
-        },
-        {
-          src: '/projects/hladinka-restaurant/12.jpg',
-        },
-        {
-          src: '/projects/hladinka-restaurant/13.jpg',
-        },
       ],
     },
   },
@@ -2241,12 +2118,6 @@ export const projectsFull: Project[] = [
             text: 'The MOJO restaurant project stands as a testament to the power of collaboration, creativity, and resilience. It is a testament to our unwavering commitment to our clients and our ability to transform challenges into opportunities for innovation and growth.',
           },
         },
-        {
-          src: '/projects/bistro-mojo/15.jpg',
-        },
-        {
-          src: '/projects/bistro-mojo/16.jpg',
-        },
       ],
     },
   },
@@ -2340,24 +2211,6 @@ export const projectsFull: Project[] = [
         },
         {
           src: '/projects/dentsu-aegis-offices/14.jpg',
-        },
-        {
-          src: '/projects/dentsu-aegis-offices/15.jpg',
-        },
-        {
-          src: '/projects/dentsu-aegis-offices/16.jpg',
-        },
-        {
-          src: '/projects/dentsu-aegis-offices/17.jpg',
-        },
-        {
-          src: '/projects/dentsu-aegis-offices/18.jpg',
-        },
-        {
-          src: '/projects/dentsu-aegis-offices/19.jpg',
-        },
-        {
-          src: '/projects/dentsu-aegis-offices/20.jpg',
         },
       ],
     },
