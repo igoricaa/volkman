@@ -167,12 +167,6 @@ export const projectsFeatured = [
     featuredPhoto: '1155-arden/featuredPhoto.jpg',
   },
   {
-    title: 'Masarycka Restaurant',
-    slug: 'masarycka-restaurant',
-    category: 'Hospitality',
-    featuredPhoto: 'masarycka-restaurant/featuredPhoto.jpg',
-  },
-  {
     title: 'Cafe Cube',
     slug: 'cafe-cube',
     category: 'Hospitality',
@@ -197,10 +191,10 @@ export const projectsFeatured = [
     featuredPhoto: 'cottage/featuredPhoto.jpg',
   },
   {
-    title: 'Costa Rica River Lodge',
-    slug: 'costa-rica-river-lodge',
+    title: 'Masarycka Restaurant',
+    slug: 'masarycka-restaurant',
     category: 'Hospitality',
-    featuredPhoto: 'costa-rica-river-lodge/featuredPhoto.jpg',
+    featuredPhoto: 'masarycka-restaurant/featuredPhoto.jpg',
   },
   {
     title: 'Motorcycle Loft',
@@ -209,10 +203,22 @@ export const projectsFeatured = [
     featuredPhoto: 'motorcycle-loft/featuredPhoto.jpg',
   },
   {
+    title: 'Costa Rica River Lodge',
+    slug: 'costa-rica-river-lodge',
+    category: 'Hospitality',
+    featuredPhoto: 'costa-rica-river-lodge/featuredPhoto.jpg',
+  },
+  {
     title: 'Modern Chalet',
     slug: 'modern-chalet',
     category: 'Hospitality',
     featuredPhoto: 'modern-chalet/featuredPhoto.jpeg',
+  },
+  {
+    title: 'Row House Loft',
+    slug: 'row-house-loft',
+    category: 'Residential',
+    featuredPhoto: 'row-house-loft/featuredPhoto.jpg',
   },
   {
     title: 'Dinosauria Museum',
@@ -231,12 +237,6 @@ export const projectsFeatured = [
     slug: 'shou-sugi-ban-apartment',
     category: 'Residential',
     featuredPhoto: 'shou-sugi-ban-apartment/featuredPhoto.jpg',
-  },
-  {
-    title: 'Dentsu Aegis Network Offices',
-    slug: 'dentsu-aegis-offices',
-    category: 'Office fittout',
-    featuredPhoto: 'dentsu-aegis-offices/featuredPhoto.jpg',
   },
   {
     title: 'Bistro MOJO',
@@ -261,6 +261,12 @@ export const projectsFeatured = [
     slug: 'red-dot-apartment',
     category: 'Residential',
     featuredPhoto: 'red-dot-apartment/featuredPhoto.jpg',
+  },
+  {
+    title: 'Dentsu Aegis Network Offices',
+    slug: 'dentsu-aegis-offices',
+    category: 'Office fittout',
+    featuredPhoto: 'dentsu-aegis-offices/featuredPhoto.jpg',
   },
   {
     title: 'Gasnet Offices',
@@ -1141,10 +1147,118 @@ export const projectsFull: Project[] = [
       ],
     },
   },
-  // {
-  //   title: 'Row House LOFT',
-  //   archicraftUrl: 'https://www.archicraft.cz/en/portfolio-item/row-house-loft/',
-  // },
+  {
+    title: 'Row House Loft',
+    slug: 'row-house-loft',
+    category: 'Residential',
+    featuredPhoto: 'row-house-loft/featuredPhoto.jpg',
+    location: 'Prague, Czech Republic',
+    client: 'Private Client',
+    year: '2023',
+    archicraftUrl:
+      'https://www.archicraft.cz/en/portfolio-item/row-house-loft/',
+    grid: {
+      alt: 'Row House Loft',
+      images: [
+        {
+          src: '/projects/row-house-loft/1.jpg',
+          caption: {
+            text: "Every now and then, we're presented with the opportunity to embark on truly extraordinary endeavors — projects that resonate deeply with our passions and ignite a creative spark within us. Such was the case with this endeavor — a project so captivating that we found ourselves reluctant to see it come to an end.",
+            style: { left: '48.5vw' },
+          },
+        },
+        {
+          src: '/projects/row-house-loft/2.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "Every now and then, we're presented with the opportunity to embark on truly extraordinary endeavors — projects that resonate deeply with our passions and ignite a creative spark within us. Such was the case with this endeavor — a project so captivating that we found ourselves reluctant to see it come to an end.",
+          },
+        },
+        {
+          src: '/projects/row-house-loft/3.jpg',
+          caption: {
+            text: 'Fueled by a profound appreciation for exotic natural materials, a penchant for elegant simplicity, and a daring embrace of unconventional technical elements, this project transcended the ordinary to become something truly exceptional. From the outset, our aim was clear: to craft a space that not only met the practical needs of our clients but also ignited their imagination and stirred their souls.',
+            style: { left: '25vw' },
+          },
+        },
+        {
+          src: '/projects/row-house-loft/4.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'Fueled by a profound appreciation for exotic natural materials, a penchant for elegant simplicity, and a daring embrace of unconventional technical elements, this project transcended the ordinary to become something truly exceptional. From the outset, our aim was clear: to craft a space that not only met the practical needs of our clients but also ignited their imagination and stirred their souls.',
+          },
+        },
+        {
+          src: '/projects/row-house-loft/5.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'One of the most remarkable features of this project? A living room where a motorbike finds its rightful place alongside the furniture — a bold and unconventional choice that speaks volumes about the adventurous spirit of its inhabitants.',
+          },
+        },
+        {
+          src: '/projects/row-house-loft/6.jpg',
+        },
+        {
+          src: '/projects/row-house-loft/7.jpg',
+          caption: {
+            text: 'One of the most remarkable features of this project? A living room where a motorbike finds its rightful place alongside the furniture — a bold and unconventional choice that speaks volumes about the adventurous spirit of its inhabitants.',
+            style: { left: '37vw' },
+          },
+        },
+        {
+          src: '/projects/row-house-loft/8.jpg',
+        },
+        {
+          src: '/projects/row-house-loft/9.jpg',
+        },
+        {
+          mobileCaption: {
+            text: 'And why stop at a motorbike? For those with an even grander sense of adventure , imagine the possibility of driving a car directly into your apartment — an audacious concept that pushes the boundaries of traditional living spaces.',
+          },
+        },
+        {
+          src: '/projects/row-house-loft/10.jpg',
+          caption: {
+            text: 'And why stop at a motorbike? For those with an even grander sense of adventure , imagine the possibility of driving a car directly into your apartment — an audacious concept that pushes the boundaries of traditional living spaces.',
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          src: '/projects/row-house-loft/11.jpg',
+        },
+        {
+          src: '/projects/row-house-loft/12.jpg',
+        },
+        {
+          src: '/projects/row-house-loft/13.jpg',
+          caption: {
+            text: "As we reflect on the journey of bringing this vision to life, the enduring image of contentment and joy on our clients' faces serves as a constant reminder of why we do what we do. Their satisfaction fuels our passion, driving us to continually push the boundaries of creativity and innovation in pursuit of extraordinary design solutions.",
+            style: { left: '-30vw', textAlign: 'right' },
+          },
+        },
+        {
+          src: '/projects/row-house-loft/14.jpg',
+        },
+        {
+          mobileCaption: {
+            text: "As we reflect on the journey of bringing this vision to life, the enduring image of contentment and joy on our clients' faces serves as a constant reminder of why we do what we do. Their satisfaction fuels our passion, driving us to continually push the boundaries of creativity and innovation in pursuit of extraordinary design solutions.",
+          },
+        },
+        {
+          src: '/projects/row-house-loft/15.jpg',
+        },
+        {
+          src: '/projects/row-house-loft/16.jpg',
+        },
+        {
+          src: '/projects/row-house-loft/17.jpg',
+        },
+      ],
+    },
+  },
   {
     title: 'Motorcycle Loft',
     slug: 'motorcycle-loft',
