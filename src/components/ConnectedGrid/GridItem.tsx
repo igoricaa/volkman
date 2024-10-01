@@ -120,7 +120,7 @@ const GridItem: React.FC<GridItemProps> = ({ image, index, isMobile, alt }) => {
                 ? '59vw'
                 : '47vw'
             }
-            quality={60}
+            quality={75}
           />
         </div>
       )}
