@@ -3,50 +3,82 @@
 import { projectsFeatured } from '@/data/data';
 import styles from './ProjectsGrid.module.scss';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
+import CustomEase from 'gsap/CustomEase';
 import TransitionLink from '@/components/PageTransition/TransitionLink/TransitionLink';
 import { useGSAP } from '@gsap/react';
 
 const ProjectsGrid = () => {
-  const cursor = useRef(null);
-  const cursorLabel = useRef(null);
+  const cursorRef = useRef(null);
+  const cursorLabelRef = useRef(null);
   const [active, setActive] = useState(false);
 
-  const scaleAnimation = {
-    initial: { scale: 0, x: '-50%', y: '-50%' },
-    enter: {
-      scale: 1,
-      x: '-50%',
-      y: '-50%',
-      transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
-    },
-    closed: {
-      scale: 0,
-      x: '-50%',
-      y: '-50%',
-      transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
-    },
-  };
+  useGSAP(() => {
+    const cursor = cursorRef.current;
+    const cursorLabel = cursorLabelRef.current;
+
+    if (!cursor || !cursorLabel) return;
+
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(
+      [cursor, cursorLabel],
+      {
+        scale: 0,
+        x: '-50%',
+        y: '-50%',
+      },
+      {
+        scale: 1,
+        duration: 0.4,
+        ease: CustomEase.create('custom', '0.76, 0, 0.24, 1'),
+      }
+    );
+
+    const closeTl = gsap.timeline({ paused: true });
+    closeTl.fromTo(
+      [cursor, cursorLabel],
+      {
+        scale: 1,
+        x: '-50%',
+        y: '-50%',
+      },
+      {
+        scale: 0,
+        duration: 0.4,
+        ease: CustomEase.create('custom2', '0.32, 0, 0.67, 0'),
+      }
+    );
+
+    if (active) {
+      tl.restart(false);
+    } else {
+      closeTl.restart(false);
+    }
+  }, [active]);
 
   useGSAP(() => {
-    let xMoveCursor = gsap.quickTo(cursor.current, 'left', {
+    const cursor = cursorRef.current;
+    const cursorLabel = cursorLabelRef.current;
+
+    if (!cursor || !cursorLabel) return;
+
+    let xMoveCursor = gsap.quickTo(cursor, 'left', {
       duration: 0.5,
       ease: 'power3',
     });
 
-    let yMoveCursor = gsap.quickTo(cursor.current, 'top', {
+    let yMoveCursor = gsap.quickTo(cursor, 'top', {
       duration: 0.5,
       ease: 'power3',
     });
 
-    let xMoveCursorLabel = gsap.quickTo(cursorLabel.current, 'left', {
+    let xMoveCursorLabel = gsap.quickTo(cursorLabel, 'left', {
       duration: 0.45,
       ease: 'power3',
     });
 
-    let yMoveCursorLabel = gsap.quickTo(cursorLabel.current, 'top', {
+    let yMoveCursorLabel = gsap.quickTo(cursorLabel, 'top', {
       duration: 0.45,
       ease: 'power3',
     });
@@ -92,22 +124,10 @@ const ProjectsGrid = () => {
           );
         })}
       </div>
-      <motion.div
-        ref={cursor}
-        className={styles.cursor}
-        variants={scaleAnimation}
-        initial='initial'
-        animate={active ? 'enter' : 'closed'}
-      ></motion.div>
-      <motion.div
-        ref={cursorLabel}
-        className={styles.cursorLabel}
-        variants={scaleAnimation}
-        initial='initial'
-        animate={active ? 'enter' : 'closed'}
-      >
+      <div ref={cursorRef} className={styles.cursor}></div>
+      <div ref={cursorLabelRef} className={styles.cursorLabel}>
         View
-      </motion.div>
+      </div>
     </>
   );
 };

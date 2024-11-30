@@ -66,7 +66,7 @@ export default function RootLayout({
       <body className={[`${gilroy.variable}`, 'demo-1', 'loading'].join(' ')}>
         <Lenis>
           <PageTransition />
-          <SplashScreen />
+          {/* <SplashScreen /> */}
           <BackgroundImage />
           <Header />
           {children}
