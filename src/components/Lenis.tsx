@@ -1,7 +1,7 @@
 'use client';
 import { PropsWithChildren, useEffect } from 'react';
 import { ReactLenis, useLenis } from 'lenis/react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const Lenis = ({ children }: PropsWithChildren) => {
   const pathname = usePathname();
