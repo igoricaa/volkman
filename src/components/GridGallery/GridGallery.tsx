@@ -31,7 +31,7 @@ interface GalleryImage {
 }
 
 interface GalleryProps {
-  images: GalleryImage[];
+  images?: GalleryImage[];
   caption?: string;
 }
 
