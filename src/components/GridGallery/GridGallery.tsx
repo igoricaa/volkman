@@ -7,100 +7,148 @@ import { Flip } from 'gsap/Flip';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import { homeGalleryImages } from '@/data/data';
-import { useState } from 'react';
+import { useMemo, useRef } from 'react';
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
-const GridGallery = () => {
-  const [bigImagesIndex, setBigImagesIndex] = useState<number[]>([]);
+interface FlipSettings {
+  flip: {
+    absoluteOnLeave: boolean;
+    absolute: boolean;
+    scale: boolean;
+    simple: boolean;
+  };
+  scrollTrigger: {
+    start: string;
+    end: string;
+  };
+  stagger: number;
+}
 
-  const imageSizesBig = `(max-width: 1024px) 25vw, 29vw`;
-  const imageSizesSmall = `(max-width: 1024px) 30px, 300px`;
-  const bigImagesIndexDesktop = [33, 34, 35, 36, 43, 44, 45, 46];
-  const bigImagesIndexMobile = [
+interface GalleryImage {
+  src: string;
+  alt?: string;
+}
+
+interface GalleryProps {
+  images: GalleryImage[];
+  caption?: string;
+}
+
+const DEFAULT_FLIP_SETTINGS: FlipSettings = {
+  flip: {
+    absoluteOnLeave: false,
+    absolute: false,
+    scale: true,
+    simple: true,
+  },
+  scrollTrigger: {
+    start: 'center center',
+    end: '+=300%',
+  },
+  stagger: 0,
+};
+
+const IMAGE_SIZES = {
+  big: '(max-width: 1024px) 256px, 750px',
+  small: '(max-width: 1024px) 30px, 300px',
+} as const;
+
+const BIG_IMAGES_INDEX = {
+  desktop: [33, 34, 35, 36, 43, 44, 45, 46] as const,
+  mobile: [
     3, 4, 5, 6, 13, 14, 15, 16, 23, 24, 25, 26, 33, 34, 35, 36, 43, 44, 45, 46,
     53, 54, 55, 56, 63, 64, 65, 66, 73, 74, 75, 76,
-  ];
+  ] as const,
+} as const;
+
+export function GridGallery({
+  images = homeGalleryImages,
+  caption = 'What is creativity?',
+}: GalleryProps) {
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  const bigImagesIndex = useMemo(() => {
+    const isDesktop =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(min-width: 1024px)').matches;
+    return isDesktop ? BIG_IMAGES_INDEX.desktop : BIG_IMAGES_INDEX.mobile;
+  }, []);
 
   useGSAP(() => {
-    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-    setBigImagesIndex(isDesktop ? bigImagesIndexDesktop : bigImagesIndexMobile);
+    if (!galleryRef.current) return;
 
-    const triggerFlipOnScroll = (galleryEl: any, options: any) => {
-      let settings = {
-        flip: {
-          absoluteOnLeave: false,
-          absolute: false,
-          scale: true,
-          simple: true,
-        },
-        scrollTrigger: {
-          start: 'center center',
-          end: '+=300%',
-        },
-        stagger: 0,
-      };
+    const galleryEl = galleryRef.current;
+    const galleryCaption = galleryEl.querySelector(`.${styles.caption}`);
+    const galleryItems = galleryEl.querySelectorAll(`.${styles.galleryItem}`);
 
-      settings = Object.assign({}, settings, options);
+    const setupGalleryAnimation = () => {
+      galleryEl.classList.add(styles.gallerySwitch);
+      const flipstate = Flip.getState(
+        [...Array.from(galleryItems), galleryCaption],
+        {
+          props: 'filter, opacity',
+        }
+      );
+      galleryEl.classList.remove(styles.gallerySwitch);
 
-      const galleryCaption = galleryEl.querySelector(`.${styles.caption}`);
-      const galleryItems = galleryEl.querySelectorAll(`.${styles.galleryItem}`);
-
-      galleryEl.classList.add(`${styles.gallerySwitch}`);
-      const flipstate = Flip.getState([galleryItems, galleryCaption], {
-        props: 'filter, opacity',
-      });
-
-      galleryEl.classList.remove(`${styles.gallerySwitch}`);
-
-      const tl = Flip.to(flipstate, {
+      return Flip.to(flipstate, {
         ease: 'none',
-        absoluteOnLeave: settings.flip.absoluteOnLeave,
-        absolute: settings.flip.absolute,
-        scale: settings.flip.scale,
-        simple: settings.flip.simple,
+        ...DEFAULT_FLIP_SETTINGS.flip,
         scrollTrigger: {
           trigger: galleryEl,
-          start: settings.scrollTrigger.start,
-          end: settings.scrollTrigger.end,
-          pin: galleryEl.parentNode,
+          ...DEFAULT_FLIP_SETTINGS.scrollTrigger,
+          pin: galleryEl.parentElement as HTMLElement,
           scrub: true,
         },
-        stagger: settings.stagger,
+        stagger: DEFAULT_FLIP_SETTINGS.stagger,
       });
     };
 
-    const scroll = () => {
-      const gallery = document.querySelector('#gallery-7');
-      triggerFlipOnScroll(gallery, {});
-    };
+    const animation = setupGalleryAnimation();
 
-    scroll();
+    return () => {
+      animation.kill();
+    };
   }, []);
 
   return (
     <div className={styles.galleryWrap}>
       <div
-        className={[styles.gallery, styles.galleryGridTiny].join(' ')}
+        ref={galleryRef}
+        className={`${styles.gallery} ${styles.galleryGridTiny}`}
         id='gallery-7'
       >
-        {[...homeGalleryImages].map((photo, index) => (
-          <div className={styles.galleryItem} key={index}>
-            <Image
-              src={photo.src}
-              alt='Marija Volkman - Architect'
-              sizes={
-                bigImagesIndex.includes(index) ? imageSizesBig : imageSizesSmall
-              }
-              fill
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
+        {images.map((photo, index) => (
+          <GalleryItem
+            key={index}
+            photo={photo}
+            isBig={bigImagesIndex.includes(index as any)}
+          />
         ))}
-        <div className={styles.caption}>What is creativity?</div>
+        <div className={styles.caption}>{caption}</div>
       </div>
     </div>
   );
-};
+}
+
+const GalleryItem = ({
+  photo,
+  isBig,
+}: {
+  photo: GalleryImage;
+  isBig: boolean;
+}) => (
+  <div className={styles.galleryItem}>
+    <Image
+      src={photo.src}
+      alt={photo.alt || 'Marija Volkman - Architect'}
+      sizes={isBig ? IMAGE_SIZES.big : IMAGE_SIZES.small}
+      fill
+      style={{ objectFit: 'cover' }}
+      quality={isBig ? 85 : 60}
+    />
+  </div>
+);
 
 export default GridGallery;

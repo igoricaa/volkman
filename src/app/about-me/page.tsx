@@ -37,7 +37,7 @@ const AboutMe = () => {
             src='/about-me/marija-volkman.png'
             alt='Marija Volkman'
             fill
-            sizes='(max-width: 1024px) 100vw, 48vw'
+            sizes='(max-width: 640px) 620px, 1000px'
             priority
           />
         </div>

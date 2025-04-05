@@ -17,7 +17,7 @@ const MobileProjects = ({ isHome }: { isHome: boolean }) => {
                   src={`/projects/${project.featuredPhoto}`}
                   alt={project.title}
                   fill
-                  sizes='(max-width: 1024px) 100vw, 0vw'
+                  sizes='(max-width: 640px) 640px, 1024px'
                   style={{ objectFit: 'cover' }}
                 />
               </div>

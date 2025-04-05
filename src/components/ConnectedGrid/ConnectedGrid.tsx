@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ConnectedGrid.module.scss';
@@ -20,20 +20,32 @@ interface ConnectedGridProps {
   endingText?: string;
 }
 
-export default function ConnectedGrid({
-  gridContent,
-  endingText,
-}: ConnectedGridProps) {
+interface GridItemStyle extends React.CSSProperties {
+  '--r': number;
+  '--c': number;
+  '--s': number;
+}
+
+export function ConnectedGrid({ gridContent, endingText }: ConnectedGridProps) {
   const isMobile = useMediaQuery('(max-width: 1023px)');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [gridContent]);
 
-  const filteredImages = useCallback(
+  const filteredImages = useMemo(
     () =>
       gridContent.images.filter((image) => isMobile || !image.mobileCaption),
     [gridContent.images, isMobile]
+  );
+
+  const endingTextStyle = useMemo<GridItemStyle>(
+    () => ({
+      '--r': filteredImages.length + 1,
+      '--c': isMobile ? 1 : 2,
+      '--s': isMobile ? 8 : 6,
+    }),
+    [filteredImages.length, isMobile]
   );
 
   return (
@@ -42,7 +54,7 @@ export default function ConnectedGrid({
         isMobile ? styles.gridMobile : styles.gridDesktop
       }`}
     >
-      {filteredImages().map((image, index) => (
+      {filteredImages.map((image, index) => (
         <GridItem
           key={`projectImage${index}`}
           image={image}
@@ -52,18 +64,7 @@ export default function ConnectedGrid({
         />
       ))}
       {endingText && (
-        <figure
-          className={styles.gridItem}
-          style={
-            {
-              '--r': isMobile
-                ? filteredImages().length + 1
-                : filteredImages().length + 1,
-              '--c': isMobile ? 1 : 2,
-              '--s': isMobile ? 8 : 6,
-            } as React.CSSProperties
-          }
-        >
+        <figure className={styles.gridItem} style={endingTextStyle}>
           <figcaption
             className={`${styles.gridItemCaptionCustom} ${styles.endingText}`}
           >
@@ -74,3 +75,5 @@ export default function ConnectedGrid({
     </div>
   );
 }
+
+export default ConnectedGrid;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
+import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -105,20 +105,20 @@ const GridItem: React.FC<GridItemProps> = ({ image, index, isMobile, alt }) => {
             style={{ objectFit: 'cover' }}
             sizes={
               isMobile && index === 6
-                ? '95vw'
+                ? '1024px'
                 : isMobile
-                ? '45vw'
+                ? '460px'
                 : indexes1204.includes(index + 1)
-                ? '47vw'
+                ? '1204px'
                 : indexes903.includes(index + 1)
-                ? '36vw'
+                ? '903px'
                 : indexes602.includes(index + 1)
-                ? '24vw'
+                ? '602px'
                 : indexes301.includes(index + 1)
-                ? '12vw'
+                ? '301px'
                 : indexes1505.includes(index + 1)
-                ? '59vw'
-                : '47vw'
+                ? '1505px'
+                : '1203px'
             }
             quality={75}
           />

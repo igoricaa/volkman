@@ -11,7 +11,6 @@ import heroMobile from '@/../public/home/marija-volkman-hero-mobile.png';
 export default function Home() {
   const common = {
     alt: 'Marija Volkman',
-    sizes: '100vw',
     fill: true,
     quality: 100,
     priority: true,
@@ -21,12 +20,14 @@ export default function Home() {
   } = getImageProps({
     ...common,
     src: heroDesktop,
+    sizes: '2560px',
   });
   const {
     props: { srcSet: mobile, ...rest },
   } = getImageProps({
     ...common,
     src: heroMobile,
+    sizes: '680px',
   });
 
   return (

@@ -111,7 +111,7 @@ const ProjectsGrid = () => {
                     src={`/projects/${project.featuredPhoto}`}
                     alt={project.title}
                     fill
-                    sizes='(max-width: 1024px) 95vw, 39vw'
+                    sizes='(max-width: 640px) 640px, 1000px'
                     style={{ objectFit: 'cover', borderRadius: '1rem' }}
                   />
                 </div>

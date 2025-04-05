@@ -3,100 +3,108 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
-import styles from './BentoGallery.module.scss';
 import { useGSAP } from '@gsap/react';
+import styles from './BentoGallery.module.scss';
 import { desktopImages, mobileImages, restProps } from './imageProps';
+import { useRef } from 'react';
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
-const BentoGallery = () => {
+interface FlipSettings {
+  flip: {
+    absoluteOnLeave: boolean;
+    absolute: boolean;
+    scale: boolean;
+    simple: boolean;
+  };
+  scrollTrigger: {
+    start: string;
+    end: string;
+  };
+  stagger: number;
+}
+
+const DEFAULT_FLIP_SETTINGS: FlipSettings = {
+  flip: {
+    absoluteOnLeave: false,
+    absolute: false,
+    scale: false,
+    simple: true,
+  },
+  scrollTrigger: {
+    start: 'center center',
+    end: '+=300%',
+  },
+  stagger: 0,
+};
+
+export function BentoGallery() {
+  const galleryRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
-    const triggerFlipOnScroll = (galleryEl: any, options: any) => {
-      let settings = {
-        flip: {
-          absoluteOnLeave: false,
-          absolute: false,
-          scale: false,
-          simple: true,
-        },
-        scrollTrigger: {
-          start: 'center center',
-          end: '+=300%',
-        },
-        stagger: 0,
-      };
+    if (!galleryRef.current) return;
 
-      settings = Object.assign({}, settings, options);
+    const galleryEl = galleryRef.current;
+    const galleryItems = galleryEl.querySelectorAll(`.${styles.galleryItem}`);
 
-      const galleryItems = galleryEl.querySelectorAll(`.${styles.galleryItem}`);
-
-      galleryEl.classList.add(`${styles.gallerySwitch}`);
-      const flipstate = Flip.getState([galleryItems], {
+    const setupGalleryAnimation = () => {
+      galleryEl.classList.add(styles.gallerySwitch);
+      const flipstate = Flip.getState(galleryItems, {
         props: 'filter, opacity',
       });
+      galleryEl.classList.remove(styles.gallerySwitch);
 
-      galleryEl.classList.remove(`${styles.gallerySwitch}`);
-
-      const tl = Flip.to(flipstate, {
+      return Flip.to(flipstate, {
         ease: 'none',
-        absoluteOnLeave: settings.flip.absoluteOnLeave,
-        absolute: settings.flip.absolute,
-        scale: settings.flip.scale,
-        simple: settings.flip.simple,
+        ...DEFAULT_FLIP_SETTINGS.flip,
         scrollTrigger: {
           trigger: galleryEl,
-          start: settings.scrollTrigger.start,
-          end: settings.scrollTrigger.end,
-          pin: galleryEl.parentNode,
+          ...DEFAULT_FLIP_SETTINGS.scrollTrigger,
+          pin: galleryEl.parentElement as HTMLElement,
           scrub: true,
         },
-        stagger: settings.stagger,
+        stagger: DEFAULT_FLIP_SETTINGS.stagger,
       });
     };
 
-    const scroll = () => {
-      const gallery = document.querySelector('#gallery-8');
-      triggerFlipOnScroll(gallery, {});
-    };
+    const animation = setupGalleryAnimation();
 
-    scroll();
+    return () => {
+      animation.kill();
+    };
   }, []);
 
   return (
-    <div className={[styles.galleryWrap, styles.desktop].join(' ')}>
+    <div className={styles.galleryWrap}>
       <div
-        className={[styles.gallery, styles.galleryBento].join(' ')}
-        id='gallery-8'
+        ref={galleryRef}
+        className={`${styles.gallery} ${styles.galleryBento}`}
       >
-        {Array.from({ length: 8 }, (_, i) => i).map((index) => (
-          <div
-            className={[
-              styles.galleryItem,
-              index === 2 && styles.centralImageWrapper,
-            ].join(' ')}
-            key={index}
-          >
-            {index !== 2 && (
-              <picture>
-                <source
-                  media='(min-width: 680px)'
-                  srcSet={desktopImages[index]}
-                />
-                <source
-                  media='(max-width: 680px)'
-                  srcSet={mobileImages[index]}
-                />
-                <img
-                  {...restProps[index]}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </picture>
-            )}
-          </div>
+        {Array.from({ length: 8 }, (_, i) => (
+          <BentoItem key={i} index={i} />
         ))}
       </div>
     </div>
   );
-};
+}
+
+const BentoItem = ({ index }: { index: number }) => (
+  <div
+    className={`${styles.galleryItem} ${
+      index === 2 ? styles.centralImageWrapper : ''
+    }`}
+  >
+    {index !== 2 && (
+      <picture>
+        <source media='(min-width: 680px)' srcSet={desktopImages[index]} />
+        <source media='(max-width: 680px)' srcSet={mobileImages[index]} />
+        <img
+          {...restProps[index]}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+      </picture>
+    )}
+  </div>
+);
 
 export default BentoGallery;

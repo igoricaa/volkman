@@ -16,103 +16,118 @@ import ardenBackYardImage from '@/../public/about-me/gallery/desktop/arden-back-
 
 const common = {
   alt: 'Marija Volkman',
-  sizes: '33vw',
   fill: true,
 };
 const {
   props: { srcSet: desktop1 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: masaryckaRestaurantImage,
 });
 const {
   props: { srcSet: mobile1, ...rest },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: basicsCoffeeImage,
 });
 const {
   props: { srcSet: desktop2 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: ardenBackYardImage,
 });
 const {
   props: { srcSet: mobile2, ...rest2 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: marijaVolkmanWorkImage,
 });
 const {
   props: { srcSet: desktop3 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: '',
 });
 const {
   props: { srcSet: mobile3, ...rest3 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: '',
 });
 const {
   props: { srcSet: desktop4 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: exteriorImage,
 });
 const {
   props: { srcSet: mobile4, ...rest4 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: marijaVolkmanWork2Image,
 });
 const {
   props: { srcSet: desktop5 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: wilshireCafeViewImage,
 });
 const {
   props: { srcSet: mobile5, ...rest5 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: birdAndBirdOfficeImage,
 });
 const {
   props: { srcSet: desktop6 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: marijaVolkmanInteriorDesign2Image,
 });
 const {
   props: { srcSet: mobile6, ...rest6 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: vokovice2Image,
 });
 const {
   props: { srcSet: desktop7 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: ardenFamilyRoomImage,
 });
 const {
   props: { srcSet: mobile7, ...rest7 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: archicraftDumImage,
 });
 const {
   props: { srcSet: desktop8 },
 } = getImageProps({
   ...common,
+  sizes: '1000px',
   src: marijaVolkmanInteriorDesignImage,
 });
 const {
   props: { srcSet: mobile8, ...rest8 },
 } = getImageProps({
   ...common,
+  sizes: '190px',
   src: vokoviceImage,
 });
 
